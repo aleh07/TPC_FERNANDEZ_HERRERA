@@ -1,0 +1,9 @@
+D:\utn\cuatri 3\re2-Prog\TPC\Negocio\bin\Debug\Negocio.dll
+D:\utn\cuatri 3\re2-Prog\TPC\Negocio\bin\Debug\Negocio.pdb
+D:\utn\cuatri 3\re2-Prog\TPC\Negocio\bin\Debug\Dominio.dll
+D:\utn\cuatri 3\re2-Prog\TPC\Negocio\bin\Debug\Dominio.pdb
+D:\utn\cuatri 3\re2-Prog\TPC\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+D:\utn\cuatri 3\re2-Prog\TPC\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\utn\cuatri 3\re2-Prog\TPC\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+D:\utn\cuatri 3\re2-Prog\TPC\Negocio\obj\Debug\Negocio.dll
+D:\utn\cuatri 3\re2-Prog\TPC\Negocio\obj\Debug\Negocio.pdb
