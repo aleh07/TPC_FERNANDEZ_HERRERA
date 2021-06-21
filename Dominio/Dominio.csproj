@@ -43,8 +43,18 @@
   <ItemGroup>
     <Compile Include="Categoria.cs" />
     <Compile Include="Componente.cs" />
+    <Compile Include="DiscoRigidos.cs" />
+    <Compile Include="Fuentes.cs" />
+    <Compile Include="Gabinetes.cs" />
     <Compile Include="Marca.cs" />
+    <Compile Include="Mensaje.cs" />
+    <Compile Include="MotherBoards.cs" />
+    <Compile Include="Pantallas.cs" />
+    <Compile Include="PlacasVideos.cs" />
+    <Compile Include="Procesadores.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rams.cs" />
+    <Compile Include="Usuario.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
