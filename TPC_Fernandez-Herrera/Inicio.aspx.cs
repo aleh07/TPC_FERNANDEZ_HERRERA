@@ -11,6 +11,7 @@ namespace TPC_Fernandez_Herrera
 {
     public partial class Inicio : System.Web.UI.Page
     {
+        //comentario de prueba
         public List<Componente> lista;
         protected void Page_Load(object sender, EventArgs e)
         {
