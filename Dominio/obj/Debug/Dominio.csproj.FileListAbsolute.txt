@@ -10,3 +10,9 @@ C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\Nueva carpeta (2)\TPC_F
 C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\Nueva carpeta (2)\TPC_FERNANDEZ_HERRERA\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\Nueva carpeta (2)\TPC_FERNANDEZ_HERRERA\Dominio\obj\Debug\Dominio.dll
 C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\Nueva carpeta (2)\TPC_FERNANDEZ_HERRERA\Dominio\obj\Debug\Dominio.pdb
+D:\utn\cuatri 3\re2-Prog\TPC\TPC_FERNANDEZ_HERRERA\Dominio\bin\Debug\Dominio.dll
+D:\utn\cuatri 3\re2-Prog\TPC\TPC_FERNANDEZ_HERRERA\Dominio\bin\Debug\Dominio.pdb
+D:\utn\cuatri 3\re2-Prog\TPC\TPC_FERNANDEZ_HERRERA\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+D:\utn\cuatri 3\re2-Prog\TPC\TPC_FERNANDEZ_HERRERA\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+D:\utn\cuatri 3\re2-Prog\TPC\TPC_FERNANDEZ_HERRERA\Dominio\obj\Debug\Dominio.dll
+D:\utn\cuatri 3\re2-Prog\TPC\TPC_FERNANDEZ_HERRERA\Dominio\obj\Debug\Dominio.pdb

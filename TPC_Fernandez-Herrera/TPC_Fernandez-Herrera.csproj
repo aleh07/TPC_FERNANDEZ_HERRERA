@@ -69,7 +69,7 @@
   <ItemGroup>
     <Content Include="Inicio.aspx" />
     <Content Include="NuestraEmpresa.aspx" />
-    <Content Include="StyleSheet1.css" />
+    <Content Include="estilos.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
