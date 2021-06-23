@@ -15,7 +15,7 @@
           <a class="btn btn-dark" href="NuestraEmpresa.aspx" runat="server">Conoce mas</a>
         
       </div>
-    <div class="container">  
+    <div class="container" style="margin-top:20px">  
     <%foreach (Dominio.Componente item in lista)
         {%>
     <div class="card border-dark mb-3" style="width: 18rem;">

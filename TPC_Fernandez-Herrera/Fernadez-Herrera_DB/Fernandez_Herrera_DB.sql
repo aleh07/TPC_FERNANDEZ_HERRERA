@@ -39,13 +39,83 @@ GO
 create table COMPONENTES (
  ID BIGINT NOT NULL PRIMARY KEY IDENTITY (1,1),
  NOMBRE VARCHAR(100) NOT NULL,
- DESCRIPCION VARCHAR(500) NOT NULL,
+ DESCRIPCION VARCHAR(100) NOT NULL,
  PRECIO MONEY NOT NULL ,
  IMAGENURL VARCHAR(1000) NOT NULL,
  IDMARCA INT NOT NULL FOREIGN KEY REFERENCES MARCAS(ID),
  IDCATEGORIA INT NOT NULL FOREIGN KEY REFERENCES CATEGORIAS(ID),
 )
 
+GO
+create table MOTHERBOARDS(
+ ID BIGINT NOT NULL PRIMARY KEY ,
+ IDCOMPONENTE BIGINT NOT NULL FOREIGN KEY REFERENCES COMPONENTES(ID),
+ CANTUSB INT NOT NULL,
+ SOCKET VARCHAR(50) NOT NULL,
+ CAPACIDADRAM VARCHAR(10) NOT NULL,
+ CANTSATA INT NOT NULL,
+ PUERTOS VARCHAR(20)
+
+)
+GO
+create table PROCESADORES(
+ ID BIGINT NOT NULL PRIMARY KEY ,
+IDCOMPONENTE BIGINT NOT NULL FOREIGN KEY REFERENCES COMPONENTES(ID),
+ SOCKET VARCHAR(50) NOT NULL,
+ CANTNUCLEOS INT NOT NULL,
+ FRECUENCIA FLOAT NOT NULL
+
+
+)
+GO 
+create table RAMS(
+ID BIGINT NOT NULL PRIMARY KEY ,
+ IDCOMPONENTE BIGINT NOT NULL FOREIGN KEY REFERENCES COMPONENTES(ID),
+ DDR INT NOT NULL,
+ CAPACIDAD INT NOT NULL,
+ VELOCIDAD INT NOT NULL
+
+)
+GO
+create table DISCORIGIDOS(
+ID BIGINT NOT NULL PRIMARY KEY ,
+ IDCOMPONENTE BIGINT NOT NULL FOREIGN KEY REFERENCES COMPONENTES(ID),
+ CAPACIDAD VARCHAR (10)NOT NULL
+
+)
+GO
+create table FUENTES(
+ID BIGINT NOT NULL PRIMARY KEY ,
+IDCOMPONENTE BIGINT NOT NULL FOREIGN KEY REFERENCES COMPONENTES(ID),
+POTENCIA VARCHAR NOT NULL,
+CERTIFICACION VARCHAR(100) NOT NULL
+
+)
+GO
+create table GABIENTES(
+ID BIGINT NOT NULL PRIMARY KEY ,
+IDCOMPONENTE BIGINT NOT NULL FOREIGN KEY REFERENCES COMPONENTES(ID),
+TAMAÑOMOTHER VARCHAR(10) NOT NULL,
+CANTUSB INT
+
+)
+GO
+create table PLACASDEVIDEO(
+ID BIGINT NOT NULL PRIMARY KEY ,
+IDCOMPONENTE BIGINT NOT NULL FOREIGN KEY REFERENCES COMPONENTES(ID),
+CAPACIDAD INT NOT NULL,
+PUERTOS VARCHAR(10) NOT NULL
+
+)
+GO 
+create table PANTALLAS
+(
+ID BIGINT NOT NULL PRIMARY KEY ,
+IDCOMPONENTE BIGINT NOT NULL FOREIGN KEY REFERENCES COMPONENTES(ID),
+PULGADAS INT NOT NULL,
+RESOLUCION VARCHAR (20) NOT NULL
+
+)
 GO
 create table ITEMS (
 ID BIGINT NOT NULL PRIMARY KEY,
@@ -73,18 +143,11 @@ insert  into CATEGORIAS values('Auriculares')
 insert  into CATEGORIAS values('Microfonos')
 insert  into CATEGORIAS values('Cables')
 insert  into CATEGORIAS values('Cargadores')
-insert  into CATEGORIAS values('Cartucho Alternativo')
-insert  into CATEGORIAS values('Cartuchos Originales')
+insert  into CATEGORIAS values('Cartucho Alternativo hp')
+insert  into CATEGORIAS values('Cartuchos Alternativos Epson')
+insert  into CATEGORIAS values('Cartuchos Originales Epson')
+insert  into CATEGORIAS values('Cartuchos Originales hp')
 insert  into CATEGORIAS values('Celulares y Tablets')
-insert  into CATEGORIAS values('Motherboards')
-insert  into CATEGORIAS values('Procesadores') 
-insert  into CATEGORIAS values('Pantallas')
-insert  into CATEGORIAS values('Fuentes')
-insert  into CATEGORIAS values('Rams')
-insert  into CATEGORIAS values('DiscoRigidos')
-insert  into CATEGORIAS values('Gabinetes')
-insert  into CATEGORIAS values('PlacasdeVideos')
-
 
 --datos marcas
 
@@ -98,15 +161,5 @@ insert  into MARCAS values('INTEL')
 insert  into MARCAS values('AMD')
 insert  into MARCAS values('LENOVO')
 insert  into MARCAS values('MAC')
-insert  into MARCAS values('KINGTONG')
-insert  into MARCAS values('SEAGATE')
-
 --COMPONENTES
-INSERT INTO COMPONENTES VALUES('CARTUCHO EPSON','Botella Epson 544 Negro',450.99,'https://eclypse.com.ar/wp-content/uploads/2020/03/544N-300x300.jpg',1,7)
-INSERT INTO COMPONENTES VALUES('AsRock Radeon RX 550 Phantom Gaming','Placa de Video AsRock Radeon RX 550 Phantom Gaming 2Gb GDDR5',450.99,'https://s3-sa-east-1.amazonaws.com/saasargentina/6w0HR6Ntf8gwv0dXgIfw/imagen',8,16)
-INSERT INTO COMPONENTES VALUES(' MSI H110M PRO-VH ','Mother MSI H110M PRO-VH DDR4 HDMI S1151',450.99,'https://s3-sa-east-1.amazonaws.com/saasargentina/vDqmnCN0pOYHI96qMzjo/imagen',9,6)
-INSERT INTO COMPONENTES VALUES('  Athlon 3000G Vega 3 DualCore AM4 BOX ','Micro AMD Athlon 3000G Vega 3 DualCore AM4 BOX',450.99,'https://s3-sa-east-1.amazonaws.com/saasargentina/skzKBEUHDOtZQWJ6AkMG/imagen',8,10)
-INSERT INTO COMPONENTES VALUES(' RAM  4GB  ','Memoria RAM 4GB DDR4 2666Mhz Value',450.99,'https://s3-sa-east-1.amazonaws.com/saasargentina/oSUqVhoCIOHuDzvTBIxb/imagen',8,11)
-INSERT INTO COMPONENTES VALUES(' DR PC 1TbSATA3','Disco Rígido PC 1Tb Seagate Barracuda SATA3',450.99,'https://s3-sa-east-1.amazonaws.com/saasargentina/yVXzYVIprX9JQYEhMOIi/imagen',14,12)
-INSERT INTO COMPONENTES VALUES('  H410M-H V2 DDR4 (10ma Gen) LGA1200','Mother Gigabyte H410M-H V2 DDR4 (10ma Gen) LGA1200',450.99,'https://s3-sa-east-1.amazonaws.com/saasargentina/RBNVEnsUVcAGVnS8ayne/imagen',9,6)
-
+INSERT INTO COMPONENTES VALUES('CARTUCHO EPSON','Botella Epson 544 Negro',450.99,'https://eclypse.com.ar/wp-content/uploads/2020/03/544N-300x300.jpg',2,8)

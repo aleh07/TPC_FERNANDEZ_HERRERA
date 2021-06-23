@@ -25,12 +25,3 @@ D:\utn\cuatri 3\re2-Prog\TPC\TPC_FERNANDEZ_HERRERA\Negocio\obj\Debug\Negocio.csp
 D:\utn\cuatri 3\re2-Prog\TPC\TPC_FERNANDEZ_HERRERA\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 D:\utn\cuatri 3\re2-Prog\TPC\TPC_FERNANDEZ_HERRERA\Negocio\obj\Debug\Negocio.dll
 D:\utn\cuatri 3\re2-Prog\TPC\TPC_FERNANDEZ_HERRERA\Negocio\obj\Debug\Negocio.pdb
-C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\TPC_PRIMER_ENTREGA\TPC_FERNANDEZ_HERRERA\Negocio\bin\Debug\Negocio.dll
-C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\TPC_PRIMER_ENTREGA\TPC_FERNANDEZ_HERRERA\Negocio\bin\Debug\Negocio.pdb
-C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\TPC_PRIMER_ENTREGA\TPC_FERNANDEZ_HERRERA\Negocio\bin\Debug\Dominio.dll
-C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\TPC_PRIMER_ENTREGA\TPC_FERNANDEZ_HERRERA\Negocio\bin\Debug\Dominio.pdb
-C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\TPC_PRIMER_ENTREGA\TPC_FERNANDEZ_HERRERA\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
-C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\TPC_PRIMER_ENTREGA\TPC_FERNANDEZ_HERRERA\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
-C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\TPC_PRIMER_ENTREGA\TPC_FERNANDEZ_HERRERA\Negocio\obj\Debug\Negocio.csproj.CopyComplete
-C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\TPC_PRIMER_ENTREGA\TPC_FERNANDEZ_HERRERA\Negocio\obj\Debug\Negocio.dll
-C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\TPC_PRIMER_ENTREGA\TPC_FERNANDEZ_HERRERA\Negocio\obj\Debug\Negocio.pdb
