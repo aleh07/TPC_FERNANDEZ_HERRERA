@@ -16,3 +16,9 @@ D:\utn\cuatri 3\re2-Prog\TPC\TPC_FERNANDEZ_HERRERA\Dominio\obj\Debug\Dominio.csp
 D:\utn\cuatri 3\re2-Prog\TPC\TPC_FERNANDEZ_HERRERA\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 D:\utn\cuatri 3\re2-Prog\TPC\TPC_FERNANDEZ_HERRERA\Dominio\obj\Debug\Dominio.dll
 D:\utn\cuatri 3\re2-Prog\TPC\TPC_FERNANDEZ_HERRERA\Dominio\obj\Debug\Dominio.pdb
+C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\TPC_PRIMER_ENTREGA\TPC_FERNANDEZ_HERRERA\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\TPC_PRIMER_ENTREGA\TPC_FERNANDEZ_HERRERA\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\TPC_PRIMER_ENTREGA\TPC_FERNANDEZ_HERRERA\Dominio\obj\Debug\Dominio.dll
+C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\TPC_PRIMER_ENTREGA\TPC_FERNANDEZ_HERRERA\Dominio\obj\Debug\Dominio.pdb
+C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\TPC_PRIMER_ENTREGA\TPC_FERNANDEZ_HERRERA\Dominio\bin\Debug\Dominio.dll
+C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\TPC_PRIMER_ENTREGA\TPC_FERNANDEZ_HERRERA\Dominio\bin\Debug\Dominio.pdb
