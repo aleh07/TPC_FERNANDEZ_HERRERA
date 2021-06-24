@@ -6,11 +6,23 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    class Carrito
+   public class Carrito
     {
-        public int ID { get; set; }
+   
         public long IdCliente { get; set; }
-        public List<Item> listaCarrito { get; set; }
-        public decimal Total { get; set; }
+     
+
+        public DateTime FechaCarrito { get; set; }
+        public List<Item> Items { get; set; }
+        public decimal totalCarrito(Carrito carrito)
+        {
+            decimal total = 0;
+            foreach (Item item in carrito.Items)
+            {
+
+                total += item.componente.Precio * item.Cantidad;
+            }
+            return total;
+        }
     }
 }

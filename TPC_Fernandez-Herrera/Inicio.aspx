@@ -33,7 +33,7 @@
                         <h5 class="card-title"><%= item.Nombre %></h5>
                         <p class="card-text"><%= item.Descripcion %></p>
                         <p class="card-text"><span class="badge bg-secondary" style="font-size: 20px"><%= item.Precio %></span></p>
-                        <a href="#" class="btn btn-secondary">Carrito</a>
+                        <a href="Carrito.aspx?id=<% = item.ID %>"  class="btn btn-secondary">Carrito</a>
                         <a href="#" class="btn btn-secondary">Favoritos</a>
                     </div>
                 </div>
