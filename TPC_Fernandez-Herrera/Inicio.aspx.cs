@@ -18,7 +18,7 @@ namespace TPC_Fernandez_Herrera
             ComponenteNegocio negocio = new ComponenteNegocio();
             try
             {
-                if (Session["listarbuscados"] == null)
+                if (Session["listabuscados"] == null)
                 {
                     listaComponentes = negocio.Listar();
                     Session.Add("ListarComponentes", listaComponentes);
