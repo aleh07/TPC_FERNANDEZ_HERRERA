@@ -24,7 +24,6 @@ namespace TPC_Fernandez_Herrera
                 string id = Request.QueryString["ID"];
                 carrito = (Carrito)Session["carrito"];
                 if (carrito == null) carrito = new Carrito();
-                //carrito.Items = (List<ItemCarrito>)Session["carrito"];
                 if (carrito.Items == null) carrito.Items = new List<Item>();
 
                 if (!IsPostBack)
@@ -40,7 +39,6 @@ namespace TPC_Fernandez_Herrera
                             item.componente = producto;
                             item.Cantidad = 1;
                             carrito.FechaCarrito = DateTime.Today;
-                            //itemCarritos.Items = (List<ItemCarrito>)Session["carrito"];
                             carrito.Items.Add(item);
 
                         }
@@ -103,7 +101,7 @@ namespace TPC_Fernandez_Herrera
             try
             {
                 var argument = ((Button)sender).CommandArgument;
-                //carrito.Items = (List<ItemCarrito>)Session["carrito"];
+
                 carrito = (Carrito)Session["carrito"];
                 Item item1 = carrito.Items.Find(x => x.componente.ID.ToString() == argument);
                 carrito.Items.Remove(item1);
