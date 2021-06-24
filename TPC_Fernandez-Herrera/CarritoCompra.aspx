@@ -44,7 +44,7 @@
                     </td>
                     <td>
                         <p>
-                            <asp:Button Text="Eliminar" CssClass="boton__eliminar" AutoPostBack="true" ID="btnEliminar" OnClick="btnEliminar_Click" runat="server" /></p>
+                            <asp:Button Text="Eliminar" CssClass="boton__eliminar" AutoPostBack="true" ID="btnEliminar" Onclick="btnEliminar_Click1" CommandArgument='<%#Eval("Componente.ID")%>' runat="server" /></p>
                     </td>
                 </tbody>
             </ItemTemplate>
