@@ -68,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="armaTuPc.aspx" />
-    <Content Include="Carrito.aspx" />
+    <Content Include="CarritoCompra.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="NuestraEmpresa.aspx" />
@@ -83,12 +83,12 @@
     <Compile Include="armaTuPc.aspx.designer.cs">
       <DependentUpon>armaTuPc.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Carrito.aspx.cs">
-      <DependentUpon>Carrito.aspx</DependentUpon>
+    <Compile Include="CarritoCompra.aspx.cs">
+      <DependentUpon>CarritoCompra.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Carrito.aspx.designer.cs">
-      <DependentUpon>Carrito.aspx</DependentUpon>
+    <Compile Include="CarritoCompra.aspx.designer.cs">
+      <DependentUpon>CarritoCompra.aspx</DependentUpon>
     </Compile>
     <Compile Include="Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
