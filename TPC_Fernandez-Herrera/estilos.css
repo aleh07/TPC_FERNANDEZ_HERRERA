@@ -13,3 +13,9 @@
     background-size: cover;
     background-blend-mode: normal;
 }
+
+body {
+    background: rgb(235,235,235);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
