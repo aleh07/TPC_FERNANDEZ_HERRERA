@@ -5,7 +5,7 @@
     <!-- arma tu pc se muestra una tanda de card que se van a separar por cada categoria 
         el orden tiene que ser 1-motherboard 2-procesador 3-coolers/ventiladores 4-ram 5-fuentes 6-placa de video 7-gabinete 8-pantalla -->
 
-    <div class="container">
+ <div class="container">
         <div class="row row-cols-1 row-cols-md-3 g-4">
 
             <%foreach (Dominio.Componente item in listaComponente)
@@ -19,7 +19,7 @@
                         <h5 class="card-title"><%= item.Nombre %></h5>
                         <p class="card-text"><%= item.Descripcion %></p>
                         <p class="card-text"><span class="badge bg-secondary" style="font-size: 20px"><%= item.Precio %></span></p>
-                        <asp:button ID="btnAgregar" class="btn btn-secondary" runat="server" OnClick="btnAgregar_Click" Text="Agregar" />
+                        <asp:button ID="btnAgregar" class="btn btn-secondary" runat="server" OnClick="btnAgregar_Click" Text="Agregar" CommandArgument="<%= item.id %>" />
                     </div>
                 </div>
             </div>

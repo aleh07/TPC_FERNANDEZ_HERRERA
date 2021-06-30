@@ -73,6 +73,7 @@
     <Content Include="Login.aspx" />
     <Content Include="NuestraEmpresa.aspx" />
     <Content Include="estilos.css" />
+    <Content Include="Scripts.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
