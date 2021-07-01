@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="armaTuPc.aspx.cs" Inherits="TPC_Fernandez_Herrera.armaTuPc" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="armaTuPc.aspx.cs" Inherits="TPC_Fernandez_Herrera.armaTuPc" EnableEventValidation="false" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -8,22 +9,23 @@
  <div class="container">
         <div class="row row-cols-1 row-cols-md-3 g-4">
 
-            <%foreach (Dominio.Componente item in listaComponente)
-                {%>
-
+           
+            <asp:Repeater runat="server" ID="repetidor">
+            <ItemTemplate>
             <div class="col">
 
                 <div class="card border-dark mb-3" style="width: 18rem; margin-top:20px">
-                    <img src="<%= item.ImagenUrl %>" class="card-img-top" alt="...">
+                    <img src="<%#Eval("ImagenUrl")%>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title"><%= item.Nombre %></h5>
-                        <p class="card-text"><%= item.Descripcion %></p>
-                        <p class="card-text"><span class="badge bg-secondary" style="font-size: 20px"><%= item.Precio %></span></p>
-                        <asp:button ID="btnAgregar" class="btn btn-secondary" runat="server" OnClick="btnAgregar_Click" Text="Agregar" CommandArgument="<%= item.id %>" />
+                        <h5 class="card-title"><%#Eval("Nombre")%></h5>
+                        <p class="card-text"><%#Eval("Descripcion")%></p>
+                        <p class="card-text"><span class="badge bg-secondary" style="font-size: 20px"><%#Eval("Precio")%></span></p>
+                        <asp:Button CssClass="btn btn-secondary"  Text="Agregar" ID="btnAgregar"  OnClick="btnAgregar_Click" AutoPostBack="true" CommandArgument='<%#Eval("ID")%>' runat="server" />
                     </div>
                 </div>
             </div>
-            <%} %>
+                </ItemTemplate>
+           </asp:Repeater>
         </div>
 
     </div>
