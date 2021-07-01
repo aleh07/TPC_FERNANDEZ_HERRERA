@@ -14,12 +14,10 @@ namespace TPC_Fernandez_Herrera
     
     public List<Componente> listaComponente;
         List<Componente> listaArmado;
-    protected void Page_Load(object sender, EventArgs e)
+        protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
-                    
-
                 if(!IsPostBack)
                 {
                     cargarCatalogo();
@@ -27,7 +25,6 @@ namespace TPC_Fernandez_Herrera
                 }
                 repetidor.DataSource = listaComponente;
                 repetidor.DataBind();
-
             }
             catch (Exception)
             {
@@ -39,12 +36,12 @@ namespace TPC_Fernandez_Herrera
 
         public void cargarCatalogo()
         {
-            
             List<Componente> listaComponentes = (List<Componente>)Session["ListarComponentes"];
             listaArmado = (List<Componente>)Session["ListaPC"];
+
             if (listaArmado == null)
             {
-                listaComponente = listaComponentes.FindAll(x => x.categoria.Nombre.ToLower().Contains("motherboard"));
+                listaComponente = listaComponentes.FindAll(x => x.categoria.Nombre.ToLower().Contains("procesador"));
                 Session.Add("listaComponente", listaComponente);
 
             }
