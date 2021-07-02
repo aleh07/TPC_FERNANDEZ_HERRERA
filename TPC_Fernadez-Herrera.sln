@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPC_Fernandez-Herrera", "TP
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{62ECEBDB-72B4-4108-9CDC-17721A39A8AD}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\Nueva carpeta\TPC_FERNANDEZ_HERRERA\TPC_Fernandez-Herrera\Fernadez-Herrera_DB\Fernandez_Herrera_DB.sql = ..\..\Nueva carpeta\TPC_FERNANDEZ_HERRERA\TPC_Fernandez-Herrera\Fernadez-Herrera_DB\Fernandez_Herrera_DB.sql
+		..\..\Fernandez_Herrera_DB.sql = ..\..\Fernandez_Herrera_DB.sql
 	EndProjectSection
 EndProject
 Global

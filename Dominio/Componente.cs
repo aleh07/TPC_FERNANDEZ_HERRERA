@@ -13,7 +13,13 @@ namespace Dominio
         public string Descripcion { get; set; }   
         public decimal Precio { get; set; }
         public string ImagenUrl { get; set; }
+
+        public int Cantidad{ get; set; }
+
+        public bool Estado { get; set; }
         public Marca marca { get; set; }
         public Categoria categoria { get; set; }
+        
     }
+
 }
