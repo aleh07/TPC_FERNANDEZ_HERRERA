@@ -48,5 +48,63 @@ namespace Negocio
                 }
 
         }
+
+
+        public void agregar(Componente nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("INSERT Into Componentes (Nombre,Descripcion,Precio,ImagenUrl,IdMarca,IdCategoria) " +
+                                   "values (@Nombre,@Descripcion,@Precio,@ImagenUrl,@Marca,@Categoria)");
+
+
+                datos.setearParametro("@Nombre", nuevo.Nombre);
+                datos.setearParametro("@Descripcion", nuevo.Descripcion);
+                datos.setearParametro("@ImagenUrl", nuevo.ImagenUrl);
+                datos.setearParametro("@Marca",1);
+                datos.setearParametro("@Categoria", 1);
+                datos.setearParametro("@Precio", nuevo.Precio);
+                datos.ejectutarAccion();
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+         
+
+        //public void modificar(Producto nuevo)
+        //{
+        //    AccesoDatos datos = new AccesoDatos();
+        //    try
+        //    {
+        //        //datos.setearConsulta("update ARTICULOS set codigo ='" + nuevo.CodigoArt + "' where id = " + nuevo.Id);
+        //        datos.setearConsulta("update ARTICULOS set codigo = '" + nuevo.CodigoArt + "', nombre = '" + nuevo.Nombre + "',Descripcion = '" + nuevo.Descripcion + "', ImagenUrl = '" + nuevo.UrlImagen + "', precio = '" + nuevo.Precio + "', idmarca = '" + nuevo.Marca.Id + "' , idcategoria = '" + nuevo.Categoria.Id + "' where id = '" + nuevo.Id + "'");
+        //        /*datos.setearConsulta("update ARTICULOS set codigo = @codigo, nombre = @nombre, Descripcion = @descripcion, ImagenUrl = @urlImagen, precio = @precio, IdMarca = @idMarca, IdCategoria = @idCategoria where codigo = @id");
+        //        datos.setearParametro("@codigo", nuevo.CodigoArt);
+        //        datos.setearParametro("@nombre", nuevo.Nombre);
+        //        datos.setearParametro("@descripcion", nuevo.Descripcion);
+        //        datos.setearParametro("@urlImagen", nuevo.UrlImagen);
+        //        datos.setearParametro("@precio", nuevo.Precio);
+        //        datos.setearParametro("@idCategoria", nuevo.Categoria.Id);
+        //        datos.setearParametro("@idMarca", nuevo.Marca.Id);
+        //        datos.setearParametro("@id", nuevo.Id);*/
+
+        //        datos.ejectutarAccion();
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //    finally
+        //    {
+        //        datos.cerrarConexion();
+        //    }
+        //}
     }
 }

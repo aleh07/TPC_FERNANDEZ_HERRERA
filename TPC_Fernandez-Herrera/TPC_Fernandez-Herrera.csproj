@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AltaComponente.aspx" />
     <Content Include="armaTuPc.aspx" />
     <Content Include="CarritoCompra.aspx" />
     <Content Include="GestionStock.aspx" />
@@ -78,6 +79,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AltaComponente.aspx.cs">
+      <DependentUpon>AltaComponente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AltaComponente.aspx.designer.cs">
+      <DependentUpon>AltaComponente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="armaTuPc.aspx.cs">
       <DependentUpon>armaTuPc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
