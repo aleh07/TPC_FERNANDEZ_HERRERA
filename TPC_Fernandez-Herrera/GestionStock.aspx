@@ -56,7 +56,7 @@
             </ItemTemplate>
         </asp:Repeater>
     </table>
-            <a class="btn btn-secondary" href="altaProducto.aspx"> Alta</a>
+            <a class="btn btn-secondary" href="AltaComponente.aspx"> Alta </a>
 </div>
 
 </asp:Content>

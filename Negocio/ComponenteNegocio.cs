@@ -62,8 +62,8 @@ namespace Negocio
                 datos.setearParametro("@Nombre", nuevo.Nombre);
                 datos.setearParametro("@Descripcion", nuevo.Descripcion);
                 datos.setearParametro("@ImagenUrl", nuevo.ImagenUrl);
-                datos.setearParametro("@Marca",1);
-                datos.setearParametro("@Categoria", 1);
+                datos.setearParametro("@Marca",nuevo.marca.Id);
+                datos.setearParametro("@Categoria", nuevo.categoria.Id);
                 datos.setearParametro("@Precio", nuevo.Precio);
                 datos.ejectutarAccion();
 

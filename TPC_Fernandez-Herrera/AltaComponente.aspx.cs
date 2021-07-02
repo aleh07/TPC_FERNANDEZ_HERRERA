@@ -11,21 +11,39 @@ namespace TPC_Fernandez_Herrera
 {
     public partial class AltaComponente : System.Web.UI.Page
     {
-        Componente componente = new Componente();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-         
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+
+            List<Marca> ListaMarcas = marcaNegocio.listar();
+            ddlMarca.DataSource = ListaMarcas;
+            ddlMarca.DataTextField = "Nombre";
+            ddlMarca.DataValueField = "Id";
+            ddlMarca.DataBind();
+
+            List<Categoria> ListaCategoria = categoriaNegocio.listar();
+            ddlCategoria.DataSource = ListaCategoria;
+            ddlCategoria.DataTextField = "Nombre";
+            ddlCategoria.DataValueField = "Id";
+            ddlCategoria.DataBind();
 
         }
+       
 
-        protected void BtnAgregar_Click(object sender, EventArgs e)
+    protected void BtnAgregar_Click(object sender, EventArgs e)
         {
-            AccesoDatos datos = new AccesoDatos();
             ComponenteNegocio negocio = new ComponenteNegocio();
-            Componente aux = new Componente();
+
+             Componente aux = new Componente();
+
             aux.Nombre = TxtNombre.Text;
             aux.Descripcion = TxtDescripcion.Text;
             aux.ImagenUrl = TxtImagenUrl.Text;
+            aux.marca.Id = Convert.ToInt32(ddlMarca.SelectedValue);
+            aux.categoria.Id = Convert.ToInt32(ddlCategoria.SelectedItem.Value);
+
             negocio.agregar(aux);
             Response.Redirect("GestionStock.aspx");
 

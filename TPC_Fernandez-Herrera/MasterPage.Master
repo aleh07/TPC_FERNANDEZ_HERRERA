@@ -30,9 +30,11 @@
                                 <a id="armatupcPestaña" class="nav-link" href="armaTuPC.aspx">Arma tu PC</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="AltaComponente.aspx">Carrito</a>
+                                <a class="nav-link" href="CarritoCompra.aspx">Carrito</a>
                             </li>
-                           
+                            <li class="nav-item">
+                                <a class="nav-link" href="GestionStock.aspx">Gestion Stock</a>
+                            </li>
                         </ul>
                         
                     </div>

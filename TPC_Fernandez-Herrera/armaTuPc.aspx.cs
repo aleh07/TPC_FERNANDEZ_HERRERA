@@ -20,8 +20,10 @@ namespace TPC_Fernandez_Herrera
             {
                 if(!IsPostBack)
                 {
-                    cargarCatalogo();
-                    listaComponente = (List<Componente>)Session["ListaComponente"];
+                    
+                        listaComponente = (List<Componente>)Session["ListaComponente"];
+                    
+                    
                 }
                 repetidor.DataSource = listaComponente;
                 repetidor.DataBind();
@@ -41,7 +43,7 @@ namespace TPC_Fernandez_Herrera
 
             if (listaArmado == null)
             {
-                listaComponente = listaComponentes.FindAll(x => x.categoria.Nombre.ToLower().Contains("procesador"));
+                listaComponente = listaComponentes.FindAll(x => x.categoria.Nombre.ToLower().Contains("procesador") );
                 Session.Add("listaComponente", listaComponente);
 
             }
