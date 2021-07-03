@@ -8,11 +8,13 @@
         <h3>Nombre</h3>
         <asp:TextBox ID="TxtNombre" class="form-control" type="text" placeholder="Ingrese Nombre" aria-label="Ingrese Nombre" runat="server"></asp:TextBox>
         <h3>Descripcion</h3>
-        <asp:TextBox ID="TxtDescripcion" class="form-control" type="text" placeholder="Default input" aria-label=" Ingrese Descripcion " runat="server"></asp:TextBox>
+        <asp:TextBox ID="TxtDescripcion" class="form-control" type="text" placeholder="Ingrese Descripcion" aria-label=" Ingrese Descripcion " runat="server"></asp:TextBox>
         <h3>Precio</h3>
-        <asp:TextBox ID="Precio" class="form-control" type="text" placeholder="Default input" aria-label="Ingrese Precio" runat="server"></asp:TextBox>
+        <asp:TextBox ID="Precio" class="form-control" type="text" placeholder="Ingrese Precio" aria-label="Ingrese Precio" runat="server"></asp:TextBox>
         <h3>ImagenUrl</h3>
-        <asp:TextBox ID="TxtImagenUrl" class="form-control" type="text" placeholder="Default input" aria-label="Ingrese UrlImagen" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TxtImagenUrl" class="form-control" type="text" placeholder="Ingrese UrlImagen" aria-label="Ingrese UrlImagen" runat="server"></asp:TextBox>
+        <h3>Cantidad</h3>
+        <asp:TextBox ID="TxtCant" class="form-control" type="text" placeholder="Ingrese Cantidad" aria-label="Ingrese UrlImagen" runat="server"></asp:TextBox>
         <h3>Marca</h3>
         <asp:DropDownList runat="server" ID="ddlMarca" CssClass="form-control-sm"></asp:DropDownList>
 

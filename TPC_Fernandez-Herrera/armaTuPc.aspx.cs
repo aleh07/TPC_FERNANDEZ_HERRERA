@@ -43,13 +43,13 @@ namespace TPC_Fernandez_Herrera
 
             if (listaArmado == null)
             {
-                listaComponente = listaComponentes.FindAll(x => x.categoria.Nombre.ToLower().Contains("procesador") );
+                listaComponente = listaComponentes.FindAll(x => x.categoria.Nombre.ToLower().Contains("Procesadores") );
                 Session.Add("listaComponente", listaComponente);
 
             }
             else if (listaArmado.Count == 1)
             {
-                listaComponente = listaComponentes.FindAll(x => x.categoria.Nombre.ToLower().Contains("procesadores"));
+                listaComponente = listaComponentes.FindAll(x => x.categoria.Nombre.ToLower().Contains("Motherboars"));
                 Session.Add("listaComponente", listaComponente);
             }
             else if (listaArmado.Count == 2)

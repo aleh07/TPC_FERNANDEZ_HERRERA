@@ -40,6 +40,7 @@
                     <td>
                         <p>$<asp:Label ID="lblPrecio" runat="server" Text='<%#Eval("Precio")%>'/></p>
                     </td>
+                   
                     <td>
                         <p><%#Eval("marca.Nombre")%></p>
                     </td>
@@ -47,9 +48,9 @@
                         <p><%#Eval("categoria.Nombre")%></p>
                     </td>
                     <td>
-                        <%--<p>
+                        <p>
                             <asp:TextBox  TextMode="Number" runat="server" ID="txtCantidad" OnTextChanged="txtCantidad_TextChanged" Text='<%#Eval("Cantidad")%>'  min="1"/>
-                            <asp:Button Text="Agregar"  AutoPostBack="true" ID="btnAgregar" OnClick="btnAgregar_Click" CommandArgument='<%#Eval("ID")%>' runat="server"/>
+                           <%--<asp:Button Text="Agregar"  AutoPostBack="true" ID="btnAgregar" OnClick="btnAgregar_Click" CommandArgument='<%#Eval("ID")%>' runat="server"/>
                         </p>--%>
                     </td>
                 </tbody>

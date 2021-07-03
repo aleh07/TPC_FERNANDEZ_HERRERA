@@ -14,7 +14,7 @@ namespace Negocio
             List<Componente> lista = new List<Componente>();
             AccesoDatos Datos = new AccesoDatos();
 
-            Datos.setearConsulta("select Co.Id Id,Nombre,Co.Descripcion,Precio,ImagenUrl,M.Descripcion Marca,M.ID IDMarca ,Ca.Descripcion Categoria,Ca.ID IDCategoria from COMPONENTES Co, CATEGORIAS Ca, Marcas M Where Co.IdCategoria = Ca.Id and Co.IdMarca = M.Id");
+            Datos.setearConsulta("select Co.Id Id,Nombre,Co.Descripcion,Precio,ImagenUrl,Cantidad,M.Descripcion Marca,M.ID IDMarca ,Ca.Descripcion Categoria,Ca.ID IDCategoria from COMPONENTES Co, CATEGORIAS Ca, Marcas M Where Co.IdCategoria = Ca.Id and Co.IdMarca = M.Id");
             Datos.ejecutarLectura();
 
                 try
@@ -28,7 +28,7 @@ namespace Negocio
                         aux.Precio = (Decimal)Datos.Lector["Precio"];         
                         aux.Descripcion = (string)Datos.Lector["Descripcion"];
                         aux.ImagenUrl = (string)Datos.Lector["ImagenUrl"];
-
+                    aux.Cantidad = (int)Datos.Lector["Cantidad"];
                         aux.marca = new Marca((int)Datos.Lector["IDMarca"], (string)Datos.Lector["Marca"]);
 
                         aux.categoria = new Categoria((int)Datos.Lector["IDCategoria"], (string)Datos.Lector["Categoria"]);
@@ -55,16 +55,19 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("INSERT Into Componentes (Nombre,Descripcion,Precio,ImagenUrl,IdMarca,IdCategoria) " +
-                                   "values (@Nombre,@Descripcion,@Precio,@ImagenUrl,@Marca,@Categoria)");
+                datos.setearConsulta("INSERT Into Componentes (Nombre,Descripcion,Precio,ImagenUrl,Cantidad,Estado,IdMarca,IdCategoria) " +
+                                   "values (@Nombre,@Descripcion,@Precio,@ImagenUrl,@Cantidad,@Estado,@Marca,@Categoria)");
 
 
                 datos.setearParametro("@Nombre", nuevo.Nombre);
                 datos.setearParametro("@Descripcion", nuevo.Descripcion);
+                datos.setearParametro("@Precio", nuevo.Precio);
                 datos.setearParametro("@ImagenUrl", nuevo.ImagenUrl);
+                datos.setearParametro("@Cantidad", nuevo.Cantidad);
+                datos.setearParametro("@Estado", nuevo.Estado);
                 datos.setearParametro("@Marca",nuevo.marca.Id);
                 datos.setearParametro("@Categoria", nuevo.categoria.Id);
-                datos.setearParametro("@Precio", nuevo.Precio);
+                
                 datos.ejectutarAccion();
 
 

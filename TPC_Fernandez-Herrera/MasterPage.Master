@@ -35,6 +35,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="GestionStock.aspx">Gestion Stock</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Registrarse.aspx">Registrarse</a>
+                            </li>
                         </ul>
                         
                     </div>

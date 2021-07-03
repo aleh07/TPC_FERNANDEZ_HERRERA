@@ -18,17 +18,9 @@ namespace Dominio
         public  int Dni { get; set; }
         public string Pass { get; set; }
         public  char Tipo { get; set; }
+        public int Estado { get; set; }
 
-        public Usuario(string nombre)
-        {
-            Nombre = nombre;
-        }
-
-        public Usuario(int id, string nombre)
-        {
-            ID= id;
-            Nombre = nombre;
-        }
+       
 
         public override string ToString()
         {

@@ -19,7 +19,7 @@ namespace TPC_Fernandez_Herrera
 
             List<Marca> ListaMarcas = marcaNegocio.listar();
             ddlMarca.DataSource = ListaMarcas;
-            ddlMarca.DataTextField = "Nombre";
+            ddlMarca.DataTextField= "Nombre";
             ddlMarca.DataValueField = "Id";
             ddlMarca.DataBind();
 
@@ -41,9 +41,10 @@ namespace TPC_Fernandez_Herrera
             aux.Nombre = TxtNombre.Text;
             aux.Descripcion = TxtDescripcion.Text;
             aux.ImagenUrl = TxtImagenUrl.Text;
+            aux.Cantidad = Convert.ToInt32(TxtCant.Text);
+            aux.Estado = 1;
             aux.marca.Id = Convert.ToInt32(ddlMarca.SelectedValue);
             aux.categoria.Id = Convert.ToInt32(ddlCategoria.SelectedItem.Value);
-
             negocio.agregar(aux);
             Response.Redirect("GestionStock.aspx");
 

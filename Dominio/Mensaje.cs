@@ -10,10 +10,10 @@ namespace Dominio
     {
 
         public long ID { get; set; }
-        public Usuario usuario { get; set; }
-        public  char Estado { get; set; }
+        public Usuario usuario { get; set; }      
         public string mensaje { get; set; }
         public string Respuesta { get; set; }
+         public bool Estado { get; set; }
       
     }
 }
