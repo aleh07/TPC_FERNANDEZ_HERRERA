@@ -8,7 +8,7 @@ namespace Dominio
 {
     public class Marca
     {
-        public int Id { get; set; }
+        public Int32 Id { get; set; }
         public string Nombre { get; set; }
 
         public Marca(string nombre)
@@ -21,10 +21,8 @@ namespace Dominio
             Id = id;
             Nombre = nombre;
         }
+    
 
-        public Marca()
-        {
-        }
 
         public override string ToString()
         {

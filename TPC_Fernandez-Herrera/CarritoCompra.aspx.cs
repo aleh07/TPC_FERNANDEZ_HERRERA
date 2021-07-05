@@ -27,7 +27,7 @@ namespace TPC_Fernandez_Herrera
                 if (carrito.Items == null) carrito.Items = new List<Item>();
 
                 if (!IsPostBack)
-                {
+                { 
                     if (id != null)
                     {
                         if (carrito.Items.Find(x => x.componente.ID.ToString() == id) == null)
@@ -118,5 +118,21 @@ namespace TPC_Fernandez_Herrera
                 throw ex;
             }
         }
+
+        protected void BtnComprar_Click(object sender, EventArgs e)
+        {
+            //if (Logeo==true)
+            //{
+            //    Response.Redirect("Compras");
+
+            //}
+            //else
+            //{
+            //    Response.Redirect("Resgsitrarse.aspx");
+            //}
+            Response.Redirect("Compras.aspx");
+        }
+
+        
     }
 }

@@ -15,6 +15,10 @@ namespace Dominio
         public string ImagenUrl { get; set; }
         public int Cantidad{ get; set; }
         public int Estado { get; set; }
+      
+        public int marc { get; set; }
+        public int cat { get; set; }
+
         public Marca marca { get; set; }
         public Categoria categoria { get; set; }
         

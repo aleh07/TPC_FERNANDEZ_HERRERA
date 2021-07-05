@@ -70,6 +70,7 @@
     <Content Include="AltaComponente.aspx" />
     <Content Include="armaTuPc.aspx" />
     <Content Include="CarritoCompra.aspx" />
+    <Content Include="Compras.aspx" />
     <Content Include="GestionStock.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="Login.aspx" />
@@ -100,6 +101,13 @@
     </Compile>
     <Compile Include="CarritoCompra.aspx.designer.cs">
       <DependentUpon>CarritoCompra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras.aspx.cs">
+      <DependentUpon>Compras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras.aspx.designer.cs">
+      <DependentUpon>Compras.aspx</DependentUpon>
     </Compile>
     <Compile Include="GestionStock.aspx.cs">
       <DependentUpon>GestionStock.aspx</DependentUpon>

@@ -25,7 +25,7 @@
                     <asp:TextBox ID="TextBox2" type="password" placeholder="Password" CssClass="form-control" runat="server"></asp:TextBox><br />
                     <asp:Label ID="Label1" runat="server" ForeColor="#CC0000"></asp:Label>
                     <br />
-                    <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Login" />
+                    <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Login" OnClick="Button1_Click"/>
               
                         </div>
                     </div>

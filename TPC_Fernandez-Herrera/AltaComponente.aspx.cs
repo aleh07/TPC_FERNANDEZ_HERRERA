@@ -37,14 +37,15 @@ namespace TPC_Fernandez_Herrera
             ComponenteNegocio negocio = new ComponenteNegocio();
 
              Componente aux = new Componente();
-
+            //int idmarca = Convert.ToInt32(ddlMarca.SelectedItem.Value);
+            //int idcategoria = Convert.ToInt32(ddlCategoria.SelectedItem.Value);
             aux.Nombre = TxtNombre.Text;
             aux.Descripcion = TxtDescripcion.Text;
             aux.ImagenUrl = TxtImagenUrl.Text;
             aux.Cantidad = Convert.ToInt32(TxtCant.Text);
             aux.Estado = 1;
-            aux.marca.Id = Convert.ToInt32(ddlMarca.SelectedValue);
-            aux.categoria.Id = Convert.ToInt32(ddlCategoria.SelectedItem.Value);
+            aux.marc= 1 ;
+            aux.cat= 4;
             negocio.agregar(aux);
             Response.Redirect("GestionStock.aspx");
 

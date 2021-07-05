@@ -45,7 +45,7 @@ namespace TPC_Fernandez_Herrera
             List<Componente> ListaBuscados = new List<Componente>();
             if (Session["listabuscados"] == null)
             {
-                Session.Add("listabuscados",ListaBuscados);
+                Session.Add("listabuscados",ListaBuscados); 
             }
             ListaBuscados = (List<Componente>) Session["ListarComponentes"];
             Session["listabuscados"] = ListaBuscados.FindAll(c => c.Nombre.ToUpper().Contains(TxtBuscar.Text.ToUpper()));

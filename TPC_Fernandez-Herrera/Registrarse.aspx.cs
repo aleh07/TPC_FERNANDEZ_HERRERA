@@ -11,6 +11,7 @@ namespace TPC_Fernandez_Herrera
 {
     public partial class Registrarse : System.Web.UI.Page
     {
+        public List<Usuario> listaUsuario { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
            
@@ -32,9 +33,12 @@ namespace TPC_Fernandez_Herrera
             aux.Dni = Convert.ToInt32(TxtDni.Text);
             aux.Tipo = 'C';
             aux.Estado = 1;
-            
-          
-
+           
+            //Guardo el nuevo usuario en la lista de usuarios
+           //listaUsuario.Add.Items(aux);
+            //Session.Add("ListaUsuario", listaUsuario);
+            //Guardo el nuevo usuario 
+            Session.Add("Usuario",aux);
             negocio.agregar(aux);
             //falta mandar el email
             Response.Redirect("Login.aspx");
