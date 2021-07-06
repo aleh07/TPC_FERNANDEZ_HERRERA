@@ -31,6 +31,7 @@ namespace TPC_Fernandez_Herrera
             aux.Apellido = TxtApellido.Text;
             aux.Fecha = Convert.ToDateTime(TxtFechaNac.Text);
             aux.Dni = Convert.ToInt32(TxtDni.Text);
+            aux.Email = Txtemail.Text;
             aux.Tipo = 'C';
             aux.Estado = 1;
            

@@ -11,7 +11,7 @@ namespace TPC_Fernandez_Herrera
 {
     public partial class CarritoCompra : System.Web.UI.Page
     {
-
+        
         Componente producto = new Componente();
         public Carrito carrito = new Carrito();
         Item item = new Item();
@@ -121,17 +121,11 @@ namespace TPC_Fernandez_Herrera
 
         protected void BtnComprar_Click(object sender, EventArgs e)
         {
-            //if (Logeo==true)
-            //{
-            //    Response.Redirect("Compras");
-
-            //}
-            //else
-            //{
-            //    Response.Redirect("Resgsitrarse.aspx");
-            //}
-            Response.Redirect("Compras.aspx");
+            Response.Redirect("Login.aspx");
+            
         }
+
+      
 
         
     }

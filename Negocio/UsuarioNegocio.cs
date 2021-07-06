@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using Dominio;
@@ -37,6 +38,42 @@ namespace Negocio
 
                 throw;
             }
+        }
+
+        public Usuario ValidarUsuarios(string usuario, string pass)
+        {
+            Usuario cuenta = new Usuario();
+            AccesoDatos Datos = new AccesoDatos();
+
+            Datos.setearConsulta("select u.Id,u.nombre,u.apellido,u.fechanac,u.dni from usuarios as u where u.NOMBREUSUARIO= '" + usuario + "'and u.PASS='" + pass +"'") ;
+            Datos.ejecutarLectura();
+
+            try
+            {
+                Datos.Lector.Read();
+                
+                    Usuario aux = new Usuario();
+                    aux.ID = (long)Datos.Lector["Id"];
+                    aux.Nombre = (string)Datos.Lector["Nombre"];
+                    aux.Apellido = (string)Datos.Lector["Apellido"];
+                    aux.Fecha = (DateTime)Datos.Lector["fechanac"];
+                    aux.Dni = (int)Datos.Lector["dni"];
+
+      
+                
+                return aux;
+            }
+            catch (Exception )
+            {
+
+                return null;
+            }
+            finally
+            {
+                Datos.cerrarConexion();
+            }
+
+
         }
     }
 }

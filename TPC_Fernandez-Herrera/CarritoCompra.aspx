@@ -59,7 +59,7 @@
                 <asp:Label ID="lblTotal" runat="server" />
             </p>
             <asp:Label ID="lblPrueba" runat="server" Visible="false" />
-    <%/*agregue el bton comprar que mandaria a registrarse si es k no esta registrado o mandaria a comprar si lo esta, nose como hacerlo  todavia"%>
+    <%/*agregue el bton comprar que mandaria a registrarse si es k no esta registrado o mandaria a comprar si lo esta, nose como hacerlo  todavia"*/%>
               <p><asp:Button Text="Comprar" CssClass="boton__Comprar" AutoPostBack="true" ID="btnComprar" Onclick="BtnComprar_Click" runat="server" /></p>
 
 

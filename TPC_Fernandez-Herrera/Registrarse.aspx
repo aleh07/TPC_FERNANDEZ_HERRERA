@@ -15,6 +15,8 @@
         <asp:TextBox ID="TxtFechaNac" class="form-control" type="text" placeholder="Ingrese su Fecha Nacimiento" aria-label="Ingrese Precio" runat="server"></asp:TextBox>
         <h3>Dni</h3>
         <asp:TextBox ID="TxtDni" class="form-control" type="text" placeholder="Ingrese su Dni" aria-label="Ingrese UrlImagen" runat="server"></asp:TextBox>
+        <h3>Email</h3>
+        <asp:TextBox ID="Txtemail" class="form-control" type="text" placeholder="Ingrese su Email" aria-label="Ingrese UrlImagen" runat="server"></asp:TextBox>
        
 
         <asp:Button ID="BtnAgregar" Text="Agregar" onclick="BtnAgregar_Click" runat="server" CssClass="btn btn-secondary" />

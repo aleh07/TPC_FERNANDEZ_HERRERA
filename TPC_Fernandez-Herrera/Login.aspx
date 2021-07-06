@@ -18,11 +18,11 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputCity">Usuario</label>
-                        <asp:TextBox ID="TextBox1" placeholder="usuario" CssClass="form-control" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TxtUser" placeholder="usuario" CssClass="form-control" runat="server"></asp:TextBox>
                     <br />
                      <label for="inputCity">Password</label>
 
-                    <asp:TextBox ID="TextBox2" type="password" placeholder="Password" CssClass="form-control" runat="server"></asp:TextBox><br />
+                    <asp:TextBox ID="TxtPass" type="password" placeholder="Password" CssClass="form-control" runat="server"></asp:TextBox><br />
                     <asp:Label ID="Label1" runat="server" ForeColor="#CC0000"></asp:Label>
                     <br />
                     <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Login" OnClick="Button1_Click"/>
