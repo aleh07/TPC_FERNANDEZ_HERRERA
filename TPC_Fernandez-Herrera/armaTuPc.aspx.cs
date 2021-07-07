@@ -20,7 +20,7 @@ namespace TPC_Fernandez_Herrera
             {
                 if(!IsPostBack)
                 {
-                    
+                    cargarCatalogo();
                         listaComponente = (List<Componente>)Session["ListaComponente"];
                     
                     
@@ -43,13 +43,13 @@ namespace TPC_Fernandez_Herrera
 
             if (listaArmado == null)
             {
-                listaComponente = listaComponentes.FindAll(x => x.categoria.Nombre.ToLower().Contains("Procesadores") );
+                listaComponente = listaComponentes.FindAll(x => x.categoria.Nombre.ToLower().Contains("procesadores") );
                 Session.Add("listaComponente", listaComponente);
 
             }
             else if (listaArmado.Count == 1)
             {
-                listaComponente = listaComponentes.FindAll(x => x.categoria.Nombre.ToLower().Contains("Motherboars"));
+                listaComponente = listaComponentes.FindAll(x => x.categoria.Nombre.ToLower().Contains("motherboards"));
                 Session.Add("listaComponente", listaComponente);
             }
             else if (listaArmado.Count == 2)

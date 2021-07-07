@@ -25,7 +25,7 @@ namespace Negocio
                         aux.ID = (long)Datos.Lector["Id"];
                         aux.Nombre = (string)Datos.Lector["Nombre"];  
                     //buscar la manera para que sean solo 2 digitos luego de la coma
-                        aux.Precio = (Decimal)Datos.Lector["Precio"];         
+                        aux.Precio = (decimal)Datos.Lector["Precio"];         
                         aux.Descripcion = (string)Datos.Lector["Descripcion"];
                         aux.ImagenUrl = (string)Datos.Lector["ImagenUrl"];
                     aux.Cantidad = (int)Datos.Lector["Cantidad"];
@@ -58,6 +58,7 @@ namespace Negocio
                 datos.setearConsulta("INSERT Into Componentes (Nombre,Descripcion,Precio,ImagenUrl,Cantidad,Estado,IdMarca,IdCategoria) " +
                                    "values (@Nombre,@Descripcion,@Precio,@ImagenUrl,@Cantidad,@Estado,@Marca,@Categoria)");
 
+              
 
                 datos.setearParametro("@Nombre", nuevo.Nombre);
                 datos.setearParametro("@Descripcion", nuevo.Descripcion);

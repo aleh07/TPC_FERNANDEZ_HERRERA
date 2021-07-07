@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Dominio;
+using Negocio;
 
 namespace TPC_Fernandez_Herrera
 {
@@ -13,20 +14,23 @@ namespace TPC_Fernandez_Herrera
         public List<Componente> listaComponentes;
         protected void Page_Load(object sender, EventArgs e)
         {
+            ComponenteNegocio negocio = new ComponenteNegocio();
             try
             {
                 if (!IsPostBack)
                 {
-                    listaComponentes = (List<Componente>)Session["ListarComponentes"];
+                    listaComponentes = negocio.Listar();
+                   
 
                 }
                 repetidor.DataSource = listaComponentes;
                 repetidor.DataBind();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                Session.Add("Error", ex.ToString());
+                Response.Redirect("Error.aspx");
             }
             
         }
