@@ -9,8 +9,7 @@
 </head>
 <body>
 
-        <div class="modal-dialog text-center">
-        <div class="col-sm-8 main-section shadow-lg p-3 mb-5 bg-body rounded">
+
            
                 <form class="col-12" runat="server">
                     <h1>Ingresar</h1>
@@ -22,15 +21,13 @@
                         <asp:TextBox ID="TxtPass" type="password" placeholder="Password" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
                     <br />
-                         <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Login" OnClick="Button1_Click"/>
+                    <asp:Button ID="btnIngresar" runat="server" CssClass="btn btn-primary" Text="Login" OnClick="btnIngresar_Click" />
                 <br />
                 </form>
                 <br />
                 <div class="col-12 forgot">
                     <a href="#">Recordar contrasena?</a>
                 </div>
-            </div>
-    </div>
-      
+
 </body>
 </html>

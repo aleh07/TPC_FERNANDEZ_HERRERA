@@ -48,13 +48,14 @@
                     </td>
                     <td>
                         <p>
-                            <asp:TextBox  TextMode="Number" runat="server" ID="txtCantidad" OnTextChanged="txtCantidad_TextChanged" Text='<%#Eval("Cantidad")%>'  min="1"/>
-                           <asp:Button Text="Agregar"  AutoPostBack="true" ID="btnAgregar" OnClick="btnAgregar_Click" CommandArgument='<%#Eval("ID")%>' runat="server"/>
+                            <%--<asp:TextBox  TextMode="Number" runat="server" ID="txtCantidad" OnTextChanged="txtCantidad_TextChanged" Text='<%#Eval("Cantidad")%>'  min="1"/>--%>
+                           <%--<asp:Button Text="Agregar"  AutoPostBack="true" ID="btnAgregar" OnClick="btnAgregar_Click" CommandArgument= runat="server"/>--%>
                         </p>
                     </td>
                 </tbody>
             </ItemTemplate>
         </asp:Repeater>
+        
     </table>
-
+            <asp:Button id="btnAlta" Text="Alta" OnClick="btnAlta_Click" runat="server"/>
 </asp:Content>

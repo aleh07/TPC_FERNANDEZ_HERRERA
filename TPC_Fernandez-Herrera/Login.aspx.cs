@@ -18,14 +18,14 @@ namespace TPC_Fernandez_Herrera
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void btnIngresar_Click(object sender, EventArgs e)
         {
             string user = TxtUser.Text;
             string pass = TxtPass.Text;
-            Usuario cuenta = negocio.ValidarUsuarios(user,pass);
-            if (cuenta != null)
+            Usuario cuenta = negocio.ValidarUsuarios(user, pass);
+            if (cuenta != null )
             {
-                Session.Add("Cuenta",cuenta);
+                Session.Add("Cuenta", cuenta);
                 Response.Redirect("Compras.aspx");
 
             }

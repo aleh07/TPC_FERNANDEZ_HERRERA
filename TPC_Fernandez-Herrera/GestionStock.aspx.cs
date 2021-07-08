@@ -31,5 +31,10 @@ namespace TPC_Fernandez_Herrera
             }
 
         }
+
+        protected void btnAlta_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AltaComponente.aspx");
+        }
     }
 }
