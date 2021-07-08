@@ -47,7 +47,9 @@
     <Compile Include="Item.cs" />
     <Compile Include="Marca.cs" />
     <Compile Include="Mensaje.cs" />
+    <Compile Include="Pedidos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TiposPedidos.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -43,7 +43,7 @@ namespace TPC_Fernandez_Herrera
             aux.Descripcion = TxtDescripcion.Text;
             aux.ImagenUrl = TxtImagenUrl.Text;
             aux.Cantidad = Convert.ToInt32(TxtCant.Text);
-            aux.Estado = 1;
+            aux.Estado = true;
             aux.marc= 1 ;
             aux.cat= 4;
             negocio.agregar(aux);

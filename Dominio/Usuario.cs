@@ -24,7 +24,7 @@ namespace Dominio
         public  int Dni { get; set; }
         public string Pass { get; set; }
         public  char Tipo { get; set; }
-        public int Estado { get; set; }
+        public bool Estado { get; set; }
 
        
 

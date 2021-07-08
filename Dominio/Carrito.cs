@@ -9,9 +9,9 @@ namespace Dominio
    public class Carrito
     {
    
-        public long IdCliente { get; set; }
-     
+        public long Id { get; set; }
 
+        public long IdUsuario { get; set; }
         public DateTime FechaCarrito { get; set; }
         public List<Item> Items { get; set; }
         public decimal totalCarrito(Carrito carrito)

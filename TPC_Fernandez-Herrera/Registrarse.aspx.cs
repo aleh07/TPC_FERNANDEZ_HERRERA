@@ -33,7 +33,7 @@ namespace TPC_Fernandez_Herrera
             aux.Dni = Convert.ToInt32(TxtDni.Text);
             aux.Email = Txtemail.Text;
             aux.Tipo = 'C';
-            aux.Estado = 1;
+            aux.Estado = true;
            
             //Guardo el nuevo usuario en la lista de usuarios
            //listaUsuario.Add.Items(aux);

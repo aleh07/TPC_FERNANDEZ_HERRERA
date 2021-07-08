@@ -42,22 +42,22 @@ namespace TPC_Fernandez_Herrera
         protected global::System.Web.UI.WebControls.Repeater repetidor;
 
         /// <summary>
-        /// Control LblDireccion.
+        /// Control TxtDireccion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblDireccion;
+        protected global::System.Web.UI.WebControls.TextBox TxtDireccion;
 
         /// <summary>
-        /// Control LblTelofono.
+        /// Control TxtTelefono.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblTelofono;
+        protected global::System.Web.UI.WebControls.TextBox TxtTelefono;
 
         /// <summary>
         /// Control btnConfirmarCompra.

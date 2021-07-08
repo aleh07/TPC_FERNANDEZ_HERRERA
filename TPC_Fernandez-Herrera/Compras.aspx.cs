@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Negocio;
 
 namespace TPC_Fernandez_Herrera
 {
@@ -121,15 +122,33 @@ namespace TPC_Fernandez_Herrera
             }
             catch (Exception ex)
             {
-
+                
                 throw ex;
             }
         }
 
         protected void btnConfirmarCompra_Click(object sender, EventArgs e)
         {
-            //aca agrego la direccion y un telefono es es opcional por son campos null en la DB y genero  un pedido ahi si con todos los datos necesarios
+       
+            PedidoNegocio negocio = new PedidoNegocio();
+            int id =  + 1;
+            //aca agrego la direccion y un telefono es es opcional por que son campos null en la DB y genero  un pedido ahi si con todos los datos necesarios
             //desorrolar la funcion en negocio que inserte en la  DB un pedido
+            Pedidos pedido= new Pedidos();
+            pedido.direccion = TxtDireccion.Text;
+            pedido.Telefono = Convert.ToInt32(TxtTelefono.Text);
+
+            pedido.Estado = true;
+            //cargar en la DB los tipos de pedidos
+            pedido.Tipos.Id= 1;
+            //dentro de carrito tengo el id del usuario ,el producto y el item
+            pedido.carrito.Id = id;
+            pedido.carrito = carrito;
+          
+            negocio.agregar(pedido);
+            //mandar mensaje de alta exitosa 
+            
+         
         }
     }
 }

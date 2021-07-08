@@ -61,9 +61,12 @@
         </asp:Repeater>
 
         <%/*aca pongo la direccion de entrega*/%>
-  
-     <p>  <asp:Label ID="LblDireccion" runat="server" /> </p>
-     <p>  <asp:Label ID="LblTelofono" runat="server" /> </p>
+        <h3>Direccion</h3>
+        <asp:TextBox ID="TxtDireccion" class="form-control" type="text" placeholder="Ingrese su direccion" aria-label="Ingrese Nombre" runat="server"></asp:TextBox>
+        <h3>Telefono</h3>
+        <asp:TextBox ID="TxtTelefono" class="form-control" type="text" placeholder="Ingrese su telefono" aria-label=" Ingrese Descripcion " runat="server"></asp:TextBox>
+       
+
          <p> <asp:Button Text="Confirmar Compra" CssClass="boton__ConfirmarCompra"  AutoPostBack="true" ID="btnConfirmarCompra" OnClick="btnConfirmarCompra_Click" runat="server" />   </p>
 
 

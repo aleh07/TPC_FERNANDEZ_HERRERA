@@ -1,4 +1,3 @@
-
 SET DATEFORMAT dmy;
 
 create database Fernandez_Herrera_DB
@@ -55,33 +54,35 @@ create table COMPONENTES (
 )
 
 GO
-create table ITEMS (
-ID BIGINT NOT NULL PRIMARY KEY,
-IDCOMPONENTE BIGINT NOT NULL FOREIGN KEY REFERENCES COMPONENTES(ID),
-CANTIDAD INT NOT NULL,
-SUBTOTAL MONEY CHECK(SUBTOTAL > 0)
-)
-GO
 create table CARRITO(
-ID INT NOT NULL PRIMARY KEY,
+ID INT NOT NULL PRIMARY KEY ,
 IDUSUARIO BIGINT NOT NULL FOREIGN KEY REFERENCES USUARIOS(ID), 
-IDITEM BIGINT NOT NULL FOREIGN KEY REFERENCES ITEMS(ID),
 TOTAL MONEY NOT NULL
 )
+GO
+create table ITEMS (
+ID BIGINT NOT NULL identity (1,1), 
+IDCARRITO INT NOT NULL FOREIGN KEY REFERENCES CARRITO (ID),
+CANTIDAD INT NOT NULL,
+SUBTOTAL MONEY CHECK(SUBTOTAL > 0)
+PRIMARY KEY (ID,IDCARRITO)
+)
 go
+
 Create table TiposPedidos(
 ID int not null primary key identity(1,1),
 Nombre varchar(100) not null
 )
+
 go
 Create table Pedidos( 
 Id bigint not null identity(1,1),
-Cliente bigint not null foreign key references Usuarios( ID),
+Usuario bigint not null foreign key references Usuarios( ID),
 Direccion varchar ( 100) not null,
-TelefonoContacto int null,
+TelefonoContacto int  null,
 EstadoPedido int not null foreign key references TiposPedidos( ID),
 Carrito int not null foreign key references Carrito (id)
-Primary key(cliente,carrito),
+Primary key(usuario,carrito),
 Estado bit not null
 )
 go
@@ -99,6 +100,11 @@ INSERT INTO USUARIOS VALUES('ATX32','LAURA','GOMEZ','03/11/1997',44432234,'ATX32
 --MENSAJE
 INSERT INTO MENSAJES VALUES(1,1,'QUISIERA SABER SI TIENE STOCK','HOLA ,SI TENEMOS')
 INSERT INTO MENSAJES VALUES(1,1,'ACEPTAN CABAL','HOLA ,POR EL MOMENTO SOLO TRABAJAMOS CON VISA')
+--TIPOS PEDIDOS
+INSERT INTO TiposPedidos VALUES ('PENDIENTE')
+INSERT INTO TiposPedidos VALUES ('EN PROCESO')
+INSERT INTO TiposPedidos VALUES ('EN CAMINO')
+INSERT INTO TiposPedidos VALUES ('ENTREGADO')
 --datos categorias
 insert  into CATEGORIAS values('Accesorios')
 insert  into CATEGORIAS values('Auriculares') 
