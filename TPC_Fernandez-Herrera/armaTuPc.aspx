@@ -14,7 +14,7 @@
 
                     <div class="col">
                         <div class="card border-dark mb-3" style="width: 18rem; margin-top: 20px">
-                            <img src="<%#Eval("ImagenUrl")%>" class="card-img-top" alt="...">
+                            <img src="<%#Eval("ImagenUrl")%>" class="card-img-top" alt="<%#Eval("Nombre")%>">
                             <div class="card-body">
                                 <h5 class="card-title"><%#Eval("Nombre")%></h5>
                                 <p class="card-text"><%#Eval("Descripcion")%></p>
@@ -26,7 +26,7 @@
 
                 </ItemTemplate>
             </asp:Repeater>
-        </div>
+       </div>
 
     </div>
 </asp:Content>

@@ -11,6 +11,43 @@ namespace Negocio
 {
     public class UsuarioNegocio
     {
+        public List<Usuario> Listar()
+        {
+            List<Usuario> lista = new List<Usuario>();
+            AccesoDatos Datos = new AccesoDatos();
+
+            Datos.setearConsulta("select ID,NOMBREUSUARIO,NOMBRE,APELLIDO,FECHANAC,DNI,TIPO,ESTADO from USUARIOS");
+            Datos.ejecutarLectura();
+
+            try
+            {
+                while (Datos.Lector.Read())
+                {
+                    Usuario aux = new Usuario();
+                    aux.ID = (long)Datos.Lector["ID"];
+                    aux.Nombre = (string)Datos.Lector["NOMBRE"];
+                    aux.NombreUsuario = (string)Datos.Lector["NOMBREUSUARIO"];
+                    aux.Apellido = (string)Datos.Lector["APELLIDO"];
+                    aux.Fecha = (DateTime)Datos.Lector["FECHANAC"];
+                    aux.Dni= (int)Datos.Lector["DNI"];
+                    aux.Tipo = (char)Datos.Lector["TIPO"];
+                    aux.Estado = (int)Datos.Lector["ESTADO"];
+
+                    lista.Add(aux);
+                }
+                return lista;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                Datos.cerrarConexion();
+            }
+        }
+
         public void agregar(Usuario nuevo)
         {
             AccesoDatos datos = new AccesoDatos();
@@ -45,25 +82,25 @@ namespace Negocio
             Usuario cuenta = new Usuario();
             AccesoDatos Datos = new AccesoDatos();
 
-            Datos.setearConsulta("select u.Id,u.nombre,u.apellido,u.fechanac,u.dni from usuarios as u where u.NOMBREUSUARIO= '" + usuario + "'and u.PASS='" + pass +"'") ;
+            Datos.setearConsulta("select u.Id,u.nombre,u.apellido,u.fechanac,u.dni from usuarios as u where u.NOMBREUSUARIO= '" + usuario + "'and u.PASS='" + pass + "'");
             Datos.ejecutarLectura();
 
             try
             {
                 Datos.Lector.Read();
-                
-                    Usuario aux = new Usuario();
-                    aux.ID = (long)Datos.Lector["Id"];
-                    aux.Nombre = (string)Datos.Lector["Nombre"];
-                    aux.Apellido = (string)Datos.Lector["Apellido"];
-                    aux.Fecha = (DateTime)Datos.Lector["fechanac"];
-                    aux.Dni = (int)Datos.Lector["dni"];
 
-      
-                
+                Usuario aux = new Usuario();
+                aux.ID = (long)Datos.Lector["Id"];
+                aux.Nombre = (string)Datos.Lector["Nombre"];
+                aux.Apellido = (string)Datos.Lector["Apellido"];
+                aux.Fecha = (DateTime)Datos.Lector["fechanac"];
+                aux.Dni = (int)Datos.Lector["dni"];
+
+
+
                 return aux;
             }
-            catch (Exception )
+            catch (Exception)
             {
 
                 return null;

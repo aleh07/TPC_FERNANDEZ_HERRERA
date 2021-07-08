@@ -71,7 +71,9 @@
     <Content Include="armaTuPc.aspx" />
     <Content Include="CarritoCompra.aspx" />
     <Content Include="Compras.aspx" />
+    <Content Include="Error.aspx" />
     <Content Include="GestionStock.aspx" />
+    <Content Include="gestionUsuarios.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="NuestraEmpresa.aspx" />
@@ -109,12 +111,26 @@
     <Compile Include="Compras.aspx.designer.cs">
       <DependentUpon>Compras.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GestionStock.aspx.cs">
       <DependentUpon>GestionStock.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GestionStock.aspx.designer.cs">
       <DependentUpon>GestionStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gestionUsuarios.aspx.cs">
+      <DependentUpon>gestionUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gestionUsuarios.aspx.designer.cs">
+      <DependentUpon>gestionUsuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>

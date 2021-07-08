@@ -30,7 +30,7 @@
                                 <a id="armatupcPestaña" class="nav-link" href="armaTuPC.aspx">Arma tu PC</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="CarritoCompra.aspx">Carrito</a>
+                                <a class="nav-link" href="GestionUsuarios.aspx">Gestion Usuarios</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="GestionStock.aspx">Gestion Stock</a>
