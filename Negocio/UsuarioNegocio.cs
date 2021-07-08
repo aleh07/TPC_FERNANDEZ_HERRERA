@@ -31,7 +31,7 @@ namespace Negocio
                     aux.Fecha = (DateTime)Datos.Lector["FECHANAC"];
                     aux.Dni= (int)Datos.Lector["DNI"];
                     aux.Tipo = (char)Datos.Lector["TIPO"];
-                    aux.Estado = (int)Datos.Lector["ESTADO"];
+                    aux.Estado = (bool)Datos.Lector["ESTADO"];
 
                     lista.Add(aux);
                 }

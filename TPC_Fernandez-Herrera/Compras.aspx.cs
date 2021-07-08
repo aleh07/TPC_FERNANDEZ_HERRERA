@@ -22,6 +22,11 @@ namespace TPC_Fernandez_Herrera
             
             Usuario usuariologuiado = new Usuario();
             usuariologuiado = (Usuario)Session["cuenta"];
+
+            PedidoNegocio negocio = new PedidoNegocio();
+
+            List<TiposPedidos> tipoLista = negocio.listar();
+            Session.Add("listaTipos", tipoLista);
             
             LblNombre.Text = usuariologuiado.Nombre;
             LblApellido.Text = usuariologuiado.Apellido;
@@ -131,6 +136,7 @@ namespace TPC_Fernandez_Herrera
         {
        
             PedidoNegocio negocio = new PedidoNegocio();
+            List<TiposPedidos> listaTipos = (List<TiposPedidos>) Session["listaTipos"];
             int id =  + 1;
             //aca agrego la direccion y un telefono es es opcional por que son campos null en la DB y genero  un pedido ahi si con todos los datos necesarios
             //desorrolar la funcion en negocio que inserte en la  DB un pedido
@@ -140,9 +146,10 @@ namespace TPC_Fernandez_Herrera
 
             pedido.Estado = true;
             //cargar en la DB los tipos de pedidos
-            pedido.Tipos.Id= 1;
-            //dentro de carrito tengo el id del usuario ,el producto y el item
-            pedido.carrito.Id = id;
+            pedido.Tipos = listaTipos.Find(x => x.Id == 1);
+            //dentro de carrito tengo el id del usuario ,el producto y el item, 
+            // List<carrito> listaCarrito . find (x.idCliente == session sacar id del usuario)
+           
             pedido.carrito = carrito;
           
             negocio.agregar(pedido);

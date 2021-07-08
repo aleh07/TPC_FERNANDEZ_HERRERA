@@ -8,30 +8,29 @@
     <title>Compu solution</title>
 </head>
 <body>
-    <form id="form1" runat="server">
-          <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-6">
-                    <h3>Ingreso al sistema</h3>
-                     <img class="img-fluid rounded-circle  centrado" src="" alt="cpiprodesign">
-                 
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputCity">Usuario</label>
-                        <asp:TextBox ID="TxtUser" placeholder="usuario" CssClass="form-control" runat="server"></asp:TextBox>
-                    <br />
-                     <label for="inputCity">Password</label>
 
-                    <asp:TextBox ID="TxtPass" type="password" placeholder="Password" CssClass="form-control" runat="server"></asp:TextBox><br />
-                    <asp:Label ID="Label1" runat="server" ForeColor="#CC0000"></asp:Label>
-                    <br />
-                    <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Login" OnClick="Button1_Click"/>
-              
-                        </div>
+        <div class="modal-dialog text-center">
+        <div class="col-sm-8 main-section shadow-lg p-3 mb-5 bg-body rounded">
+           
+                <form class="col-12" runat="server">
+                    <h1>Ingresar</h1>
+                    <div class="form-group" id="user-group">
+                        <asp:TextBox ID="TxtUser" placeholder="usuario" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
+                    <br />
+                    <div class="form-group" id="contrasena-group">
+                        <asp:TextBox ID="TxtPass" type="password" placeholder="Password" CssClass="form-control" runat="server"></asp:TextBox>
+                    </div>
+                    <br />
+                         <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Login" OnClick="Button1_Click"/>
+                <br />
+                </form>
+                <br />
+                <div class="col-12 forgot">
+                    <a href="#">Recordar contrasena?</a>
                 </div>
             </div>
-        </div>
-        </form>
+    </div>
+      
 </body>
 </html>

@@ -9,6 +9,35 @@ namespace Negocio
 {
    public class PedidoNegocio
     {
+
+        public List<TiposPedidos> listar()
+        {
+            List<TiposPedidos> lista = new List<TiposPedidos>();
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("select id, nombre from TiposPedidos");
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    lista.Add(new TiposPedidos((int)datos.Lector["id"], (string)datos.Lector["nombre"]));
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+
         public void agregar(Pedidos nuevo)
         {
             AccesoDatos datos = new AccesoDatos();

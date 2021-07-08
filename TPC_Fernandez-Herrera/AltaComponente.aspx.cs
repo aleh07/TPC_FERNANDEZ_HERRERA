@@ -52,17 +52,16 @@ namespace TPC_Fernandez_Herrera
             aux.Descripcion = TxtDescripcion.Text;
             aux.ImagenUrl = TxtImagenUrl.Text;
             aux.Cantidad = Convert.ToInt32(TxtCant.Text);
-<<<<<<< HEAD
+
             aux.Estado = true;
             aux.marc= 1 ;
             aux.cat= 4;
-=======
-            aux.Estado = 1;
+
+            aux.Estado = true;
             aux.marca = marcas.Find(x => x.Id == int.Parse(ddlMarca.SelectedValue));
             aux.categoria = categorias.Find(x => x.Id == Convert.ToInt32(ddlCategoria.SelectedItem.Value));
             aux.Precio = decimal.Parse(TxtPrecio.Text);
 
->>>>>>> 35f33dd30c7e4ba24304deb229c3bd6ecd06df2f
             negocio.agregar(aux);
 
             Response.Redirect("GestionStock.aspx");
