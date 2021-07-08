@@ -14,44 +14,21 @@ namespace TPC_Fernandez_Herrera
         public List<Componente> listaComponentes;
         protected void Page_Load(object sender, EventArgs e)
         {
-            ComponenteNegocio negocio = new ComponenteNegocio();
             try
             {
                 if (!IsPostBack)
                 {
-                    listaComponentes = negocio.Listar();
-                   
+                    listaComponentes = (List<Componente>)Session["ListarComponentes"];
 
                 }
                 repetidor.DataSource = listaComponentes;
                 repetidor.DataBind();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                Session.Add("Error", ex.ToString());
-                Response.Redirect("Error.aspx");
+                throw;
             }
-            
-        }
-
-        protected void btnModificar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnAgregar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void txtCantidad_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnModificar_Click1(object sender, EventArgs e)
-        {
 
         }
     }

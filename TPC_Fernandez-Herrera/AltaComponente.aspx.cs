@@ -60,7 +60,7 @@ namespace TPC_Fernandez_Herrera
             aux.Estado = true;
             aux.marca = marcas.Find(x => x.Id == int.Parse(ddlMarca.SelectedValue));
             aux.categoria = categorias.Find(x => x.Id == Convert.ToInt32(ddlCategoria.SelectedItem.Value));
-            aux.Precio = decimal.Parse(TxtPrecio.Text);
+            aux.Precio = decimal.Parse(txtPrecio.Text);
 
             negocio.agregar(aux);
 
