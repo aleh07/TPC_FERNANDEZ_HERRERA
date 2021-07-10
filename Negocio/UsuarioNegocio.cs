@@ -82,7 +82,8 @@ namespace Negocio
             Usuario cuenta = new Usuario();
             AccesoDatos Datos = new AccesoDatos();
 
-            Datos.setearConsulta("select u.Id,u.nombre,u.apellido,u.fechanac,u.dni,u.Tipo from usuarios as u where u.NOMBREUSUARIO= '" + usuario + "'and u.PASS='" + pass + "'");
+           // Datos.setearConsulta("select u.Estado,u.NombreUsuario,u.Dni,u.Direcion,u.Telefono,u.Id,u.Nombre,u.Apellido,u.Email,u.Pass,u.Tipo from usuarios as u where u.Email= '" + usuario + "'and u.Pass='" + pass + "'");
+            Datos.setearConsulta("select u.Id,u.Nombre,u.Apellido,u.Email,u.Pass,u.Tipo from usuarios as u where u.Email= '" + usuario + "'and u.Pass='" + pass + "'");
             Datos.ejecutarLectura();
 
             try
@@ -90,11 +91,16 @@ namespace Negocio
                 Datos.Lector.Read();
 
                 Usuario aux = new Usuario();
+                //estos atributos al estar nulos en la debe me dan error buscar la manera de que se puedan cargar a AUX aunke sean nulos como hice con nombreusuario
+                //aux.Estado = Convert.ToBoolean(Datos.Lector["Estado"]);
+                //aux.NombreUsuario= Convert.ToString(Datos.Lector["NombreUsuario"]);               
+                //aux.Dni =(int)Datos.Lector["Dni"];
+                //aux.Domicilio = (string)Datos.Lector["Direcion"];
+                //aux.Telefono = (int)Datos.Lector["Telefono"];               
                 aux.ID = (long)Datos.Lector["Id"];
                 aux.Nombre = (string)Datos.Lector["Nombre"];
                 aux.Apellido = (string)Datos.Lector["Apellido"];
-                aux.Fecha = (DateTime)Datos.Lector["fechanac"];
-                aux.Dni = (int)Datos.Lector["dni"];
+                aux.Pass = (string)Datos.Lector["Pass"];
                 aux.Tipo = (string)Datos.Lector["Tipo"];
 
 

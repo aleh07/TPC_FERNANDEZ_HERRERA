@@ -5,11 +5,9 @@
    <body class="body-register">
   <section class="form-register">
     <h4>Ingrese su Cuenta</h4> 
-    <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-    <input class="controls" type="password" name="password" id="password" placeholder="Ingrese su Contraseña">
-      
-    <p><a class="botons" href="Compras.aspx">ENTRAR</a></p>
-     
+    <asp:TextBox ID="TxtEmail" class="controls" type="Mail" placeholder="Ingrese su Email" aria-label="Ingrese Nombre" runat="server"></asp:TextBox>
+    <asp:TextBox ID="TxtPass" class="controls" type="password" placeholder="Ingrese su Contraseña" aria-label="Ingrese Nombre" runat="server"></asp:TextBox>
+     <asp:Button ID="BtnAgregar" Text="ENTRAR" onclick="BtnAgregar_Click" runat="server" CssClass="botons" />
     <p><a href="RegistrarCuenta.aspx">Registrarme</a></p>
  
   </section>

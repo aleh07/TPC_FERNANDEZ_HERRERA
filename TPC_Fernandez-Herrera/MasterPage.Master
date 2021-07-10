@@ -23,7 +23,7 @@
  
                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                            <a class="nav-link"  href="NuestraEmpresa.aspx">Nuestra Empresa</a>
+                            <a class="nav-link" Style="color:darkblue" href="Inicio.aspx">Compu solution</a>
                         </li>
                        
                         <li class="nav-item">
@@ -38,9 +38,7 @@
                             <a class="nav-link" href="GestionStock.aspx">Gestion Stock</a>
                            <%}%>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Registrarse.aspx">Registrarse</a>
-                        </li>
+                        
                         <li class="nav-item">
                             <a class="nav-link" href="CarritoCompra.aspx">Carrito</a>
                         </li>
@@ -56,7 +54,9 @@
                          <a class="form-control me-2"  href="Login.aspx"" >Login</a>
                         <%}
                               else
-                           {%> <a class="form-control me-2" href="Login.aspx">Logout</a> <%}%>
+                           {%> <a class="form-control me-2" href="Login.aspx">Logout</a>  
+                              <%// Session.Add("Cuenta",null);%>
+                             <%}%>
                  </div>
 
               

@@ -15,50 +15,41 @@ namespace TPC_Fernandez_Herrera
     public partial class Login : System.Web.UI.Page
     {
         UsuarioNegocio negocio = new UsuarioNegocio();
+        Usuario cuenta = new Usuario();
         protected void Page_Load(object sender, EventArgs e)
         {
-           
 
+            Session.Add("Cuenta", null);
         }
 
-        protected void btnIngresar_Click(object sender, EventArgs e)
+        protected void BtnAgregar_Click(object sender, EventArgs e)
         {
-            
-        //    string user = TxtUser.Text;
-        //    string pass = TxtPass.Text;
-        //    Usuario cuenta = negocio.ValidarUsuarios(user, pass);
-       
-        //    if (cuenta.Tipo =="C") 
-        //    {
-        //        Session.Add("admin","yes");
 
-        //    }
+            string user = TxtEmail.Text;
+            string pass = TxtPass.Text;
+            Usuario cuenta = negocio.ValidarUsuarios(user, pass);
 
-        //    //string pag = (string)Session["Pagina"];
-
-        //    if (cuenta != null  )
-        //    {
+            if (cuenta != null)
+            {
 
 
-        //        Session.Add("Cuenta", cuenta);
-                   
-        //            Response.Write("<script>alert('Cuenta Registrada');</script>");
-               
-        //            Response.Redirect("Compras.aspx");
-        //            }
-           
-        //    else
-        //    {
-        //        //mandar un mensaje de "debe loguiarse"
-        //        Response.Redirect("Inicio.aspx");
-        //    }
+                Session.Add("Cuenta", cuenta);
+
+                Response.Write("<script>alert('Cuenta Registrada');</script>");
+                //Nose como hacer para que despues de la alerta redirija a la pag compras
+                //Response.Redirect("Compras.aspx");
+            }
+
+            else
+            {
+                //mandar un mensaje de "debe loguiarse"
+                Response.Write("<script>alert('Cuenta o usuario Incorrecta');</script>");
+                //Response.Redirect("Inicio.aspx");
 
 
-        }
+            }
 
-        protected void EntrarCuenta_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Compras.aspx");
+
         }
     }
 }

@@ -16,26 +16,11 @@
                 </th>
                 <th scope="col">
                     <h4 class="titulo">Apellido</h4>
-                </th>
-                <th scope="col">
-                    <h4 class="titulo">Domicilio</h4>
-                </th>
-                <th scope="col">
-                    <h4 class="titulo">Telefono</h4>
-                </th>
-                <th scope="col">
-                    <h4 class="titulo">Fecha de Nacimiento</h4>
-                </th>
-                
-                <th scope="col">
-                    <h4 class="titulo">Dni</h4>
-                </th>
+                </th>            
                   <th scope="col">
                     <h4 class="titulo">Email</h4>
                 </th>
-               <th scope="col">
-                    <h4 class="titulo">NombreUsuario</h4>
-                </th>
+              
                 <th scope="col">
                     <h4 class="titulo">Contraseña</h4>
                 </th>
@@ -61,26 +46,10 @@
         <td>
             <p><%=item.Apellido%></p>
         </td>
-        <td>
-            <p><%=item.Domicilio%></p>
-        </td>
-        <td>
-            <p><%=item.Telefono%></p>
-        </td>
-        <td>
-            <p><%=item.Fecha%></p>
-        </td>
-
-        <td>
-            <p><%=item.Dni%></p>
-        </td>
+      
         <td>
             <p><%=item.Email%></p>
-        </td>
-        <td>
-            <p><%=item.NombreUsuario%></p>
-        </td>
-
+        </td>  
         <td>
             <p><%=item.Pass%></p>
         </td>
