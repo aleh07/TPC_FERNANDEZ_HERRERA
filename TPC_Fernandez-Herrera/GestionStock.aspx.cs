@@ -36,5 +36,20 @@ namespace TPC_Fernandez_Herrera
         {
             Response.Redirect("AltaComponente.aspx");
         }
+
+        protected void btnElimiar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnModificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

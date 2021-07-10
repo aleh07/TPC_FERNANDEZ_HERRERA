@@ -2,9 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <div class="table-responsive">
-    <table class="table">
-        <thead>
+        
+    <table class="table-stock">
+       
+        <thead style="background-color:green">
             <tr>
                 <th scope="col">
                     <h4 class="titulo">Nombre</h4>
@@ -26,7 +27,7 @@
                 </th>
             </tr>
         </thead>
-
+ 
         <asp:Repeater runat="server" ID="repetidor">
             <ItemTemplate>
                 <tbody>
@@ -55,7 +56,12 @@
                 </tbody>
             </ItemTemplate>
         </asp:Repeater>
-        
     </table>
-            <asp:Button id="btnAlta" Text="Alta" OnClick="btnAlta_Click" runat="server"/>
+
+            
+            <asp:Button type="button" class="btn btn-lg btn-primary" id="btnAlta" Text="Alta nuevo Componente" OnClick="btnAlta_Click" runat="server"/>
+     <asp:Button type="button" class="btn btn-secondary btn-lg"  id="btnModificar" Text="Modificar" OnClick="btnModificar_Click" runat="server"/>
+    <asp:Button  type="button" class="btn btn-outline-danger" id="btnEliminar" Text="Eliminar" OnClick="btnEliminar_Click" runat="server"/>
+
+
 </asp:Content>
