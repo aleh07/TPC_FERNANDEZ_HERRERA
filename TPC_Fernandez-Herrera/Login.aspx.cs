@@ -24,7 +24,7 @@ namespace TPC_Fernandez_Herrera
 
         protected void BtnAgregar_Click(object sender, EventArgs e)
         {
-
+           
             string user = TxtEmail.Text;
             string pass = TxtPass.Text;
             Usuario cuenta = negocio.ValidarUsuarios(user, pass);
@@ -38,6 +38,8 @@ namespace TPC_Fernandez_Herrera
                 Response.Write("<script>alert('Cuenta Registrada');</script>");
                 //Nose como hacer para que despues de la alerta redirija a la pag compras
                 //Response.Redirect("Compras.aspx");
+                if (cuenta.Tipo == "C") { Session.Add("admin", 1); }
+                else if(cuenta.Tipo == "U") { Session.Add("admin", null); }
             }
 
             else

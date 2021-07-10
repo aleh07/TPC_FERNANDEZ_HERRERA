@@ -28,7 +28,7 @@ namespace TPC_Fernandez_Herrera
             aux.Apellido = TxtApellido.Text;
             aux.Email = TxtEmail.Text;
             aux.Pass = TxtPass.Text;  
-            aux.Tipo = "C";
+            aux.Tipo = "U";
             aux.Estado = true;
 
             
