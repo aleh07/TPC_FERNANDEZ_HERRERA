@@ -8,8 +8,9 @@
         <thead>
             <tr>
                 <th scope="col">
-                    <h4 class="titulo">NombreUsuario</h4>
+                    <h4 class="titulo">ID</h4>
                 </th>
+              
                 <th scope="col">
                     <h4 class="titulo">Nombre</h4>
                 </th>
@@ -17,43 +18,81 @@
                     <h4 class="titulo">Apellido</h4>
                 </th>
                 <th scope="col">
-                    <h4 class="titulo">DNI</h4>
+                    <h4 class="titulo">Domicilio</h4>
                 </th>
                 <th scope="col">
-                    <h4 class="titulo">Nacimiento</h4>
+                    <h4 class="titulo">Telefono</h4>
                 </th>
-                 
                 <th scope="col">
-                    <h4 class="titulo">Estado </h4>
+                    <h4 class="titulo">Fecha de Nacimiento</h4>
                 </th>
+                
+                <th scope="col">
+                    <h4 class="titulo">Dni</h4>
+                </th>
+                  <th scope="col">
+                    <h4 class="titulo">Email</h4>
+                </th>
+               <th scope="col">
+                    <h4 class="titulo">NombreUsuario</h4>
+                </th>
+                <th scope="col">
+                    <h4 class="titulo">Contraseña</h4>
+                </th>
+                 <th scope="col">
+                    <h4 class="titulo">Tipo de cuenta</h4>
+                </th>
+                
             </tr>
         </thead>
 
-        <asp:Repeater runat="server" ID="repetidor">
-            <ItemTemplate>
-                <tbody>
-                    <td>
-                        <p><%#Eval("NombreUsuario")%></p>
-                    </td>
-                    <td>
-                        <p><%#Eval("Nombre")%></p>
-                    </td>
-                    <td>
-                        <p><%#Eval("Apellido")%></p>
-                    </td>
-                   
-                    <td>
-                        <p><%#Eval("Dni")%></p>
-                    </td>
-                    <td>
-                        <p><%#Eval("Fecha")%></p>
-                    </td>
-                    <td>
-                        <p><%#Eval("Estado")%></p>
-                    </td>
-                </tbody>
-            </ItemTemplate>
-        </asp:Repeater>
+
+
+        <%foreach (Dominio.Usuario item in listaUsuarios)
+                {%>
+        <tr>
+        <td>
+            <p><%=item.ID%></p>
+        </td>
+        <td>
+            <p><%=item.Nombre%></p>
+        </td>
+
+        <td>
+            <p><%=item.Apellido%></p>
+        </td>
+        <td>
+            <p><%=item.Domicilio%></p>
+        </td>
+        <td>
+            <p><%=item.Telefono%></p>
+        </td>
+        <td>
+            <p><%=item.Fecha%></p>
+        </td>
+
+        <td>
+            <p><%=item.Dni%></p>
+        </td>
+        <td>
+            <p><%=item.Email%></p>
+        </td>
+        <td>
+            <p><%=item.NombreUsuario%></p>
+        </td>
+
+        <td>
+            <p><%=item.Pass%></p>
+        </td>
+          <td>
+            <p><%=item.Tipo%></p>
+        </td>
+
+
+        </tr>
+        
+
+        <%} %>
     </table>
      
 </div>

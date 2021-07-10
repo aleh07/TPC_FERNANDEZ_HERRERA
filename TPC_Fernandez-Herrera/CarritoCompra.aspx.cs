@@ -122,6 +122,7 @@ namespace TPC_Fernandez_Herrera
         protected void BtnComprar_Click(object sender, EventArgs e)
         {
             Response.Redirect("Login.aspx");
+            Session.Add("Pagina","Carrito");
             
         }
 

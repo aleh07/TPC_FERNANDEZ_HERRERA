@@ -17,20 +17,16 @@ namespace TPC_Fernandez_Herrera
             UsuarioNegocio negocio = new UsuarioNegocio();
             try
             {
-                if (!IsPostBack)
-                {
                     listaUsuarios = negocio.Listar();
 
 
-                }
-                repetidor.DataSource = listaUsuarios;
-                repetidor.DataBind();
+               
             }
             catch (Exception ex)
             {
 
-                Session.Add("Error", ex.ToString());
-                Response.Redirect("Error.aspx");
+                //Session.Add("Error", ex.ToString());
+                //Response.Redirect("Error.aspx");
             }
         }
     }

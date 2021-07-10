@@ -15,6 +15,10 @@
         <asp:TextBox ID="TxtFechaNac" class="form-control" type="text" placeholder="Ingrese su Fecha Nacimiento" aria-label="Ingrese Precio" runat="server"></asp:TextBox>
         <h3>Dni</h3>
         <asp:TextBox ID="TxtDni" class="form-control" type="text" placeholder="Ingrese su Dni" aria-label="Ingrese UrlImagen" runat="server"></asp:TextBox>
+        <h3>Domicilio</h3>
+        <asp:TextBox ID="TxtDomicilio" class="form-control" type="text" placeholder="Ingrese su Domiclio" aria-label="Ingrese UrlImagen" runat="server"></asp:TextBox>
+       <h3>Telefono</h3>
+        <asp:TextBox ID="Txtelefono" class="form-control" type="text" placeholder="Ingrese su tel" aria-label="Ingrese UrlImagen" runat="server"></asp:TextBox>
         <h3>Email</h3>
         <asp:TextBox ID="Txtemail" class="form-control" type="text" placeholder="Ingrese su Email" aria-label="Ingrese UrlImagen" runat="server"></asp:TextBox>
        

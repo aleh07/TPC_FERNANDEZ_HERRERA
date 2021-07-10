@@ -11,26 +11,8 @@ namespace TPC_Fernandez_Herrera
 {
 
 
-    public partial class Registrarse
+    public partial class Loggin
     {
-
-        /// <summary>
-        /// Control TxtUsuario.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtUsuario;
-
-        /// <summary>
-        /// Control TxtContraseña.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtContraseña;
 
         /// <summary>
         /// Control TxtNombre.
@@ -51,49 +33,22 @@ namespace TPC_Fernandez_Herrera
         protected global::System.Web.UI.WebControls.TextBox TxtApellido;
 
         /// <summary>
-        /// Control TxtFechaNac.
+        /// Control TxtEmail.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtFechaNac;
+        protected global::System.Web.UI.WebControls.TextBox TxtEmail;
 
         /// <summary>
-        /// Control TxtDni.
+        /// Control TxtPass.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtDni;
-
-        /// <summary>
-        /// Control TxtDomicilio.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtDomicilio;
-
-        /// <summary>
-        /// Control Txtelefono.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Txtelefono;
-
-        /// <summary>
-        /// Control Txtemail.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Txtemail;
+        protected global::System.Web.UI.WebControls.TextBox TxtPass;
 
         /// <summary>
         /// Control BtnAgregar.

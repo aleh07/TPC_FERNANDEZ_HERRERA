@@ -14,6 +14,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{62ECEBDB-72B4-
 		TPC_Fernandez-Herrera\Fernadez-Herrera_DB\Fernandez_Herrera_DB.sql = TPC_Fernandez-Herrera\Fernadez-Herrera_DB\Fernandez_Herrera_DB.sql
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "imagenes", "imagenes", "{0649016F-18E5-448F-8DCD-E0B9FEE37B8D}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\..\Downloads\FORMULARIO DE REGISTRO DE YOUTUBE\Crear-un-Formulario-de-Registro-con-HTML-y-CSS-\fondoregistro.jpg = ..\..\..\..\..\..\Downloads\FORMULARIO DE REGISTRO DE YOUTUBE\Crear-un-Formulario-de-Registro-con-HTML-y-CSS-\fondoregistro.jpg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -75,6 +75,7 @@
     <Content Include="GestionStock.aspx" />
     <Content Include="gestionUsuarios.aspx" />
     <Content Include="Inicio.aspx" />
+    <Content Include="RegistrarCuenta.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="NuestraEmpresa.aspx" />
     <Content Include="estilos.css" />
@@ -138,6 +139,13 @@
     </Compile>
     <Compile Include="Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarCuenta.aspx.cs">
+      <DependentUpon>RegistrarCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarCuenta.aspx.designer.cs">
+      <DependentUpon>RegistrarCuenta.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

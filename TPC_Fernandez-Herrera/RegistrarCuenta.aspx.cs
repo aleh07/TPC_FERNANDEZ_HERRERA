@@ -4,18 +4,16 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Dominio;
 using Negocio;
+using Dominio;
 
 namespace TPC_Fernandez_Herrera
 {
-    public partial class Registrarse : System.Web.UI.Page
+    public partial class Loggin : System.Web.UI.Page
     {
         public List<Usuario> listaUsuario { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
-           
-           
 
         }
 
@@ -25,27 +23,20 @@ namespace TPC_Fernandez_Herrera
 
             Usuario aux = new Usuario();
 
-            aux.NombreUsuario = TxtUsuario.Text;
-            aux.Pass = TxtContraseña.Text;
-            aux.Nombre = TxtNombre.Text;
+
+            aux.Nombre = TxtNombre.Text ;
             aux.Apellido = TxtApellido.Text;
-            aux.Fecha = Convert.ToDateTime(TxtFechaNac.Text);
-            aux.Dni = Convert.ToInt32(TxtDni.Text);
-            aux.Domicilio = TxtDomicilio.Text;
-            aux.Telefono =Convert.ToInt32( Txtelefono.Text);
-            aux.Email = Txtemail.Text;
+            aux.Email = TxtEmail.Text;
+            aux.Pass = TxtPass.Text;  
             aux.Tipo = "C";
             aux.Estado = true;
-           
-            //Guardo el nuevo usuario en la lista de usuarios
-           //listaUsuario.Add.Items(aux);
-            //Session.Add("ListaUsuario", listaUsuario);
+
+            
             //Guardo el nuevo usuario 
-            Session.Add("Usuario",aux);
+            Session.Add("Usuario", aux);
             negocio.agregar(aux);
             //falta mandar el email
             Response.Redirect("Login.aspx");
-
         }
     }
 }

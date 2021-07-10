@@ -15,15 +15,15 @@ namespace Dominio
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Email { get; set; }
-
-
+   
         public string Domicilio { get; set; }
 
         public int Telefono { get; set; }
         public DateTime Fecha { get; set; }
         public  int Dni { get; set; }
         public string Pass { get; set; }
-        public  char Tipo { get; set; }
+
+        public string Tipo { get; set; }
         public bool Estado { get; set; }
 
        

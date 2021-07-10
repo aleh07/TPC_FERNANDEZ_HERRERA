@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    >
+    
     <%/*aca pongo lo que me traje  en la session"carrito" no decidi de que manera ponerlo todavia*/%>
       <div class="table-responsive">
 
