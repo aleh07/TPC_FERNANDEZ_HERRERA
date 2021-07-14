@@ -4,8 +4,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="table-responsive">
-    <table class="table">
-        <thead>
+     <table class="table-stock">
+<thead style="background-color:green">
             <tr>
                 <th scope="col">
                     <h4 class="titulo">Nombre</h4>
@@ -27,7 +27,7 @@
 
         <asp:Repeater runat="server" ID="repetidor">
             <ItemTemplate>
-                <tbody>
+                <tr>
                     <td>
                         <p><%#Eval("Componente.Nombre")%></p>
                     </td>
@@ -44,12 +44,10 @@
                         <p>
                             <asp:TextBox TextMode="Number" runat="server" OnTextChanged="txtCantidad_TextChanged" Text='<%#Eval("Cantidad")%>' ID="txtCantidad" min="1" />
                             <asp:Button Text="Agregar" CssClass="boton__eliminar"  AutoPostBack="true" ID="btnAgregar" OnClick="btnAgregar_Click" CommandArgument='<%#Eval("Componente.ID")%>' runat="server" />
-                        </p>
-                    </td>
-                    <td>
-                        <p><asp:Button Text="Eliminar" CssClass="boton__eliminar" AutoPostBack="true" ID="btnEliminar" Onclick="btnEliminar_Click1" CommandArgument='<%#Eval("Componente.ID")%>' runat="server" /></p>
-                    </td>
-                </tbody>
+                      
+                        <asp:Button Text="Eliminar" CssClass="boton__eliminar" AutoPostBack="true" ID="btnEliminar" Onclick="btnEliminar_Click1" CommandArgument='<%#Eval("Componente.ID")%>' runat="server" /></p>
+                  </tr>
+              
             </ItemTemplate>
         </asp:Repeater>
 

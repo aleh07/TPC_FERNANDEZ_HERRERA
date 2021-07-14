@@ -67,5 +67,8 @@
             </asp:ContentPlaceHolder>
         </div>
     </form>
+      <footer class="footer">
+        <h2>Todos los derechos reservados 2021 - Compu Solution</h2>
+    </footer>
 </body>
 </html>

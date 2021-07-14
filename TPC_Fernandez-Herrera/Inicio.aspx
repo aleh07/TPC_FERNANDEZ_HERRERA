@@ -19,26 +19,23 @@
             <asp:Button ID="BtnBuscar" style="margin-left:5px;" class="btn btn-outline-dark" OnClick="BtnBuscar_Click" runat="server" Text="Buscar" />
         </div>
         <!--cards -->
-        <div class="row row-cols-1 row-cols-md-4 g-4" >
+        <div class="row row-cols-1 row-cols-md-4 g-4 "style="padding:2rem">
 
             <%foreach (Dominio.Componente item in listaComponentes)
                 {%>
 
-            <div class="col">
-
                 <div class="Componente">
                     <img src="<%= item.ImagenUrl %>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title"Style="color:red"><%= item.Nombre %></h5>
-                        <p class="card-text" Style="font-size:small"><%= item.Descripcion %></p>
-                        <h5 class="card-text "Style="color:red"><span"><%= item.Precio %></span></h5>
+                        <h5 class="card-title"Style="color:red ; display:flex;justify-content:center""><%= item.Nombre %></h5>
+
+                        <h5 class="card-text "Style="color:green ; display:flex;justify-content:center" ><span">$<%= item.Precio %></span></h5>
                          <div class="columnas">
                         <a href="CarritoCompra.aspx?id=<% = item.ID %>"  class="btn btn-secondary">Carrito</a>
-                        <a href="#" class="btn btn-secondary">Favoritos</a>
+                        <a href="Detalle.aspx" class="btn btn-secondary">Detalle</a>
                              </div>
                     </div>
                 </div>
-            </div>
             <%} %>
         </div>
     </div>
