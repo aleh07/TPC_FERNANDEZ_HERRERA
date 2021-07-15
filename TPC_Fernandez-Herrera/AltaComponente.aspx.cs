@@ -14,10 +14,28 @@ namespace TPC_Fernandez_Herrera
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            string id = Request.QueryString["ID"];
+            List<Componente> listaComponente = (List<Componente>)Session["ListarComponentes"];
+
+            if (id != null)
+            {
+
+                Componente modificar = listaComponente.Find(x => x.ID.ToString() == id);
+
+                TxtNombre.Text = modificar.Nombre;
+                TxtDescripcion.Text = modificar.Descripcion;
+                txtPrecio.Text = modificar.Precio.ToString();
+                TxtCant.Text = modificar.Cantidad.ToString();
+                TxtImagenUrl.Text = modificar.ImagenUrl;
+
+            }
+
+            if (!IsPostBack)
             {
                 MarcaNegocio marcaNegocio = new MarcaNegocio();
                 CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+
+                
 
                 List<Marca> ListaMarcas = marcaNegocio.listar();
                 Session.Add("listaMarcas", ListaMarcas);
@@ -34,6 +52,11 @@ namespace TPC_Fernandez_Herrera
                 ddlCategoria.DataTextField = "Nombre";
                 ddlCategoria.DataValueField = "Id";
                 ddlCategoria.DataBind();
+               
+                
+                
+               
+
             }
             
 
@@ -54,15 +77,19 @@ namespace TPC_Fernandez_Herrera
             aux.Cantidad = Convert.ToInt32(TxtCant.Text);
 
             aux.Estado = true;
-            aux.marc= 1 ;
-            aux.cat= 4;
-
-            aux.Estado = true;
             aux.marca = marcas.Find(x => x.Id == int.Parse(ddlMarca.SelectedValue));
             aux.categoria = categorias.Find(x => x.Id == Convert.ToInt32(ddlCategoria.SelectedItem.Value));
             aux.Precio = decimal.Parse(txtPrecio.Text);
-
-            negocio.agregar(aux);
+          
+            if (aux.Nombre !="" && aux.Descripcion != "" && aux.Cantidad > 0)
+            {
+                negocio.agregar(aux);
+            }
+            else
+            {
+                Response.Write("<script>alert('Los campos con * son obligarotios');</script>");
+            }
+                
 
             Response.Redirect("GestionStock.aspx");
 

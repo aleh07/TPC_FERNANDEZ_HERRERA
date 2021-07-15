@@ -32,36 +32,34 @@
             <ItemTemplate>
                 <tbody>
                     <td>
-                        <p><%#Eval("Nombre")%></p>
+                        <p><%#Eval("Nombre")%> </p>
                     </td>
                     <td>
-                        <p><%#Eval("Descripcion")%></p>
+                        <p><%#Eval("Descripcion")%> </p>
                     </td>
                     <td>
                         <p>$<asp:Label ID="lblPrecio" runat="server" Text='<%#Eval("Precio")%>'/></p>
                     </td>
                    
                     <td>
-                        <p><%#Eval("marca.Nombre")%></p>
+                        <p><%#Eval("marca.Nombre")%> </p>
                     </td>
                     <td>
-                        <p><%#Eval("categoria.Nombre")%></p>
+                        <p><%#Eval("categoria.Nombre")%> </p>
+                    </td>
+                    <td>
+                        <p><%#Eval("Cantidad")%> </p>
                     </td>
                     <td>
                         <p>
-                            <%--<asp:TextBox  TextMode="Number" runat="server" ID="txtCantidad" OnTextChanged="txtCantidad_TextChanged" Text='<%#Eval("Cantidad")%>'  min="1"/>--%>
-                           <%--<asp:Button Text="Agregar"  AutoPostBack="true" ID="btnAgregar" OnClick="btnAgregar_Click" CommandArgument= runat="server"/>--%>
+                            <a href='AltaComponente.aspx?id=<%#Eval("ID")%>' class="btn btn-secondary btn-lg">modificar</a>
+                           <asp:Button  type="button" class="btn btn-outline-danger" id="btnEliminar" Text="Eliminar" OnClick="btnEliminar_Click" CommandArgument='<%#Eval("ID")%> ' runat="server"/>
                         </p>
                     </td>
                 </tbody>
             </ItemTemplate>
         </asp:Repeater>
     </table>
-
-            
             <asp:Button type="button" class="btn btn-lg btn-primary" id="btnAlta" Text="Alta nuevo Componente" OnClick="btnAlta_Click" runat="server"/>
-     <asp:Button type="button" class="btn btn-secondary btn-lg"  id="btnModificar" Text="Modificar" OnClick="btnModificar_Click" runat="server"/>
-    <asp:Button  type="button" class="btn btn-outline-danger" id="btnEliminar" Text="Eliminar" OnClick="btnEliminar_Click" runat="server"/>
-
-
+     
 </asp:Content>

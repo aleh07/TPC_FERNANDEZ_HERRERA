@@ -3,25 +3,30 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="table-responsive">
+    <div class="table">
      <table class="table-stock">
 <thead style="background-color:green">
             <tr>
                 <th scope="col">
                     <h4 class="titulo">Nombre</h4>
                 </th>
+                <th></th>
                 <th scope="col">
                     <h4 class="titulo">Descripcion</h4>
                 </th>
+                <th></th>
                 <th scope="col">
                     <h4 class="titulo">Precio</h4>
                 </th>
+                <th></th>
                 <th scope="col">
                     <h4 class="titulo">Marca</h4>
                 </th>
+                <th></th>
                 <th scope="col">
                     <h4 class="titulo">Cantidad </h4>
                 </th>
+                <th></th>
             </tr>
         </thead>
 
@@ -31,15 +36,19 @@
                     <td>
                         <p><%#Eval("Componente.Nombre")%></p>
                     </td>
+                    <td></td>
                     <td>
                         <p><%#Eval("Componente.Descripcion")%></p>
                     </td>
+                    <td></td>
                     <td>
                         <p>$<asp:Label ID="Label1" runat="server" Text='<%#Eval("Subtotal")%>' /></p>
                     </td>
+                    <td></td>
                     <td>
                         <p><%#Eval("Componente.marca.Nombre")%></p>
                     </td>
+                    <td></td>
                     <td>
                         <p>
                             <asp:TextBox TextMode="Number" runat="server" OnTextChanged="txtCantidad_TextChanged" Text='<%#Eval("Cantidad")%>' ID="txtCantidad" min="1" />

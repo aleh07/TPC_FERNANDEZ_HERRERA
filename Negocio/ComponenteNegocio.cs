@@ -81,34 +81,56 @@ namespace Negocio
         }
 
 
-        //public void modificar(Producto nuevo)
-        //{
-        //    AccesoDatos datos = new AccesoDatos();
-        //    try
-        //    {
-        //        datos.setearConsulta("update ARTICULOS set codigo ='" + nuevo.CodigoArt + "' where id = " + nuevo.Id);
-        //        datos.setearConsulta("update ARTICULOS set codigo = '" + nuevo.CodigoArt + "', nombre = '" + nuevo.Nombre + "',Descripcion = '" + nuevo.Descripcion + "', ImagenUrl = '" + nuevo.UrlImagen + "', precio = '" + nuevo.Precio + "', idmarca = '" + nuevo.Marca.Id + "' , idcategoria = '" + nuevo.Categoria.Id + "' where id = '" + nuevo.Id + "'");
-        //        /*datos.setearConsulta("update ARTICULOS set codigo = @codigo, nombre = @nombre, Descripcion = @descripcion, ImagenUrl = @urlImagen, precio = @precio, IdMarca = @idMarca, IdCategoria = @idCategoria where codigo = @id");
-        //        datos.setearParametro("@codigo", nuevo.CodigoArt);
-        //        datos.setearParametro("@nombre", nuevo.Nombre);
-        //        datos.setearParametro("@descripcion", nuevo.Descripcion);
-        //        datos.setearParametro("@urlImagen", nuevo.UrlImagen);
-        //        datos.setearParametro("@precio", nuevo.Precio);
-        //        datos.setearParametro("@idCategoria", nuevo.Categoria.Id);
-        //        datos.setearParametro("@idMarca", nuevo.Marca.Id);
-        //        datos.setearParametro("@id", nuevo.Id);*/
+        public void modificar(Componente nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+              
+                datos.setearConsulta("update Componentes set  Nombre = @nombre, Descripcion = @descripcion, ImagenUrl = @urlImagen, precio = @precio, IdMarca = @idMarca, IdCategoria = @idCategoria, Estado = @Estado where id = @id");
+                datos.setearParametro("@Id", nuevo.ID);
+                datos.setearParametro("@nombre", nuevo.Nombre);
+                datos.setearParametro("@descripcion", nuevo.Descripcion);
+                datos.setearParametro("@urlImagen", nuevo.ImagenUrl);
+                datos.setearParametro("@precio", nuevo.Precio);
+                datos.setearParametro("@idCategoria", nuevo.categoria.Id);
+                datos.setearParametro("@idMarca", nuevo.marca.Id);
+                datos.setearParametro("@Estado", nuevo.Estado);
 
-        //        datos.ejectutarAccion();
+                datos.ejectutarAccion();
 
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //    finally
-        //    {
-        //        datos.cerrarConexion();
-        //    }
-        //}
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        public void Eliminar(Componente nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+
+                datos.setearConsulta("update Componentes set  Estado = @Estado where id = @id");
+                
+                datos.setearParametro("@Id", nuevo.ID);
+                datos.setearParametro("@Estado", nuevo.Estado);
+
+                datos.ejectutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }

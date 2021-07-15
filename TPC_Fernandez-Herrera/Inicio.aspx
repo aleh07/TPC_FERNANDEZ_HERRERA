@@ -23,19 +23,21 @@
 
             <%foreach (Dominio.Componente item in listaComponentes)
                 {%>
-
-                <div class="Componente">
-                    <img src="<%= item.ImagenUrl %>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title"Style="color:red ; display:flex;justify-content:center""><%= item.Nombre %></h5>
-
-                        <h5 class="card-text "Style="color:green ; display:flex;justify-content:center" ><span">$<%= item.Precio %></span></h5>
-                         <div class="columnas">
-                        <a href="CarritoCompra.aspx?id=<% = item.ID %>"  class="btn btn-secondary">Carrito</a>
-                        <a href="Detalle.aspx" class="btn btn-secondary">Detalle</a>
-                             </div>
-                    </div>
-                </div>
+                     <% if (item.Estado != true)//colocar los componentes en true
+                         {%>
+                            <div class="Componente">
+                             <img src="<%= item.ImagenUrl %>" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"Style="color:red ; display:flex;justify-content:center""><%= item.Nombre %></h5>
+                                <h5 class="card-text "Style="color:green ; display:flex;justify-content:center" ><span">$<%= item.Precio %></span></h5>
+                                 <div class="columnas">
+                                <a href="CarritoCompra.aspx?id=<% = item.ID %>"  class="btn btn-secondary">Carrito</a>
+                                <a href="Detalle.aspx" class="btn btn-secondary">Detalle</a>
+                                     </div>
+                                </div>
+                            </div>
+                        <%}%>
+               
             <%} %>
         </div>
     </div>
