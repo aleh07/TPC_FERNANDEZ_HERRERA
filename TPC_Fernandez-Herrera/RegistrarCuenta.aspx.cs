@@ -36,7 +36,8 @@ namespace TPC_Fernandez_Herrera
             Session.Add("Usuario", aux);
             negocio.agregar(aux);
             //falta mandar el email
-            Response.Redirect("Login.aspx");
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Cuenta Registrada correctamente');window.location ='Login.aspx';", true);
+           
         }
     }
 }

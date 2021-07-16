@@ -36,22 +36,24 @@ namespace TPC_Fernandez_Herrera
 
                 Session.Add("Cuenta", cuenta);
 
-                //Response.Write("<script>alert('Cuenta Registrada');</script>");
-                //Nose como hacer para que despues de la alerta redirija a la pag compras
+               
+               
                 string id = Request.QueryString["ID"];
                 if (id==null)
                 { 
               
                 if (cuenta.Tipo == "C") { Session.Add("admin", 1); }
                 else if(cuenta.Tipo == "U") { Session.Add("admin", null); }
-                    Response.Redirect("Inicio.aspx");
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Hola "+user+"');window.location ='Inicio.aspx';", true);
+              
+                   
                 }
                 else
                 {
                   
                     if (cuenta.Tipo == "C") { Session.Add("admin", 1); }
                     else if (cuenta.Tipo == "U") { Session.Add("admin", null); }
-                    Response.Redirect("Compras.aspx");
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Hola " + user + "');window.location ='Compras.aspx';", true);
                 }
             }
 

@@ -17,7 +17,7 @@
                             <p>Categoria: <asp:Label Text="lala" ID="lblCategoria" runat="server" /></p>
                             <p >Precio: $<asp:Label Text="lala" ID="lblPrecio" runat="server" /></p>
                             <p >Descripcion: <asp:Label Text="lala" ID="lblDescripcion" runat="server" /></p>
-                            <a href="Carrito.aspx?id=<%  = hola %>"class="btn btn-secondary">Agregar al carrito</a>
+                            <a href="CarritoCompra.aspx?id=<%  = hola %>"class="btn btn-secondary">Agregar al carrito</a>
                     </div>
                     
                     
