@@ -3,8 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    <div class="container">
+     <body class="body-register">
+  <section class="form-register">
+        <h4>Formulario </h4>
         <h3>Nombre *</h3>
         <asp:TextBox ID="TxtNombre" class="form-control" type="text" placeholder="Ingrese Nombre" aria-label="Ingrese Nombre" runat="server"></asp:TextBox>
         <h3>Descripcion *</h3>
@@ -23,5 +24,6 @@
         <asp:DropDownList runat="server" ID="ddlCategoria" CssClass="form-control-sm"></asp:DropDownList>
         <br />
         <asp:Button ID="BtnAgregar" Text="Agregar" OnClick="BtnAgregar_Click" runat="server" CssClass="btn btn-secondary" />
-    </div>
+ </section>
+         </body>
 </asp:Content>

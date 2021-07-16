@@ -145,16 +145,19 @@ body {
     position: fixed;
     bottom: 0;
 }
-#main-container {
-    margin: 150px auto;
-    width: 600px;
+main-container {
+    position:center;
+    width:auto;
+
 }
 
 table {
+    position: center;
     background-color: white;
     text-align: left;
     border-collapse: collapse;
     width: 100%;
+    font-size: 10px;
 }
 
 th, td {

@@ -16,6 +16,7 @@ namespace TPC_Fernandez_Herrera
     {
         UsuarioNegocio negocio = new UsuarioNegocio();
         Usuario cuenta = new Usuario();
+    
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -35,11 +36,23 @@ namespace TPC_Fernandez_Herrera
 
                 Session.Add("Cuenta", cuenta);
 
-                Response.Write("<script>alert('Cuenta Registrada');</script>");
+                //Response.Write("<script>alert('Cuenta Registrada');</script>");
                 //Nose como hacer para que despues de la alerta redirija a la pag compras
-                //Response.Redirect("Compras.aspx");
+                string id = Request.QueryString["ID"];
+                if (id==null)
+                { 
+              
                 if (cuenta.Tipo == "C") { Session.Add("admin", 1); }
                 else if(cuenta.Tipo == "U") { Session.Add("admin", null); }
+                    Response.Redirect("Inicio.aspx");
+                }
+                else
+                {
+                  
+                    if (cuenta.Tipo == "C") { Session.Add("admin", 1); }
+                    else if (cuenta.Tipo == "U") { Session.Add("admin", null); }
+                    Response.Redirect("Compras.aspx");
+                }
             }
 
             else

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Dominio;
@@ -123,10 +124,11 @@ namespace TPC_Fernandez_Herrera
 
             protected void BtnComprar_Click(object sender, EventArgs e)
             {
-                Response.Redirect("Login.aspx");
-                Session.Add("Pagina", "Carrito");
+                Response.Redirect("Login.aspx?ID=1");
+                
+              
 
-            }
+        }
 
 
 

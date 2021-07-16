@@ -2,35 +2,38 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        
-    <table class="table-stock">
+      <div class="main-container">  
+    <table class="table">
        
-        <thead style="background-color:green">
+        <thead>
             <tr>
-                <th scope="col">
-                    <h4 class="titulo">Nombre</h4>
+                <th> 
+                    Nombre
                 </th>
-                <th scope="col">
-                    <h4 class="titulo">Descripcion</h4>
+                <th>
+                    Descripcion
                 </th>
-                <th scope="col">
-                    <h4 class="titulo">Precio</h4>
+                <th >
+                   Precio
                 </th>
-                <th scope="col">
-                    <h4 class="titulo">Marca</h4>
+                <th >
+                   Marca
                 </th>
-                 <th scope="col">
-                    <h4 class="titulo">Categoria</h4>
+                 <th>
+                    Categoria
                 </th>
-                <th scope="col">
-                    <h4 class="titulo">Cantidad </h4>
+                <th>
+                   Cantidad 
+                </th>
+                 <th>
+                  Elija una opcion
                 </th>
             </tr>
         </thead>
  
         <asp:Repeater runat="server" ID="repetidor">
             <ItemTemplate>
-                <tbody>
+         <tr>
                     <td>
                         <p><%#Eval("Nombre")%> </p>
                     </td>
@@ -52,14 +55,14 @@
                     </td>
                     <td>
                         <p>
-                            <a href='AltaComponente.aspx?id=<%#Eval("ID")%>' class="btn btn-secondary btn-lg">modificar</a>
+                            <a href='AltaComponente.aspx?ID=<%#Eval("ID")%>' class="btn btn-secondary btn-lg">modificar</a>
                            <asp:Button  type="button" class="btn btn-outline-danger" id="btnEliminar" Text="Eliminar" OnClick="btnEliminar_Click" CommandArgument='<%#Eval("ID")%> ' runat="server"/>
                         </p>
                     </td>
-                </tbody>
+              </tr>
             </ItemTemplate>
         </asp:Repeater>
     </table>
             <asp:Button type="button" class="btn btn-lg btn-primary" id="btnAlta" Text="Alta nuevo Componente" OnClick="btnAlta_Click" runat="server"/>
-     
+     </div>
 </asp:Content>

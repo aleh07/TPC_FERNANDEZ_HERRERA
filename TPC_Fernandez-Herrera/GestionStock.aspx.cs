@@ -15,11 +15,12 @@ namespace TPC_Fernandez_Herrera
         public List<Componente> listaComponentesActivos;
         protected void Page_Load(object sender, EventArgs e)
         {
+            ComponenteNegocio listar = new ComponenteNegocio();
             try
             {
                 if (!IsPostBack)
                 {
-                    listaComponentes = (List<Componente>)Session["ListarComponentes"];
+                    listaComponentes = listar.Listar();
 
                 }
                 repetidor.DataSource = listaComponentes;

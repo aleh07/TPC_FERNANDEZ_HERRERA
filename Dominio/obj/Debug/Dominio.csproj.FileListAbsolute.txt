@@ -28,3 +28,9 @@ C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\TPC_Fernandez_Herrera\T
 C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\TPC_Fernandez_Herrera\TPC_FERNANDEZ_HERRERA\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\TPC_Fernandez_Herrera\TPC_FERNANDEZ_HERRERA\Dominio\obj\Debug\Dominio.dll
 C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\TPC_Fernandez_Herrera\TPC_FERNANDEZ_HERRERA\Dominio\obj\Debug\Dominio.pdb
+C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\tpultimo\TPC_FERNANDEZ_HERRERA\Dominio\bin\Debug\Dominio.dll
+C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\tpultimo\TPC_FERNANDEZ_HERRERA\Dominio\bin\Debug\Dominio.pdb
+C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\tpultimo\TPC_FERNANDEZ_HERRERA\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\tpultimo\TPC_FERNANDEZ_HERRERA\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\tpultimo\TPC_FERNANDEZ_HERRERA\Dominio\obj\Debug\Dominio.dll
+C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\tpultimo\TPC_FERNANDEZ_HERRERA\Dominio\obj\Debug\Dominio.pdb

@@ -70,20 +70,27 @@ namespace TPC_Fernandez_Herrera
             ///para poder cargar los dropdowns hay que pasarle los objetos buscado con el find de las listas
             List<Marca> marcas = (List<Marca>) Session["listaMarcas"];
             List<Categoria> categorias = (List<Categoria>)Session["listaCat"];
-           
-            aux.Nombre = TxtNombre.Text;
-            aux.Descripcion = TxtDescripcion.Text;
-            aux.ImagenUrl = TxtImagenUrl.Text;
-            aux.Cantidad = Convert.ToInt32(TxtCant.Text);
-
-            aux.Estado = true;
-            aux.marca = marcas.Find(x => x.Id == int.Parse(ddlMarca.SelectedValue));
-            aux.categoria = categorias.Find(x => x.Id == Convert.ToInt32(ddlCategoria.SelectedItem.Value));
-            aux.Precio = decimal.Parse(txtPrecio.Text);
-          
+            string id = Request.QueryString["ID"];
+            
             if (aux.Nombre !="" && aux.Descripcion != "" && aux.Cantidad > 0)
             {
-                negocio.agregar(aux);
+                if (id==null)
+                {
+                   //el problema es que no refresca ver el video de mxi, kDA CARGADO CON LA VARIABLE MODIFICAR,PD ESTO NO VA ACA
+                    aux.Nombre = TxtNombre.Text;
+                    aux.Descripcion = TxtDescripcion.Text;
+                    aux.ImagenUrl = TxtImagenUrl.Text;
+                    aux.Cantidad = Convert.ToInt32(TxtCant.Text);
+                    aux.Estado = true;
+                    aux.marca = marcas.Find(x => x.Id == int.Parse(ddlMarca.SelectedValue));
+                    aux.categoria = categorias.Find(x => x.Id == Convert.ToInt32(ddlCategoria.SelectedItem.Value));
+                    aux.Precio = decimal.Parse(txtPrecio.Text);
+
+                    negocio.agregar(aux);
+                }
+                else {
+                negocio.modificar(aux);
+                }
             }
             else
             {

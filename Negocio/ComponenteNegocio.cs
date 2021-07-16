@@ -14,7 +14,7 @@ namespace Negocio
             List<Componente> lista = new List<Componente>();
             AccesoDatos Datos = new AccesoDatos();
 
-            Datos.setearConsulta("select Co.Id Id,Nombre,Co.Descripcion,Precio,ImagenUrl,Cantidad,M.Descripcion Marca,M.ID IDMarca ,Ca.Descripcion Categoria,Ca.ID IDCategoria from COMPONENTES Co, CATEGORIAS Ca, Marcas M Where Co.IdCategoria = Ca.Id and Co.IdMarca = M.Id");
+            Datos.setearConsulta("select Co.Id Id,Nombre,Co.Descripcion,Precio,ImagenUrl,Cantidad,Estado,M.Descripcion Marca,M.ID IDMarca ,Ca.Descripcion Categoria,Ca.ID IDCategoria from COMPONENTES Co, CATEGORIAS Ca, Marcas M Where Co.IdCategoria = Ca.Id and Co.IdMarca = M.Id");
             Datos.ejecutarLectura();
 
                 try
@@ -28,7 +28,8 @@ namespace Negocio
                         aux.Precio = (decimal)Datos.Lector["Precio"];         
                         aux.Descripcion = (string)Datos.Lector["Descripcion"];
                         aux.ImagenUrl = (string)Datos.Lector["ImagenUrl"];
-                    aux.Cantidad = (int)Datos.Lector["Cantidad"];
+                        aux.Cantidad = (int)Datos.Lector["Cantidad"];
+                        aux.Estado = (bool)Datos.Lector["Estado"];
                         aux.marca = new Marca((int)Datos.Lector["IDMarca"], (string)Datos.Lector["Marca"]);
 
                         aux.categoria = new Categoria((int)Datos.Lector["IDCategoria"], (string)Datos.Lector["Categoria"]);

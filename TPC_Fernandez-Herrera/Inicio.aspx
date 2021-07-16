@@ -23,7 +23,7 @@
 
             <%foreach (Dominio.Componente item in listaComponentes)
                 {%>
-                     <% if (item.Estado != true)//colocar los componentes en true
+                     <% if (item.Estado==true)//colocar los componentes en true
                          {%>
                             <div class="Componente">
                              <img src="<%= item.ImagenUrl %>" class="card-img-top" alt="...">
