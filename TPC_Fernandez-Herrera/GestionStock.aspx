@@ -10,9 +10,6 @@
                 <th> 
                     Nombre
                 </th>
-                <th>
-                    Descripcion
-                </th>
                 <th >
                    Precio
                 </th>
@@ -26,7 +23,7 @@
                    Cantidad 
                 </th>
                  <th>
-                  Elija una opcion
+                  <asp:Button type="button" class="btn btn-lg btn-primary" id="btnAlta" Text="Alta Componente" OnClick="btnAlta_Click" runat="server"/>
                 </th>
             </tr>
         </thead>
@@ -36,14 +33,10 @@
          <tr>
                     <td>
                         <p><%#Eval("Nombre")%> </p>
-                    </td>
-                    <td>
-                        <p><%#Eval("Descripcion")%> </p>
-                    </td>
+                    </td>                   
                     <td>
                         <p>$<asp:Label ID="lblPrecio" runat="server" Text='<%#Eval("Precio")%>'/></p>
                     </td>
-                   
                     <td>
                         <p><%#Eval("marca.Nombre")%> </p>
                     </td>
@@ -63,6 +56,5 @@
             </ItemTemplate>
         </asp:Repeater>
     </table>
-            <asp:Button type="button" class="btn btn-lg btn-primary" id="btnAlta" Text="Alta nuevo Componente" OnClick="btnAlta_Click" runat="server"/>
      </div>
 </asp:Content>

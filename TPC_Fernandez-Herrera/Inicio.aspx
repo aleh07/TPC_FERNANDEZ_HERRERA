@@ -26,7 +26,7 @@
                      <% if (item.Estado==true)//colocar los componentes en true
                          {%>
                             <div class="Componente">
-                             <img src="<%= item.ImagenUrl %>" class="card-img-top" alt="...">
+                             <img  src="<%= item.ImagenUrl %>" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title"Style="color:red ; display:flex;justify-content:center""><%= item.Nombre %></h5>
                                 <h5 class="card-text "Style="color:green ; display:flex;justify-content:center" ><span">$<%= item.Precio %></span></h5>

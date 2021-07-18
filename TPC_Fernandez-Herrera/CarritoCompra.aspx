@@ -4,18 +4,18 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div  class="main-container">
-
-		<table>
+        
+		<table class="table">
 			<thead>
 				<tr>
-					<th>Nombre</th><th>Descripcion</th><th>Precio</th><th>Marca</th><th>Cantidad</th><th>Elija una opcion</th>
+					<th>Imagen</th><th>Nombre</th><th>Precio</th><th>Marca</th><th>Cantidad</th><th>Elija una opcion</th>
 				</tr>
 			</thead>
                <asp:Repeater runat="server" ID="repetidor">
             <ItemTemplate>
 			<tr>
-				<td> <p><%#Eval("Componente.Nombre")%></p></td>
-                <td> <p><%#Eval("Componente.Descripcion")%></p></td>
+                <td> <img style="width:50px ; height:50px" src="<%#Eval("Componente.ImagenUrl")%>" class="img-thumbnail" alt="..."></td>
+				<td> <p><%#Eval("Componente.Nombre")%></p></td>  
                 <td> <p>$<asp:Label ID="Label1" runat="server" Text='<%#Eval("Subtotal")%>' /></p></td>
                 <td>  <p><%#Eval("Componente.marca.Nombre")%></p></td>
                 <td> <p><asp:TextBox TextMode="Number" runat="server" OnTextChanged="txtCantidad_TextChanged" Text='<%#Eval("Cantidad")%>' ID="txtCantidad" min="1" /></p></td>

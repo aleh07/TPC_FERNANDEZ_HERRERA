@@ -1,3 +1,4 @@
+
 SET DATEFORMAT dmy;
 
 create database Fernandez_Herrera_DB
@@ -39,7 +40,7 @@ GO
 create table COMPONENTES (
  ID BIGINT NOT NULL PRIMARY KEY IDENTITY (1,1),
  NOMBRE VARCHAR(100) NOT NULL,
- DESCRIPCION VARCHAR(500) NOT NULL,
+ DESCRIPCION VARCHAR(5000) NOT NULL,
  PRECIO MONEY NOT NULL ,
  IMAGENURL VARCHAR(1000) NOT NULL,
  Cantidad int not null ,
@@ -134,16 +135,669 @@ insert  into MARCAS values('KINGTONG')
 insert  into MARCAS values('SEAGATE')
 SELECT * FROM USUARIOS
 --COMPONENTES
-INSERT INTO COMPONENTES VALUES('CARTUCHO EPSON','Botella Epson 544 Negro',450.99,'https://eclypse.com.ar/wp-content/uploads/2020/03/544N-300x300.jpg',1,1,1,1,7)
-INSERT INTO COMPONENTES VALUES('AsRock Radeon RX 550 Phantom Gaming','Placa de Video AsRock Radeon RX 550 Phantom Gaming 2Gb GDDR5',450.99,'https://s3-sa-east-1.amazonaws.com/saasargentina/6w0HR6Ntf8gwv0dXgIfw/imagen',1,1,1,8,16)
-INSERT INTO COMPONENTES VALUES(' MSI H110M PRO-VH ','Mother MSI H110M PRO-VH DDR4 HDMI S1151',450.99,'https://s3-sa-east-1.amazonaws.com/saasargentina/vDqmnCN0pOYHI96qMzjo/imagen',1,1,1,9,6)
-INSERT INTO COMPONENTES VALUES('  Athlon 3000G Vega 3 DualCore AM4 BOX ','Micro AMD Athlon 3000G Vega 3 DualCore AM4 BOX',450.99,'https://s3-sa-east-1.amazonaws.com/saasargentina/skzKBEUHDOtZQWJ6AkMG/imagen',1,1,1,8,10)
-INSERT INTO COMPONENTES VALUES(' RAM  4GB  ','Memoria RAM 4GB DDR4 2666Mhz Value',450.99,'https://s3-sa-east-1.amazonaws.com/saasargentina/oSUqVhoCIOHuDzvTBIxb/imagen',1,1,1,8,11)
-INSERT INTO COMPONENTES VALUES(' DR PC 1TbSATA3','Disco Rígido PC 1Tb Seagate Barracuda SATA3',450.99,'https://s3-sa-east-1.amazonaws.com/saasargentina/yVXzYVIprX9JQYEhMOIi/imagen',1,1,1,14,12)
+INSERT INTO COMPONENTES 
+VALUES('PC Armada | AMD Athlon 3000G + 4GB + SSD','Imágenes de carácter ilustrativo, las PC son armadas y poseen sistema operativo. No se incluyen monitor ni periféricos, sólo los componentes detallados debajo. Si desea armar una configuración a su medida podrá hacerla desde nuestro Armador de PC.
+ CPU067 Micro AMD Athlon 3000G Vega 3 DualCore AM4 BOX 
+ MOT076 Mother MSI A320M-A PRO M2 AM4  
+ RAM034 Memoria RAM Crucial/Oloy 4GB DDR4 2400/2666Mhz PC  
+ HDD056 Disco SSD Gigabyte 240GB SATA3  
+ SER004 Armado de PC Basic - No Incluye Sistema Operativo
+ GAB003 Gabinete KIT ATX C/Fuente 500w. Teclado. Mouse y Parlantes'  
+,45499.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/EshTCUvq6gwsm3Ivrjh7/imagen',1,1,1,1,7)
+  
+  INSERT INTO COMPONENTES 
+VALUES('PC Armada | Intel Core I3 10100F + 8GB + SSD','Imágenes de carácter ilustrativo, las PC son armadas y poseen sistema operativo. No se incluyen monitor ni periféricos, sólo los componentes detallados debajo. Si desea armar una configuración a su medida podrá hacerla desde nuestro Armador de PC.
+ CPU021 Micro Intel Core I3 10100F 4 Núcleos / 8 Threads HT 4.3Ghz (10ma Gen) LGA1200  
+ MOT205 Mother ASUS PRIME H410M-E (10ma Gen) LGA1200  
+ RAM022 Memoria RAM NeoForza/HP 8GB DDR4 2666Mhz PC  
+ HDD056 Disco SSD Gigabyte 240GB SATA3 
+ VGA124 Placa de Video Palit NVIDIA GeForce GT 710 2GB DDR3 
+ GAB003 Gabinete KIT ATX C/Fuente 500w. Teclado. Mouse y Parlantes 
+ SER004 Armado de PC Basic - No Incluye Sistema Operativo ' 
+
+,57999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/EshTCUvq6gwsm3Ivrjh7/imagen',1,1,1,1,7)
+
+INSERT INTO COMPONENTES 
+VALUES('PC Armada | AMD Athlon 3000G + 4GB + SSD','Imágenes de carácter ilustrativo, las PC son armadas y poseen sistema operativo. No se incluyen monitor ni periféricos, sólo los componentes detallados debajo. Si desea armar una configuración a su medida podrá hacerla desde nuestro Armador de PC.
+CPU067 Micro AMD Athlon 3000G Vega 3 DualCore AM4 BOX 
+ MOT076 Mother MSI A320M-A PRO M2 AM4  
+ RAM034 Memoria RAM Crucial/Oloy 4GB DDR4 2400/2666Mhz PC  
+ HDD056 Disco SSD Gigabyte 240GB SATA3  
+ SER004 Armado de PC Basic - No Incluye Sistema Operativo
+ GAB003 Gabinete KIT ATX C/Fuente 500w. Teclado. Mouse y Parlantes'  
+,45499.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/EshTCUvq6gwsm3Ivrjh7/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Notebook ASUS X509MA Intel N4020 | 4GB | 500Gb | 15.6','
+PROCESADOR
+Marca: Intel / Modelo: Celeron N4020
+Núcleos: 2 / Frecuencia: 2.80 GHz
+GRÁFICOS
+Marca: Intel / Modelo: UHD
+MEMORIA
+Capacidad: 4GB / Tipo: DDR4 SODIMM
+Expansión: Hasta 8Gb Reemplazando La Que Trae
+ALMACENAMIENTO
+Capacidad: 500Gb / Clase: HDD
+Puerto M2: Si, solo NVME
+PANTALLA
+Tamaño: 15.6 / Resolución: 1366x768
+CONECTIVIDAD
+WiFi: Si, AC / Bluetooth: Si, 4.2
+HDMI: Si / Red: Si
+USB 2.0: 2 / USB 3.1: 1
+Grabadora DVD: No / Lector Memorias: Si
+SISTEMA OPERATIVO
+OS: Linux'  
+,62999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/6Qb6xKi5QfifPITOy9Jj/imagen',1,1,1,1,7)
+  
+  INSERT INTO COMPONENTES 
+VALUES('Notebook Lenovo IP S145 AMD A6 9225 | 4GB | 1TB | Win10 | 15.6 | 81N300N7AR','PROCESADOR
+Marca: AMD / Modelo: A6 9225
+Núcleos: 2 / Frecuencia: 3.1GHz 
+GRÁFICOS
+Marca: AMD Radeon / Modelo: R4
+MEMORIA
+Capacidad: 4GB / Tipo: DDR4 SODIMM
+Expansión: 1 Slot Ocupado (Puede Reemplazar RAM Hasta 8Gb)
+ALMACENAMIENTO
+Capacidad: 1TB / Clase: HDD
+Puerto M2: Si, NVME
+PANTALLA
+Tamaño: 15.6" / Resolución: 1366x768
+CONECTIVIDAD
+WiFi: Si, AC / Bluetooth: Si, 4.2
+HDMI: Si / Red: No
+USB 2.0: 1 / USB 3.1: 2
+Grabadora DVD: No / Lector Memorias: Si
+SISTEMA OPERATIVO
+OS: Windows 10 Home 64bits'  
+,66999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/ghTK94Sfcb0iqdPzIyZe/imagen',1,1,1,1,7)
+
+INSERT INTO COMPONENTES 
+VALUES('Micro AMD Athlon 3000G Vega 3 DualCore AM4 BOX','Garantia de 12 meses'
+,25999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/skzKBEUHDOtZQWJ6AkMG/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Micro AMD Ryzen 5 3600 - 6 Núcleos / 12 Threads 4.2Ghz AM4','Garantia de 12 meses'
+,36999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/kanaXeWTnCPgAR6bhe6N/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Micro Intel Core I7 11700F 8 Núcleos / 16 Threads HT 4.9Ghz (11va Gen) LGA1200','Garantia de 12 meses'
+,47999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/27XhOV7630M2JfOzHdWk/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Micro Intel Core I3 10105F 4 Núcleos / 8 Threads HT 4.4Ghz (10ma Gen) LGA1200','Garantia de 12 meses'
+,18999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/7X7nDz9qUW68sVjNeKjh/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('PC Armada | AMD Athlon 3000G + 4GB + SSD','Imágenes de carácter ilustrativo, las PC son armadas y poseen sistema operativo. No se incluyen monitor ni periféricos, sólo los componentes detallados debajo. Si desea armar una configuración a su medida podrá hacerla desde nuestro Armador de PC.
+ CPU067 Micro AMD Athlon 3000G Vega 3 DualCore AM4 BOX 
+ MOT076 Mother MSI A320M-A PRO M2 AM4  
+ RAM034 Memoria RAM Crucial/Oloy 4GB DDR4 2400/2666Mhz PC  
+ HDD056 Disco SSD Gigabyte 240GB SATA3  
+ SER004 Armado de PC Basic - No Incluye Sistema Operativo
+ GAB003 Gabinete KIT ATX C/Fuente 500w. Teclado. Mouse y Parlantes'  
+,45499.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/EshTCUvq6gwsm3Ivrjh7/imagen',1,1,1,1,7)
+  
+  INSERT INTO COMPONENTES 
+VALUES('PC Armada | Intel Core I3 10100F + 8GB + SSD','Imágenes de carácter ilustrativo, las PC son armadas y poseen sistema operativo. No se incluyen monitor ni periféricos, sólo los componentes detallados debajo. Si desea armar una configuración a su medida podrá hacerla desde nuestro Armador de PC.
+ CPU021 Micro Intel Core I3 10100F 4 Núcleos / 8 Threads HT 4.3Ghz (10ma Gen) LGA1200  
+ MOT205 Mother ASUS PRIME H410M-E (10ma Gen) LGA1200  
+ RAM022 Memoria RAM NeoForza/HP 8GB DDR4 2666Mhz PC  
+ HDD056 Disco SSD Gigabyte 240GB SATA3 
+ VGA124 Placa de Video Palit NVIDIA GeForce GT 710 2GB DDR3 
+ GAB003 Gabinete KIT ATX C/Fuente 500w. Teclado. Mouse y Parlantes 
+ SER004 Armado de PC Basic - No Incluye Sistema Operativo ' 
+
+,57999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/EshTCUvq6gwsm3Ivrjh7/imagen',1,1,1,1,7)
+
+INSERT INTO COMPONENTES 
+VALUES('PC Armada | AMD Athlon 3000G + 4GB + SSD','Imágenes de carácter ilustrativo, las PC son armadas y poseen sistema operativo. No se incluyen monitor ni periféricos, sólo los componentes detallados debajo. Si desea armar una configuración a su medida podrá hacerla desde nuestro Armador de PC.
+CPU067 Micro AMD Athlon 3000G Vega 3 DualCore AM4 BOX 
+ MOT076 Mother MSI A320M-A PRO M2 AM4  
+ RAM034 Memoria RAM Crucial/Oloy 4GB DDR4 2400/2666Mhz PC  
+ HDD056 Disco SSD Gigabyte 240GB SATA3  
+ SER004 Armado de PC Basic - No Incluye Sistema Operativo
+ GAB003 Gabinete KIT ATX C/Fuente 500w. Teclado. Mouse y Parlantes'  
+,45499.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/EshTCUvq6gwsm3Ivrjh7/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Notebook ASUS X509MA Intel N4020 | 4GB | 500Gb | 15.6','
+PROCESADOR
+Marca: Intel / Modelo: Celeron N4020
+Núcleos: 2 / Frecuencia: 2.80 GHz
+GRÁFICOS
+Marca: Intel / Modelo: UHD
+MEMORIA
+Capacidad: 4GB / Tipo: DDR4 SODIMM
+Expansión: Hasta 8Gb Reemplazando La Que Trae
+ALMACENAMIENTO
+Capacidad: 500Gb / Clase: HDD
+Puerto M2: Si, solo NVME
+PANTALLA
+Tamaño: 15.6 / Resolución: 1366x768
+CONECTIVIDAD
+WiFi: Si, AC / Bluetooth: Si, 4.2
+HDMI: Si / Red: Si
+USB 2.0: 2 / USB 3.1: 1
+Grabadora DVD: No / Lector Memorias: Si
+SISTEMA OPERATIVO
+OS: Linux'  
+,62999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/6Qb6xKi5QfifPITOy9Jj/imagen',1,1,1,1,7)
+  
+  INSERT INTO COMPONENTES 
+VALUES('Notebook Lenovo IP S145 AMD A6 9225 | 4GB | 1TB | Win10 | 15.6 | 81N300N7AR','PROCESADOR
+Marca: AMD / Modelo: A6 9225
+Núcleos: 2 / Frecuencia: 3.1GHz 
+GRÁFICOS
+Marca: AMD Radeon / Modelo: R4
+MEMORIA
+Capacidad: 4GB / Tipo: DDR4 SODIMM
+Expansión: 1 Slot Ocupado (Puede Reemplazar RAM Hasta 8Gb)
+ALMACENAMIENTO
+Capacidad: 1TB / Clase: HDD
+Puerto M2: Si, NVME
+PANTALLA
+Tamaño: 15.6" / Resolución: 1366x768
+CONECTIVIDAD
+WiFi: Si, AC / Bluetooth: Si, 4.2
+HDMI: Si / Red: No
+USB 2.0: 1 / USB 3.1: 2
+Grabadora DVD: No / Lector Memorias: Si
+SISTEMA OPERATIVO
+OS: Windows 10 Home 64bits'  
+,66999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/ghTK94Sfcb0iqdPzIyZe/imagen',1,1,1,1,7)
+
+INSERT INTO COMPONENTES 
+VALUES('Micro AMD Athlon 3000G Vega 3 DualCore AM4 BOX','Garantia de 12 meses'
+,25999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/skzKBEUHDOtZQWJ6AkMG/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Micro AMD Ryzen 5 3600 - 6 Núcleos / 12 Threads 4.2Ghz AM4','Garantia de 12 meses'
+,36999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/kanaXeWTnCPgAR6bhe6N/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Micro Intel Core I7 11700F 8 Núcleos / 16 Threads HT 4.9Ghz (11va Gen) LGA1200','Garantia de 12 meses'
+,47999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/27XhOV7630M2JfOzHdWk/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Micro Intel Core I3 10105F 4 Núcleos / 8 Threads HT 4.4Ghz (10ma Gen) LGA1200','Garantia de 12 meses'
+,18999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/7X7nDz9qUW68sVjNeKjh/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('PC Armada | AMD Athlon 3000G + 4GB + SSD','Imágenes de carácter ilustrativo, las PC son armadas y poseen sistema operativo. No se incluyen monitor ni periféricos, sólo los componentes detallados debajo. Si desea armar una configuración a su medida podrá hacerla desde nuestro Armador de PC.
+ CPU067 Micro AMD Athlon 3000G Vega 3 DualCore AM4 BOX 
+ MOT076 Mother MSI A320M-A PRO M2 AM4  
+ RAM034 Memoria RAM Crucial/Oloy 4GB DDR4 2400/2666Mhz PC  
+ HDD056 Disco SSD Gigabyte 240GB SATA3  
+ SER004 Armado de PC Basic - No Incluye Sistema Operativo
+ GAB003 Gabinete KIT ATX C/Fuente 500w. Teclado. Mouse y Parlantes'  
+,45499.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/EshTCUvq6gwsm3Ivrjh7/imagen',1,1,1,1,7)
+  
+  INSERT INTO COMPONENTES 
+VALUES('PC Armada | Intel Core I3 10100F + 8GB + SSD','Imágenes de carácter ilustrativo, las PC son armadas y poseen sistema operativo. No se incluyen monitor ni periféricos, sólo los componentes detallados debajo. Si desea armar una configuración a su medida podrá hacerla desde nuestro Armador de PC.
+ CPU021 Micro Intel Core I3 10100F 4 Núcleos / 8 Threads HT 4.3Ghz (10ma Gen) LGA1200  
+ MOT205 Mother ASUS PRIME H410M-E (10ma Gen) LGA1200  
+ RAM022 Memoria RAM NeoForza/HP 8GB DDR4 2666Mhz PC  
+ HDD056 Disco SSD Gigabyte 240GB SATA3 
+ VGA124 Placa de Video Palit NVIDIA GeForce GT 710 2GB DDR3 
+ GAB003 Gabinete KIT ATX C/Fuente 500w. Teclado. Mouse y Parlantes 
+ SER004 Armado de PC Basic - No Incluye Sistema Operativo ' 
+
+,57999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/EshTCUvq6gwsm3Ivrjh7/imagen',1,1,1,1,7)
+
+INSERT INTO COMPONENTES 
+VALUES('PC Armada | AMD Athlon 3000G + 4GB + SSD','Imágenes de carácter ilustrativo, las PC son armadas y poseen sistema operativo. No se incluyen monitor ni periféricos, sólo los componentes detallados debajo. Si desea armar una configuración a su medida podrá hacerla desde nuestro Armador de PC.
+CPU067 Micro AMD Athlon 3000G Vega 3 DualCore AM4 BOX 
+ MOT076 Mother MSI A320M-A PRO M2 AM4  
+ RAM034 Memoria RAM Crucial/Oloy 4GB DDR4 2400/2666Mhz PC  
+ HDD056 Disco SSD Gigabyte 240GB SATA3  
+ SER004 Armado de PC Basic - No Incluye Sistema Operativo
+ GAB003 Gabinete KIT ATX C/Fuente 500w. Teclado. Mouse y Parlantes'  
+,45499.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/EshTCUvq6gwsm3Ivrjh7/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Notebook ASUS X509MA Intel N4020 | 4GB | 500Gb | 15.6','
+PROCESADOR
+Marca: Intel / Modelo: Celeron N4020
+Núcleos: 2 / Frecuencia: 2.80 GHz
+GRÁFICOS
+Marca: Intel / Modelo: UHD
+MEMORIA
+Capacidad: 4GB / Tipo: DDR4 SODIMM
+Expansión: Hasta 8Gb Reemplazando La Que Trae
+ALMACENAMIENTO
+Capacidad: 500Gb / Clase: HDD
+Puerto M2: Si, solo NVME
+PANTALLA
+Tamaño: 15.6 / Resolución: 1366x768
+CONECTIVIDAD
+WiFi: Si, AC / Bluetooth: Si, 4.2
+HDMI: Si / Red: Si
+USB 2.0: 2 / USB 3.1: 1
+Grabadora DVD: No / Lector Memorias: Si
+SISTEMA OPERATIVO
+OS: Linux'  
+,62999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/6Qb6xKi5QfifPITOy9Jj/imagen',1,1,1,1,7)
+  
+  INSERT INTO COMPONENTES 
+VALUES('Notebook Lenovo IP S145 AMD A6 9225 | 4GB | 1TB | Win10 | 15.6 | 81N300N7AR','PROCESADOR
+Marca: AMD / Modelo: A6 9225
+Núcleos: 2 / Frecuencia: 3.1GHz 
+GRÁFICOS
+Marca: AMD Radeon / Modelo: R4
+MEMORIA
+Capacidad: 4GB / Tipo: DDR4 SODIMM
+Expansión: 1 Slot Ocupado (Puede Reemplazar RAM Hasta 8Gb)
+ALMACENAMIENTO
+Capacidad: 1TB / Clase: HDD
+Puerto M2: Si, NVME
+PANTALLA
+Tamaño: 15.6" / Resolución: 1366x768
+CONECTIVIDAD
+WiFi: Si, AC / Bluetooth: Si, 4.2
+HDMI: Si / Red: No
+USB 2.0: 1 / USB 3.1: 2
+Grabadora DVD: No / Lector Memorias: Si
+SISTEMA OPERATIVO
+OS: Windows 10 Home 64bits'  
+,66999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/ghTK94Sfcb0iqdPzIyZe/imagen',1,1,1,1,7)
+
+INSERT INTO COMPONENTES 
+VALUES('Micro AMD Athlon 3000G Vega 3 DualCore AM4 BOX','Garantia de 12 meses'
+,25999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/skzKBEUHDOtZQWJ6AkMG/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Micro AMD Ryzen 5 3600 - 6 Núcleos / 12 Threads 4.2Ghz AM4','Garantia de 12 meses'
+,36999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/kanaXeWTnCPgAR6bhe6N/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Micro Intel Core I7 11700F 8 Núcleos / 16 Threads HT 4.9Ghz (11va Gen) LGA1200','Garantia de 12 meses'
+,47999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/27XhOV7630M2JfOzHdWk/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Micro Intel Core I3 10105F 4 Núcleos / 8 Threads HT 4.4Ghz (10ma Gen) LGA1200','Garantia de 12 meses'
+,18999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/7X7nDz9qUW68sVjNeKjh/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('PC Armada | AMD Athlon 3000G + 4GB + SSD','Imágenes de carácter ilustrativo, las PC son armadas y poseen sistema operativo. No se incluyen monitor ni periféricos, sólo los componentes detallados debajo. Si desea armar una configuración a su medida podrá hacerla desde nuestro Armador de PC.
+ CPU067 Micro AMD Athlon 3000G Vega 3 DualCore AM4 BOX 
+ MOT076 Mother MSI A320M-A PRO M2 AM4  
+ RAM034 Memoria RAM Crucial/Oloy 4GB DDR4 2400/2666Mhz PC  
+ HDD056 Disco SSD Gigabyte 240GB SATA3  
+ SER004 Armado de PC Basic - No Incluye Sistema Operativo
+ GAB003 Gabinete KIT ATX C/Fuente 500w. Teclado. Mouse y Parlantes'  
+,45499.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/EshTCUvq6gwsm3Ivrjh7/imagen',1,1,1,1,7)
+  
+  INSERT INTO COMPONENTES 
+VALUES('PC Armada | Intel Core I3 10100F + 8GB + SSD','Imágenes de carácter ilustrativo, las PC son armadas y poseen sistema operativo. No se incluyen monitor ni periféricos, sólo los componentes detallados debajo. Si desea armar una configuración a su medida podrá hacerla desde nuestro Armador de PC.
+ CPU021 Micro Intel Core I3 10100F 4 Núcleos / 8 Threads HT 4.3Ghz (10ma Gen) LGA1200  
+ MOT205 Mother ASUS PRIME H410M-E (10ma Gen) LGA1200  
+ RAM022 Memoria RAM NeoForza/HP 8GB DDR4 2666Mhz PC  
+ HDD056 Disco SSD Gigabyte 240GB SATA3 
+ VGA124 Placa de Video Palit NVIDIA GeForce GT 710 2GB DDR3 
+ GAB003 Gabinete KIT ATX C/Fuente 500w. Teclado. Mouse y Parlantes 
+ SER004 Armado de PC Basic - No Incluye Sistema Operativo ' 
+
+,57999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/EshTCUvq6gwsm3Ivrjh7/imagen',1,1,1,1,7)
+
+INSERT INTO COMPONENTES 
+VALUES('PC Armada | AMD Athlon 3000G + 4GB + SSD','Imágenes de carácter ilustrativo, las PC son armadas y poseen sistema operativo. No se incluyen monitor ni periféricos, sólo los componentes detallados debajo. Si desea armar una configuración a su medida podrá hacerla desde nuestro Armador de PC.
+CPU067 Micro AMD Athlon 3000G Vega 3 DualCore AM4 BOX 
+ MOT076 Mother MSI A320M-A PRO M2 AM4  
+ RAM034 Memoria RAM Crucial/Oloy 4GB DDR4 2400/2666Mhz PC  
+ HDD056 Disco SSD Gigabyte 240GB SATA3  
+ SER004 Armado de PC Basic - No Incluye Sistema Operativo
+ GAB003 Gabinete KIT ATX C/Fuente 500w. Teclado. Mouse y Parlantes'  
+,45499.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/EshTCUvq6gwsm3Ivrjh7/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Notebook ASUS X509MA Intel N4020 | 4GB | 500Gb | 15.6','
+PROCESADOR
+Marca: Intel / Modelo: Celeron N4020
+Núcleos: 2 / Frecuencia: 2.80 GHz
+GRÁFICOS
+Marca: Intel / Modelo: UHD
+MEMORIA
+Capacidad: 4GB / Tipo: DDR4 SODIMM
+Expansión: Hasta 8Gb Reemplazando La Que Trae
+ALMACENAMIENTO
+Capacidad: 500Gb / Clase: HDD
+Puerto M2: Si, solo NVME
+PANTALLA
+Tamaño: 15.6 / Resolución: 1366x768
+CONECTIVIDAD
+WiFi: Si, AC / Bluetooth: Si, 4.2
+HDMI: Si / Red: Si
+USB 2.0: 2 / USB 3.1: 1
+Grabadora DVD: No / Lector Memorias: Si
+SISTEMA OPERATIVO
+OS: Linux'  
+,62999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/6Qb6xKi5QfifPITOy9Jj/imagen',1,1,1,1,7)
+  
+  INSERT INTO COMPONENTES 
+VALUES('Notebook Lenovo IP S145 AMD A6 9225 | 4GB | 1TB | Win10 | 15.6 | 81N300N7AR','PROCESADOR
+Marca: AMD / Modelo: A6 9225
+Núcleos: 2 / Frecuencia: 3.1GHz 
+GRÁFICOS
+Marca: AMD Radeon / Modelo: R4
+MEMORIA
+Capacidad: 4GB / Tipo: DDR4 SODIMM
+Expansión: 1 Slot Ocupado (Puede Reemplazar RAM Hasta 8Gb)
+ALMACENAMIENTO
+Capacidad: 1TB / Clase: HDD
+Puerto M2: Si, NVME
+PANTALLA
+Tamaño: 15.6" / Resolución: 1366x768
+CONECTIVIDAD
+WiFi: Si, AC / Bluetooth: Si, 4.2
+HDMI: Si / Red: No
+USB 2.0: 1 / USB 3.1: 2
+Grabadora DVD: No / Lector Memorias: Si
+SISTEMA OPERATIVO
+OS: Windows 10 Home 64bits'  
+,66999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/ghTK94Sfcb0iqdPzIyZe/imagen',1,1,1,1,7)
+
+INSERT INTO COMPONENTES 
+VALUES('Micro AMD Athlon 3000G Vega 3 DualCore AM4 BOX','Garantia de 12 meses'
+,25999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/skzKBEUHDOtZQWJ6AkMG/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Micro AMD Ryzen 5 3600 - 6 Núcleos / 12 Threads 4.2Ghz AM4','Garantia de 12 meses'
+,36999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/kanaXeWTnCPgAR6bhe6N/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Micro Intel Core I7 11700F 8 Núcleos / 16 Threads HT 4.9Ghz (11va Gen) LGA1200','Garantia de 12 meses'
+,47999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/27XhOV7630M2JfOzHdWk/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Micro Intel Core I3 10105F 4 Núcleos / 8 Threads HT 4.4Ghz (10ma Gen) LGA1200','Garantia de 12 meses'
+,18999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/7X7nDz9qUW68sVjNeKjh/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('PC Armada | AMD Athlon 3000G + 4GB + SSD','Imágenes de carácter ilustrativo, las PC son armadas y poseen sistema operativo. No se incluyen monitor ni periféricos, sólo los componentes detallados debajo. Si desea armar una configuración a su medida podrá hacerla desde nuestro Armador de PC.
+ CPU067 Micro AMD Athlon 3000G Vega 3 DualCore AM4 BOX 
+ MOT076 Mother MSI A320M-A PRO M2 AM4  
+ RAM034 Memoria RAM Crucial/Oloy 4GB DDR4 2400/2666Mhz PC  
+ HDD056 Disco SSD Gigabyte 240GB SATA3  
+ SER004 Armado de PC Basic - No Incluye Sistema Operativo
+ GAB003 Gabinete KIT ATX C/Fuente 500w. Teclado. Mouse y Parlantes'  
+,45499.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/EshTCUvq6gwsm3Ivrjh7/imagen',1,1,1,1,7)
+  
+  INSERT INTO COMPONENTES 
+VALUES('PC Armada | Intel Core I3 10100F + 8GB + SSD','Imágenes de carácter ilustrativo, las PC son armadas y poseen sistema operativo. No se incluyen monitor ni periféricos, sólo los componentes detallados debajo. Si desea armar una configuración a su medida podrá hacerla desde nuestro Armador de PC.
+ CPU021 Micro Intel Core I3 10100F 4 Núcleos / 8 Threads HT 4.3Ghz (10ma Gen) LGA1200  
+ MOT205 Mother ASUS PRIME H410M-E (10ma Gen) LGA1200  
+ RAM022 Memoria RAM NeoForza/HP 8GB DDR4 2666Mhz PC  
+ HDD056 Disco SSD Gigabyte 240GB SATA3 
+ VGA124 Placa de Video Palit NVIDIA GeForce GT 710 2GB DDR3 
+ GAB003 Gabinete KIT ATX C/Fuente 500w. Teclado. Mouse y Parlantes 
+ SER004 Armado de PC Basic - No Incluye Sistema Operativo ' 
+
+,57999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/EshTCUvq6gwsm3Ivrjh7/imagen',1,1,1,1,7)
+
+INSERT INTO COMPONENTES 
+VALUES('PC Armada | AMD Athlon 3000G + 4GB + SSD','Imágenes de carácter ilustrativo, las PC son armadas y poseen sistema operativo. No se incluyen monitor ni periféricos, sólo los componentes detallados debajo. Si desea armar una configuración a su medida podrá hacerla desde nuestro Armador de PC.
+CPU067 Micro AMD Athlon 3000G Vega 3 DualCore AM4 BOX 
+ MOT076 Mother MSI A320M-A PRO M2 AM4  
+ RAM034 Memoria RAM Crucial/Oloy 4GB DDR4 2400/2666Mhz PC  
+ HDD056 Disco SSD Gigabyte 240GB SATA3  
+ SER004 Armado de PC Basic - No Incluye Sistema Operativo
+ GAB003 Gabinete KIT ATX C/Fuente 500w. Teclado. Mouse y Parlantes'  
+,45499.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/EshTCUvq6gwsm3Ivrjh7/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Notebook ASUS X509MA Intel N4020 | 4GB | 500Gb | 15.6','
+PROCESADOR
+Marca: Intel / Modelo: Celeron N4020
+Núcleos: 2 / Frecuencia: 2.80 GHz
+GRÁFICOS
+Marca: Intel / Modelo: UHD
+MEMORIA
+Capacidad: 4GB / Tipo: DDR4 SODIMM
+Expansión: Hasta 8Gb Reemplazando La Que Trae
+ALMACENAMIENTO
+Capacidad: 500Gb / Clase: HDD
+Puerto M2: Si, solo NVME
+PANTALLA
+Tamaño: 15.6 / Resolución: 1366x768
+CONECTIVIDAD
+WiFi: Si, AC / Bluetooth: Si, 4.2
+HDMI: Si / Red: Si
+USB 2.0: 2 / USB 3.1: 1
+Grabadora DVD: No / Lector Memorias: Si
+SISTEMA OPERATIVO
+OS: Linux'  
+,62999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/6Qb6xKi5QfifPITOy9Jj/imagen',1,1,1,1,7)
+  
+  INSERT INTO COMPONENTES 
+VALUES('Notebook Lenovo IP S145 AMD A6 9225 | 4GB | 1TB | Win10 | 15.6 | 81N300N7AR','PROCESADOR
+Marca: AMD / Modelo: A6 9225
+Núcleos: 2 / Frecuencia: 3.1GHz 
+GRÁFICOS
+Marca: AMD Radeon / Modelo: R4
+MEMORIA
+Capacidad: 4GB / Tipo: DDR4 SODIMM
+Expansión: 1 Slot Ocupado (Puede Reemplazar RAM Hasta 8Gb)
+ALMACENAMIENTO
+Capacidad: 1TB / Clase: HDD
+Puerto M2: Si, NVME
+PANTALLA
+Tamaño: 15.6" / Resolución: 1366x768
+CONECTIVIDAD
+WiFi: Si, AC / Bluetooth: Si, 4.2
+HDMI: Si / Red: No
+USB 2.0: 1 / USB 3.1: 2
+Grabadora DVD: No / Lector Memorias: Si
+SISTEMA OPERATIVO
+OS: Windows 10 Home 64bits'  
+,66999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/ghTK94Sfcb0iqdPzIyZe/imagen',1,1,1,1,7)
+
+INSERT INTO COMPONENTES 
+VALUES('Micro AMD Athlon 3000G Vega 3 DualCore AM4 BOX','Garantia de 12 meses'
+,25999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/skzKBEUHDOtZQWJ6AkMG/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Micro AMD Ryzen 5 3600 - 6 Núcleos / 12 Threads 4.2Ghz AM4','Garantia de 12 meses'
+,36999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/kanaXeWTnCPgAR6bhe6N/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Micro Intel Core I7 11700F 8 Núcleos / 16 Threads HT 4.9Ghz (11va Gen) LGA1200','Garantia de 12 meses'
+,47999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/27XhOV7630M2JfOzHdWk/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Micro Intel Core I3 10105F 4 Núcleos / 8 Threads HT 4.4Ghz (10ma Gen) LGA1200','Garantia de 12 meses'
+,18999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/7X7nDz9qUW68sVjNeKjh/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('PC Armada | AMD Athlon 3000G + 4GB + SSD','Imágenes de carácter ilustrativo, las PC son armadas y poseen sistema operativo. No se incluyen monitor ni periféricos, sólo los componentes detallados debajo. Si desea armar una configuración a su medida podrá hacerla desde nuestro Armador de PC.
+ CPU067 Micro AMD Athlon 3000G Vega 3 DualCore AM4 BOX 
+ MOT076 Mother MSI A320M-A PRO M2 AM4  
+ RAM034 Memoria RAM Crucial/Oloy 4GB DDR4 2400/2666Mhz PC  
+ HDD056 Disco SSD Gigabyte 240GB SATA3  
+ SER004 Armado de PC Basic - No Incluye Sistema Operativo
+ GAB003 Gabinete KIT ATX C/Fuente 500w. Teclado. Mouse y Parlantes'  
+,45499.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/EshTCUvq6gwsm3Ivrjh7/imagen',1,1,1,1,7)
+  
+  INSERT INTO COMPONENTES 
+VALUES('PC Armada | Intel Core I3 10100F + 8GB + SSD','Imágenes de carácter ilustrativo, las PC son armadas y poseen sistema operativo. No se incluyen monitor ni periféricos, sólo los componentes detallados debajo. Si desea armar una configuración a su medida podrá hacerla desde nuestro Armador de PC.
+ CPU021 Micro Intel Core I3 10100F 4 Núcleos / 8 Threads HT 4.3Ghz (10ma Gen) LGA1200  
+ MOT205 Mother ASUS PRIME H410M-E (10ma Gen) LGA1200  
+ RAM022 Memoria RAM NeoForza/HP 8GB DDR4 2666Mhz PC  
+ HDD056 Disco SSD Gigabyte 240GB SATA3 
+ VGA124 Placa de Video Palit NVIDIA GeForce GT 710 2GB DDR3 
+ GAB003 Gabinete KIT ATX C/Fuente 500w. Teclado. Mouse y Parlantes 
+ SER004 Armado de PC Basic - No Incluye Sistema Operativo ' 
+
+,57999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/EshTCUvq6gwsm3Ivrjh7/imagen',1,1,1,1,7)
+
+INSERT INTO COMPONENTES 
+VALUES('PC Armada | AMD Athlon 3000G + 4GB + SSD','Imágenes de carácter ilustrativo, las PC son armadas y poseen sistema operativo. No se incluyen monitor ni periféricos, sólo los componentes detallados debajo. Si desea armar una configuración a su medida podrá hacerla desde nuestro Armador de PC.
+CPU067 Micro AMD Athlon 3000G Vega 3 DualCore AM4 BOX 
+ MOT076 Mother MSI A320M-A PRO M2 AM4  
+ RAM034 Memoria RAM Crucial/Oloy 4GB DDR4 2400/2666Mhz PC  
+ HDD056 Disco SSD Gigabyte 240GB SATA3  
+ SER004 Armado de PC Basic - No Incluye Sistema Operativo
+ GAB003 Gabinete KIT ATX C/Fuente 500w. Teclado. Mouse y Parlantes'  
+,45499.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/EshTCUvq6gwsm3Ivrjh7/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Notebook ASUS X509MA Intel N4020 | 4GB | 500Gb | 15.6','
+PROCESADOR
+Marca: Intel / Modelo: Celeron N4020
+Núcleos: 2 / Frecuencia: 2.80 GHz
+GRÁFICOS
+Marca: Intel / Modelo: UHD
+MEMORIA
+Capacidad: 4GB / Tipo: DDR4 SODIMM
+Expansión: Hasta 8Gb Reemplazando La Que Trae
+ALMACENAMIENTO
+Capacidad: 500Gb / Clase: HDD
+Puerto M2: Si, solo NVME
+PANTALLA
+Tamaño: 15.6 / Resolución: 1366x768
+CONECTIVIDAD
+WiFi: Si, AC / Bluetooth: Si, 4.2
+HDMI: Si / Red: Si
+USB 2.0: 2 / USB 3.1: 1
+Grabadora DVD: No / Lector Memorias: Si
+SISTEMA OPERATIVO
+OS: Linux'  
+,62999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/6Qb6xKi5QfifPITOy9Jj/imagen',1,1,1,1,7)
+  
+  INSERT INTO COMPONENTES 
+VALUES('Notebook Lenovo IP S145 AMD A6 9225 | 4GB | 1TB | Win10 | 15.6 | 81N300N7AR','PROCESADOR
+Marca: AMD / Modelo: A6 9225
+Núcleos: 2 / Frecuencia: 3.1GHz 
+GRÁFICOS
+Marca: AMD Radeon / Modelo: R4
+MEMORIA
+Capacidad: 4GB / Tipo: DDR4 SODIMM
+Expansión: 1 Slot Ocupado (Puede Reemplazar RAM Hasta 8Gb)
+ALMACENAMIENTO
+Capacidad: 1TB / Clase: HDD
+Puerto M2: Si, NVME
+PANTALLA
+Tamaño: 15.6" / Resolución: 1366x768
+CONECTIVIDAD
+WiFi: Si, AC / Bluetooth: Si, 4.2
+HDMI: Si / Red: No
+USB 2.0: 1 / USB 3.1: 2
+Grabadora DVD: No / Lector Memorias: Si
+SISTEMA OPERATIVO
+OS: Windows 10 Home 64bits'  
+,66999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/ghTK94Sfcb0iqdPzIyZe/imagen',1,1,1,1,7)
+
+INSERT INTO COMPONENTES 
+VALUES('Micro AMD Athlon 3000G Vega 3 DualCore AM4 BOX','Garantia de 12 meses'
+,25999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/skzKBEUHDOtZQWJ6AkMG/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Micro AMD Ryzen 5 3600 - 6 Núcleos / 12 Threads 4.2Ghz AM4','Garantia de 12 meses'
+,36999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/kanaXeWTnCPgAR6bhe6N/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Micro Intel Core I7 11700F 8 Núcleos / 16 Threads HT 4.9Ghz (11va Gen) LGA1200','Garantia de 12 meses'
+,47999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/27XhOV7630M2JfOzHdWk/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Micro Intel Core I3 10105F 4 Núcleos / 8 Threads HT 4.4Ghz (10ma Gen) LGA1200','Garantia de 12 meses'
+,18999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/7X7nDz9qUW68sVjNeKjh/imagen',1,1,1,1,7) 
 
 
+INSERT INTO COMPONENTES 
+VALUES('PC Armada | AMD Athlon 3000G + 4GB + SSD','Imágenes de carácter ilustrativo, las PC son armadas y poseen sistema operativo. No se incluyen monitor ni periféricos, sólo los componentes detallados debajo. Si desea armar una configuración a su medida podrá hacerla desde nuestro Armador de PC.
+ CPU067 Micro AMD Athlon 3000G Vega 3 DualCore AM4 BOX 
+ MOT076 Mother MSI A320M-A PRO M2 AM4  
+ RAM034 Memoria RAM Crucial/Oloy 4GB DDR4 2400/2666Mhz PC  
+ HDD056 Disco SSD Gigabyte 240GB SATA3  
+ SER004 Armado de PC Basic - No Incluye Sistema Operativo
+ GAB003 Gabinete KIT ATX C/Fuente 500w. Teclado. Mouse y Parlantes'  
+,45499.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/EshTCUvq6gwsm3Ivrjh7/imagen',1,1,1,1,7)
+  
+  INSERT INTO COMPONENTES 
+VALUES('PC Armada | Intel Core I3 10100F + 8GB + SSD','Imágenes de carácter ilustrativo, las PC son armadas y poseen sistema operativo. No se incluyen monitor ni periféricos, sólo los componentes detallados debajo. Si desea armar una configuración a su medida podrá hacerla desde nuestro Armador de PC.
+ CPU021 Micro Intel Core I3 10100F 4 Núcleos / 8 Threads HT 4.3Ghz (10ma Gen) LGA1200  
+ MOT205 Mother ASUS PRIME H410M-E (10ma Gen) LGA1200  
+ RAM022 Memoria RAM NeoForza/HP 8GB DDR4 2666Mhz PC  
+ HDD056 Disco SSD Gigabyte 240GB SATA3 
+ VGA124 Placa de Video Palit NVIDIA GeForce GT 710 2GB DDR3 
+ GAB003 Gabinete KIT ATX C/Fuente 500w. Teclado. Mouse y Parlantes 
+ SER004 Armado de PC Basic - No Incluye Sistema Operativo ' 
 
+,57999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/EshTCUvq6gwsm3Ivrjh7/imagen',1,1,1,1,7)
 
+INSERT INTO COMPONENTES 
+VALUES('PC Armada | AMD Athlon 3000G + 4GB + SSD','Imágenes de carácter ilustrativo, las PC son armadas y poseen sistema operativo. No se incluyen monitor ni periféricos, sólo los componentes detallados debajo. Si desea armar una configuración a su medida podrá hacerla desde nuestro Armador de PC.
+CPU067 Micro AMD Athlon 3000G Vega 3 DualCore AM4 BOX 
+ MOT076 Mother MSI A320M-A PRO M2 AM4  
+ RAM034 Memoria RAM Crucial/Oloy 4GB DDR4 2400/2666Mhz PC  
+ HDD056 Disco SSD Gigabyte 240GB SATA3  
+ SER004 Armado de PC Basic - No Incluye Sistema Operativo
+ GAB003 Gabinete KIT ATX C/Fuente 500w. Teclado. Mouse y Parlantes'  
+,45499.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/EshTCUvq6gwsm3Ivrjh7/imagen',1,1,1,1,7) 
 
+INSERT INTO COMPONENTES 
+VALUES('Notebook ASUS X509MA Intel N4020 | 4GB | 500Gb | 15.6','
+PROCESADOR
+Marca: Intel / Modelo: Celeron N4020
+Núcleos: 2 / Frecuencia: 2.80 GHz
+GRÁFICOS
+Marca: Intel / Modelo: UHD
+MEMORIA
+Capacidad: 4GB / Tipo: DDR4 SODIMM
+Expansión: Hasta 8Gb Reemplazando La Que Trae
+ALMACENAMIENTO
+Capacidad: 500Gb / Clase: HDD
+Puerto M2: Si, solo NVME
+PANTALLA
+Tamaño: 15.6 / Resolución: 1366x768
+CONECTIVIDAD
+WiFi: Si, AC / Bluetooth: Si, 4.2
+HDMI: Si / Red: Si
+USB 2.0: 2 / USB 3.1: 1
+Grabadora DVD: No / Lector Memorias: Si
+SISTEMA OPERATIVO
+OS: Linux'  
+,62999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/6Qb6xKi5QfifPITOy9Jj/imagen',1,1,1,1,7)
+  
+  INSERT INTO COMPONENTES 
+VALUES('Notebook Lenovo IP S145 AMD A6 9225 | 4GB | 1TB | Win10 | 15.6 | 81N300N7AR','PROCESADOR
+Marca: AMD / Modelo: A6 9225
+Núcleos: 2 / Frecuencia: 3.1GHz 
+GRÁFICOS
+Marca: AMD Radeon / Modelo: R4
+MEMORIA
+Capacidad: 4GB / Tipo: DDR4 SODIMM
+Expansión: 1 Slot Ocupado (Puede Reemplazar RAM Hasta 8Gb)
+ALMACENAMIENTO
+Capacidad: 1TB / Clase: HDD
+Puerto M2: Si, NVME
+PANTALLA
+Tamaño: 15.6" / Resolución: 1366x768
+CONECTIVIDAD
+WiFi: Si, AC / Bluetooth: Si, 4.2
+HDMI: Si / Red: No
+USB 2.0: 1 / USB 3.1: 2
+Grabadora DVD: No / Lector Memorias: Si
+SISTEMA OPERATIVO
+OS: Windows 10 Home 64bits'  
+,66999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/ghTK94Sfcb0iqdPzIyZe/imagen',1,1,1,1,7)
 
+INSERT INTO COMPONENTES 
+VALUES('Micro AMD Athlon 3000G Vega 3 DualCore AM4 BOX','Garantia de 12 meses'
+,25999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/skzKBEUHDOtZQWJ6AkMG/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Micro AMD Ryzen 5 3600 - 6 Núcleos / 12 Threads 4.2Ghz AM4','Garantia de 12 meses'
+,36999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/kanaXeWTnCPgAR6bhe6N/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Micro Intel Core I7 11700F 8 Núcleos / 16 Threads HT 4.9Ghz (11va Gen) LGA1200','Garantia de 12 meses'
+,47999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/27XhOV7630M2JfOzHdWk/imagen',1,1,1,1,7) 
+
+INSERT INTO COMPONENTES 
+VALUES('Micro Intel Core I3 10105F 4 Núcleos / 8 Threads HT 4.4Ghz (10ma Gen) LGA1200','Garantia de 12 meses'
+,18999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/7X7nDz9qUW68sVjNeKjh/imagen',1,1,1,1,7) 
 
