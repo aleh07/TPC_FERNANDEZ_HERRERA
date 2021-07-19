@@ -12,24 +12,14 @@ namespace TPC_Fernandez_Herrera
 {
     public partial class AltaComponente : System.Web.UI.Page
     {
-
+        ComponenteNegocio negocio = new ComponenteNegocio();
+        List<Componente> listaComponente = new List<Componente>();
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             string id = Request.QueryString["ID"];
-            List<Componente> listaComponente = (List<Componente>)Session["ListarComponentes"];
-
-            if (id != null)
-            {
-
-                Componente modificar = listaComponente.Find(x => x.ID.ToString() == id);
-
-                TxtNombre.Text = modificar.Nombre;
-                TxtDescripcion.Text = modificar.Descripcion;
-                TxtPrecio.Text = modificar.Precio.ToString();
-                TxtCant.Text = modificar.Cantidad.ToString();
-                TxtImagenUrl.Text = modificar.ImagenUrl;
-
-            }
+            
+            listaComponente = negocio.Listar();
 
             if (!IsPostBack)
             {
@@ -54,12 +44,18 @@ namespace TPC_Fernandez_Herrera
                 ddlCategoria.DataValueField = "Id";
                 ddlCategoria.DataBind();
 
-
-
-
-
             }
-          
+            if (id != null)
+            {
+                Componente modificar = listaComponente.Find(x => x.ID.ToString() == id);
+                TxtNombre.Text = modificar.Nombre;
+                TxtDescripcion.Text = modificar.Descripcion;
+                TxtPrecio.Text = modificar.Precio.ToString();
+                TxtCant.Text = modificar.Cantidad.ToString();
+                TxtImagenUrl.Text = modificar.ImagenUrl;
+                ddlCategoria.SelectedIndex = modificar.categoria.Id -1;
+                ddlMarca.SelectedIndex = modificar.marca.Id -1;
+            }
         }
 
         bool ValidarVacios()
@@ -90,8 +86,6 @@ namespace TPC_Fernandez_Herrera
                 vacios = true;
             }
             return vacios;
-
-
         }
         protected void BtnAgregar_Click(object sender, EventArgs e)
         {
@@ -114,13 +108,25 @@ namespace TPC_Fernandez_Herrera
                     aux.Estado = true;
                     aux.marca = marcas.Find(x => x.Id == int.Parse(ddlMarca.SelectedValue));
                     aux.categoria = categorias.Find(x => x.Id == Convert.ToInt32(ddlCategoria.SelectedItem.Value));
+                    if (TxtPrecio.Text == "") aux.Precio = 0;
                     aux.Precio = decimal.Parse(TxtPrecio.Text);
 
                     negocio.agregar(aux);
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Alta Registrada');window.location ='GestionStock.aspx';", true);
                 }
                 else {
-                negocio.modificar(aux);
+                    Componente modificar = listaComponente.Find(x => x.ID.ToString() == id);
+
+                    modificar.Nombre = TxtNombre.Text;
+                    modificar.Descripcion = TxtDescripcion.Text;
+                    modificar.ImagenUrl = TxtImagenUrl.Text;
+                    modificar.Cantidad = int.Parse(TxtCant.Text);
+                    modificar.Estado = true;
+                    modificar.marca = marcas.Find(x => x.Id == int.Parse(ddlMarca.SelectedValue));
+                    modificar.categoria = categorias.Find(x => x.Id == Convert.ToInt32(ddlCategoria.SelectedItem.Value));
+                    modificar.Precio = decimal.Parse(TxtPrecio.Text);
+                    
+                    negocio.modificar(modificar);
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Registro Modificado');window.location ='GestionStock.aspx';", true);
                 }
             }

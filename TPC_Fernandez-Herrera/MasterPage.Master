@@ -23,7 +23,7 @@
  
                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                            <a class="nav-link" Style="color:darkblue" href="Inicio.aspx">Compu solution</a>
+                            <a class="nav-link" Style="color:darkblue; " href="Inicio.aspx"  > <img src="https://api.freelogodesign.org/files/0f5bda46fd98424ba12a6182bb3e67ec/thumb/logo_200x200.png?v=637622633400000000" style="width: 85px; height:65px; padding:0; margin:0;" /></a>
                         </li>
                        
                         <li class="nav-item">

@@ -88,11 +88,12 @@ namespace Negocio
             try
             {
               
-                datos.setearConsulta("update Componentes set  Nombre = @nombre, Descripcion = @descripcion, ImagenUrl = @urlImagen, precio = @precio, IdMarca = @idMarca, IdCategoria = @idCategoria, Estado = @Estado where id = @id");
+                datos.setearConsulta("update Componentes set  Nombre = @nombre, Descripcion = @descripcion, ImagenUrl = @urlImagen,Cantidad = @Cantidad, precio = @precio, IdMarca = @idMarca, IdCategoria = @idCategoria, Estado = @Estado where id = @id");
                 datos.setearParametro("@Id", nuevo.ID);
                 datos.setearParametro("@nombre", nuevo.Nombre);
                 datos.setearParametro("@descripcion", nuevo.Descripcion);
                 datos.setearParametro("@urlImagen", nuevo.ImagenUrl);
+                datos.setearParametro("@Cantidad", nuevo.Cantidad);
                 datos.setearParametro("@precio", nuevo.Precio);
                 datos.setearParametro("@idCategoria", nuevo.categoria.Id);
                 datos.setearParametro("@idMarca", nuevo.marca.Id);

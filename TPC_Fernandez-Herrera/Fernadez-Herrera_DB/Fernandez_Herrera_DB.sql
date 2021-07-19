@@ -133,7 +133,7 @@ insert  into MARCAS values('LENOVO')
 insert  into MARCAS values('MAC')
 insert  into MARCAS values('KINGTONG')
 insert  into MARCAS values('SEAGATE')
-SELECT * FROM USUARIOS
+
 --COMPONENTES
 INSERT INTO COMPONENTES 
 VALUES('PC Armada | AMD Athlon 3000G + 4GB + SSD','Imágenes de carácter ilustrativo, las PC son armadas y poseen sistema operativo. No se incluyen monitor ni periféricos, sólo los componentes detallados debajo. Si desea armar una configuración a su medida podrá hacerla desde nuestro Armador de PC.

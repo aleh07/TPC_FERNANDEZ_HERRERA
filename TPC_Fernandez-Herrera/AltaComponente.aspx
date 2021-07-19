@@ -16,7 +16,8 @@
         <asp:TextBox ID="TxtImagenUrl" class="form-control" type="text" placeholder="Ingrese Url Imagen" aria-label="Ingrese UrlImagen" runat="server"></asp:TextBox>
         <h3> *</h3>
         <asp:TextBox ID="TxtCant" MaxLength="5"  class="form-control" type="text" placeholder="Ingrese Cantidad" aria-label="Ingrese UrlImagen" runat="server"></asp:TextBox>
-        <h5> Campos Obligatorios(*)</h5>  
+        
+      <h5> Campos Obligatorios(*)</h5>  
       <h3>Marca</h3>
         <asp:DropDownList runat="server" ID="ddlMarca" CssClass="form-control-sm"></asp:DropDownList>
 
