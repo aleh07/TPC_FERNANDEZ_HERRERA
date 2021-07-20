@@ -182,7 +182,6 @@ D:\utn\cuatri 3\re2-Prog\TPC\TPC_FERNANDEZ_HERRERA\TPC_Fernandez-Herrera\bin\Neg
 D:\utn\cuatri 3\re2-Prog\TPC\TPC_FERNANDEZ_HERRERA\TPC_Fernandez-Herrera\bin\Dominio.pdb
 D:\utn\cuatri 3\re2-Prog\TPC\TPC_FERNANDEZ_HERRERA\TPC_Fernandez-Herrera\bin\Negocio.pdb
 D:\utn\cuatri 3\re2-Prog\TPC\TPC_FERNANDEZ_HERRERA\TPC_Fernandez-Herrera\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\utn\cuatri 3\re2-Prog\TPC\TPC_FERNANDEZ_HERRERA\TPC_Fernandez-Herrera\obj\Debug\TPC_Fernandez-Herrera.csprojAssemblyReference.cache
 D:\utn\cuatri 3\re2-Prog\TPC\TPC_FERNANDEZ_HERRERA\TPC_Fernandez-Herrera\obj\Debug\TPC_Fernandez-Herrera.csproj.CoreCompileInputs.cache
 D:\utn\cuatri 3\re2-Prog\TPC\TPC_FERNANDEZ_HERRERA\TPC_Fernandez-Herrera\obj\Debug\TPC_Fernandez-Herrera.csproj.CopyComplete
 D:\utn\cuatri 3\re2-Prog\TPC\TPC_FERNANDEZ_HERRERA\TPC_Fernandez-Herrera\obj\Debug\TPC_Fernandez-Herrera.dll
@@ -502,3 +501,4 @@ C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\tpultimo\TPC_FERNANDEZ_
 C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\tpultimo\TPC_FERNANDEZ_HERRERA\TPC_Fernandez-Herrera\obj\Debug\TPC_Fernandez-Herrera.csproj.CopyComplete
 C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\tpultimo\TPC_FERNANDEZ_HERRERA\TPC_Fernandez-Herrera\obj\Debug\TPC_Fernandez-Herrera.dll
 C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\tpultimo\TPC_FERNANDEZ_HERRERA\TPC_Fernandez-Herrera\obj\Debug\TPC_Fernandez-Herrera.pdb
+D:\utn\cuatri 3\re2-Prog\TPC\TPC_FERNANDEZ_HERRERA\TPC_Fernandez-Herrera\obj\Debug\TPC_Fernandez-Herrera.csproj.AssemblyReference.cache
