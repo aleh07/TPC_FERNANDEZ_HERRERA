@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
      <body class="body-register">
   <section class="form-register">
         <h4>Formulario </h4>
@@ -25,7 +26,7 @@
         
         <asp:DropDownList runat="server" ID="ddlCategoria" CssClass="form-control-sm"></asp:DropDownList>
         <br />
-        <asp:Button ID="BtnAgregar" Text="Agregar" OnClick="BtnAgregar_Click" runat="server" CssClass="btn btn-secondary" />
+        <asp:Button ID="BtnAgregar" Text="Agregar" AutoPosback="true" OnClick="BtnAgregar_Click" runat="server" CssClass="btn btn-secondary" />
  </section>
          </body>
 </asp:Content>

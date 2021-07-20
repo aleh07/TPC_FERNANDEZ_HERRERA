@@ -44,16 +44,12 @@ namespace TPC_Fernandez_Herrera
                 ddlCategoria.DataValueField = "Id";
                 ddlCategoria.DataBind();
 
-            }
+           
             if (id != null)
             {
-                CargarForm(id);
-                
-            }
-        }
-
-        public void CargarForm(string id)
-        {
+               
+                   
+      
             Componente modificar = listaComponente.Find(x => x.ID.ToString() == id);
 
             TxtNombre.Text = modificar.Nombre;
@@ -64,7 +60,13 @@ namespace TPC_Fernandez_Herrera
             ddlCategoria.SelectedIndex = modificar.categoria.Id - 1;
             ddlMarca.SelectedIndex = modificar.marca.Id - 1;
 
+      
+            }
+
+         }
         }
+
+   
         public void GuardarForm(Componente aux)
         {
             List<Marca> marcas = (List<Marca>)Session["listaMarcas"];
