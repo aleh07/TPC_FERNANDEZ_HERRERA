@@ -16,9 +16,9 @@ namespace TPC_Fernandez_Herrera
         List<Componente> listaComponente = new List<Componente>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
             string id = Request.QueryString["ID"];
-            
+
             listaComponente = negocio.Listar();
 
             if (!IsPostBack)
@@ -44,42 +44,19 @@ namespace TPC_Fernandez_Herrera
                 ddlCategoria.DataValueField = "Id";
                 ddlCategoria.DataBind();
 
-           
-            if (id != null)
-            {
-               
-                   
-      
-            Componente modificar = listaComponente.Find(x => x.ID.ToString() == id);
-
-            TxtNombre.Text = modificar.Nombre;
-            TxtDescripcion.Text = modificar.Descripcion;
-            TxtPrecio.Text = modificar.Precio.ToString();
-            TxtCant.Text = modificar.Cantidad.ToString();
-            TxtImagenUrl.Text = modificar.ImagenUrl;
-            ddlCategoria.SelectedIndex = modificar.categoria.Id - 1;
-            ddlMarca.SelectedIndex = modificar.marca.Id - 1;
-
-      
+                //ACA ESTA EL PROBLEMA ,TENIA QUE ESTAR DENTRO DEL POSBACK ,SINO LO LO RECARGABA DE NUEVO AL HACER CLICK EN AGREGAR
+                if (id != null)
+                {
+                    Componente modificar = listaComponente.Find(x => x.ID.ToString() == id);
+                    TxtNombre.Text = modificar.Nombre;
+                    TxtDescripcion.Text = modificar.Descripcion;
+                    TxtPrecio.Text = modificar.Precio.ToString();
+                    TxtCant.Text = modificar.Cantidad.ToString();
+                    TxtImagenUrl.Text = modificar.ImagenUrl;
+                    ddlCategoria.SelectedIndex = modificar.categoria.Id - 1;
+                    ddlMarca.SelectedIndex = modificar.marca.Id - 1;
+                }
             }
-
-         }
-        }
-
-   
-        public void GuardarForm(Componente aux)
-        {
-            List<Marca> marcas = (List<Marca>)Session["listaMarcas"];
-            List<Categoria> categorias = (List<Categoria>)Session["listaCat"];
-            aux.Nombre = TxtNombre.Text;
-            aux.Descripcion = TxtDescripcion.Text;
-            aux.ImagenUrl = TxtImagenUrl.Text;
-            aux.Cantidad = Convert.ToInt32(TxtCant.Text);
-            aux.Estado = true;
-            aux.marca = marcas.Find(x => x.Id == int.Parse(ddlMarca.SelectedValue));
-            aux.categoria = categorias.Find(x => x.Id == Convert.ToInt32(ddlCategoria.SelectedItem.Value));
-            if (TxtPrecio.Text == "") aux.Precio = 0;
-            aux.Precio = decimal.Parse(TxtPrecio.Text);
         }
 
         bool ValidarVacios()
@@ -87,6 +64,7 @@ namespace TPC_Fernandez_Herrera
             TxtNombre.BorderColor = Color.White;
             TxtDescripcion.BorderColor = Color.White;
             TxtPrecio.BorderColor = Color.White;
+            TxtImagenUrl.BorderColor = Color.White;
             TxtCant.BorderColor = Color.White;
             bool vacios = false;
             if (TxtNombre.Text == "")
@@ -104,6 +82,11 @@ namespace TPC_Fernandez_Herrera
                 TxtPrecio.BorderColor = Color.Red;
                 vacios = true;
             }
+            if (TxtImagenUrl.Text == "")
+            {
+                TxtImagenUrl.BorderColor = Color.Red;
+                vacios = true;
+            }
             if (TxtCant.Text == "")
             {
                 TxtCant.BorderColor = Color.Red;
@@ -116,19 +99,15 @@ namespace TPC_Fernandez_Herrera
             ComponenteNegocio negocio = new ComponenteNegocio();
             Componente aux = new Componente();
             ///para poder cargar los dropdowns hay que pasarle los objetos buscado con el find de las listas
-            List<Marca> marcas = (List<Marca>) Session["listaMarcas"];
+            List<Marca> marcas = (List<Marca>)Session["listaMarcas"];
             List<Categoria> categorias = (List<Categoria>)Session["listaCat"];
             string id = Request.QueryString["ID"];
-            
-           
 
-            if (ValidarVacios()==false)
+            if (ValidarVacios() == false)
             {
-                if (id==null)
+                if (id == null)
                 {
-                    List<Componente> ListaAux = new List<Componente>();
-                    ListaAux = (List<Componente>)Session["ListarComponentes"];
-                    //el problema es que no refresca ver el video de mxi, kDA CARGADO CON LA VARIABLE MODIFICAR,PD ESTO NO VA ACA
+
                     aux.Nombre = TxtNombre.Text;
                     aux.Descripcion = TxtDescripcion.Text;
                     aux.ImagenUrl = TxtImagenUrl.Text;
@@ -140,41 +119,37 @@ namespace TPC_Fernandez_Herrera
                     aux.Precio = decimal.Parse(TxtPrecio.Text);
 
                     negocio.agregar(aux);
-
-                    ListaAux.Add(aux);
-                    Session["ListarComponentes"] = ListaAux;
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Alta Registrada');window.location ='GestionStock.aspx';", true);
-                                
                 }
-                else {
+                else
+                {
+                    //esto esta demas creo que se puede utlizar la variable aux pero n lo probe por tiempo
+                    Componente modificar = listaComponente.Find(x => x.ID.ToString() == id);
 
-                    
-                    List<Componente> ListaAux = new List<Componente>();
-                    ListaAux = (List<Componente>)Session["ListarComponentes"];
+                    modificar.Nombre = TxtNombre.Text;
+                    modificar.Descripcion = TxtDescripcion.Text;
+                    modificar.ImagenUrl = TxtImagenUrl.Text;
+                    modificar.Cantidad = int.Parse(TxtCant.Text);
+                    modificar.Estado = true;
+                    modificar.marca = marcas.Find(x => x.Id == int.Parse(ddlMarca.SelectedValue));
+                    modificar.categoria = categorias.Find(x => x.Id == Convert.ToInt32(ddlCategoria.SelectedItem.Value));
+                    modificar.Precio = decimal.Parse(TxtPrecio.Text);
 
-                    //aux.Nombre = TxtNombre.Text;
-                    //aux.Descripcion = TxtDescripcion.Text;
-                    //aux.ImagenUrl = TxtImagenUrl.Text;
-                    //aux.Cantidad = Convert.ToInt32(TxtCant.Text);
-                    //aux.Estado = true;
-                    //aux.marca = marcas.Find(x => x.Id == int.Parse(ddlMarca.SelectedValue));
-                    //aux.categoria = categorias.Find(x => x.Id == Convert.ToInt32(ddlCategoria.SelectedItem.Value));
-                    //if (TxtPrecio.Text == "") aux.Precio = 0;
-                    //aux.Precio = decimal.Parse(TxtPrecio.Text);
-                    GuardarForm(aux);
-                   
-                    negocio.modificar(aux);
-                   
-                    ListaAux.RemoveAll(item => item.ID == int.Parse(Request.QueryString["ID"]));
-                    ListaAux.Add(aux);
-                    Session["ListarComponentes"] = ListaAux;
-
+                    negocio.modificar(modificar);
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Registro Modificado');window.location ='GestionStock.aspx';", true);
                 }
             }
-           
-          
 
+
+
+        }
+
+        protected void TxtNombre_TextChanged(object sender, EventArgs e)
+        {
+            string id = Request.QueryString["ID"];
+            Componente modificar = listaComponente.Find(x => x.ID.ToString() == id);
+
+            modificar.Nombre = TxtNombre.Text;
         }
     }
 }
