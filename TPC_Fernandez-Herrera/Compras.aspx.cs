@@ -15,6 +15,7 @@ namespace TPC_Fernandez_Herrera
         public Carrito carrito = new Carrito();
         Item item = new Item();
         decimal total;
+       
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -28,8 +29,8 @@ namespace TPC_Fernandez_Herrera
             List<TiposPedidos> tipoLista = negocio.listar();
             Session.Add("listaTipos", tipoLista);
             
-            LblNombre.Text = usuariologuiado.Nombre;
-            LblApellido.Text = usuariologuiado.Apellido;
+            LblNombre.Text = usuariologuiado.Nombre +" "+usuariologuiado.Apellido;
+            LblEmail.Text = usuariologuiado.Email;
            
             try
             {
@@ -137,13 +138,15 @@ namespace TPC_Fernandez_Herrera
        
             PedidoNegocio negocio = new PedidoNegocio();
             List<TiposPedidos> listaTipos = (List<TiposPedidos>) Session["listaTipos"];
+            Usuario usuariologuiado = (Usuario)Session["cuenta"];
             int id =  + 1;
             //aca agrego la direccion y un telefono es es opcional por que son campos null en la DB y genero  un pedido ahi si con todos los datos necesarios
             //desorrolar la funcion en negocio que inserte en la  DB un pedido
             Pedidos pedido= new Pedidos();
+            pedido.usuario = usuariologuiado;
             pedido.direccion = TxtDireccion.Text;
             pedido.Telefono = Convert.ToInt32(TxtTelefono.Text);
-
+            //sacarlo de la db 
             pedido.Estado = true;
             //cargar en la DB los tipos de pedidos
             pedido.Tipos = listaTipos.Find(x => x.Id == 1);

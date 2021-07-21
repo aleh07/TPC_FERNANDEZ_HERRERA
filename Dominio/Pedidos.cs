@@ -13,8 +13,9 @@ namespace Dominio
      
         public string direccion { get; set; }
         public int Telefono { get; set; }
+        public Usuario usuario { get; set; }
 
-       public  Carrito carrito { get; set; }
+        public  Carrito carrito { get; set; }
 
         public bool Estado { get; set; }
 

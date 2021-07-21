@@ -45,14 +45,14 @@ namespace Negocio
             try
             {
                 datos.setearConsulta("insert into Pedidos (Usuario,Direccion,TelefonoContacto,EstadoPedido,Carrito,Estado)" +
-                    " values(@Usuario,@Direccion,@TelefonoContacto,@EstadoPedido,Carrito,Estado)");
+                    " values(@Usuario,@Direccion,@TelefonoContacto,@EstadoPedido,@Carrito,@Estado)");
 
 
-                datos.setearParametro("@Usuario", nuevo.carrito.IdUsuario);
+                datos.setearParametro("@Usuario", nuevo.usuario.ID);
                 datos.setearParametro("@Direccion", nuevo.direccion);
                 datos.setearParametro("@TelefonoContacto", nuevo.Telefono);
                 datos.setearParametro("@EstadoPedido", nuevo.Tipos.Id);  
-                datos.setearParametro("@Cantidad", nuevo.carrito.Id);
+                datos.setearParametro("@Carrito", nuevo.carrito.Id);
                 datos.setearParametro("@Estado", nuevo.Estado);
                 
 

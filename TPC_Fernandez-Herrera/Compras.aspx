@@ -9,7 +9,7 @@
 <%/*aca pongo lo que me traje el en la session "usuario" definir y rearmar lo que se va atraer y mostrar*/%>
   
      <p>  <asp:Label ID="LblNombre" runat="server" /> </p>
-     <p>  <asp:Label ID="LblApellido" runat="server" /> </p>
+     <p>  <asp:Label ID="LblEmail" runat="server" /> </p>
 
     <table class="table">
         <thead>

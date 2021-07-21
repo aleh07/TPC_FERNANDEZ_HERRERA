@@ -1,4 +1,5 @@
 
+
 SET DATEFORMAT dmy;
 
 create database Fernandez_Herrera_DB
@@ -60,6 +61,7 @@ GO
 create table ITEMS (
 ID BIGINT NOT NULL identity (1,1), 
 IDCARRITO INT NOT NULL FOREIGN KEY REFERENCES CARRITO (ID),
+IDCOMPONENTE BIGINT NOT NULL FOREIGN KEY REFERENCES COMPONENTES (ID),
 CANTIDAD INT NOT NULL,
 SUBTOTAL MONEY CHECK(SUBTOTAL > 0)
 PRIMARY KEY (ID,IDCARRITO)
@@ -80,7 +82,7 @@ TelefonoContacto int  null,
 EstadoPedido int not null foreign key references TiposPedidos( ID),
 Carrito int not null foreign key references Carrito (id)
 Primary key(usuario,carrito),
-Estado bit not null
+
 )
 go
 create table Presupuestos(
@@ -800,4 +802,5 @@ VALUES('Micro Intel Core I7 11700F 8 Núcleos / 16 Threads HT 4.9Ghz (11va Gen) L
 INSERT INTO COMPONENTES 
 VALUES('Micro Intel Core I3 10105F 4 Núcleos / 8 Threads HT 4.4Ghz (10ma Gen) LGA1200','Garantia de 12 meses'
 ,18999.00,'https://s3-sa-east-1.amazonaws.com/saasargentina/7X7nDz9qUW68sVjNeKjh/imagen',1,1,1,1,7) 
+
 
