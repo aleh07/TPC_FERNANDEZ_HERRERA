@@ -14,6 +14,8 @@ namespace Dominio
         public long IdUsuario { get; set; }
         public DateTime FechaCarrito { get; set; }
         public List<Item> Items { get; set; }
+        public decimal Total { get; set; }
+
         public decimal totalCarrito(Carrito carrito)
         {
             decimal total = 0;

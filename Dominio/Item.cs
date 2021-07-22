@@ -8,6 +8,7 @@ namespace Dominio
 {
     public class Item
     {
+        public long IdCarrito { get; set; }
         public Componente componente { get; set; }
         public int Cantidad { get; set; }
         public decimal SubTotal { get; set; }

@@ -111,6 +111,30 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
+
+        public void ActualizarStock(long id , int cantidad)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+
+                datos.setearConsulta("update Componentes set Cantidad = @Cantidad where id = @id");
+                datos.setearParametro("@Id",id);
+                datos.setearParametro("@Cantidad", cantidad);
+
+
+                datos.ejectutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
         public void Eliminar(Componente nuevo)
         {
             AccesoDatos datos = new AccesoDatos();

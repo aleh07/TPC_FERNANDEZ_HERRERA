@@ -44,8 +44,8 @@ namespace Negocio
            
             try
             {
-                datos.setearConsulta("insert into Pedidos (Usuario,Direccion,TelefonoContacto,EstadoPedido,Carrito,Estado)" +
-                    " values(@Usuario,@Direccion,@TelefonoContacto,@EstadoPedido,@Carrito,@Estado)");
+                datos.setearConsulta("insert into Pedidos (Usuario,Direccion,TelefonoContacto,EstadoPedido,Carrito)" +
+                                    " values(@Usuario,@Direccion,@TelefonoContacto,@EstadoPedido,@Carrito)");
 
 
                 datos.setearParametro("@Usuario", nuevo.usuario.ID);
@@ -53,8 +53,7 @@ namespace Negocio
                 datos.setearParametro("@TelefonoContacto", nuevo.Telefono);
                 datos.setearParametro("@EstadoPedido", nuevo.Tipos.Id);  
                 datos.setearParametro("@Carrito", nuevo.carrito.Id);
-                datos.setearParametro("@Estado", nuevo.Estado);
-                
+
 
                 datos.ejectutarAccion();
 

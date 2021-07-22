@@ -14,7 +14,7 @@ namespace TPC_Fernandez_Herrera
         Componente producto = new Componente();
         public Carrito carrito = new Carrito();
         Item item = new Item();
-        decimal total;
+       
        
 
         protected void Page_Load(object sender, EventArgs e)
@@ -51,9 +51,6 @@ namespace TPC_Fernandez_Herrera
                             item.SubTotal = producto.Precio;
                             item.componente = producto;
                             item.Cantidad = 1;
-                            carrito.FechaCarrito = DateTime.Today;
-                            carrito.Items.Add(item);
-
                         }
                     }
                     //Repeater
@@ -62,6 +59,8 @@ namespace TPC_Fernandez_Herrera
                 }
                 lblTotal.Text = carrito.totalCarrito(carrito).ToString();
                 Session.Add("carrito", carrito);
+
+                GenerarCarrito();
             }
             catch (Exception ex)
             {
@@ -70,6 +69,16 @@ namespace TPC_Fernandez_Herrera
             }
 
 
+        }
+
+        protected void GenerarCarrito()
+        {
+            Usuario usuariologuiado = (Usuario)Session["cuenta"];
+            Carrito carrito = new Carrito();
+            CarritoNegocio negocio = new CarritoNegocio();
+
+            carrito.IdUsuario = usuariologuiado.ID;
+            negocio.Agregar(carrito, 0);
         }
 
         protected void btnEliminar_Click(object sender, EventArgs e)
@@ -135,30 +144,50 @@ namespace TPC_Fernandez_Herrera
 
         protected void btnConfirmarCompra_Click(object sender, EventArgs e)
         {
-       
+            ComponenteNegocio componenteNegocio = new ComponenteNegocio();
+            CarritoNegocio carritoNegocio = new CarritoNegocio();
+            ItemNegocio itemNegocio = new ItemNegocio();
+            Carrito CarritoSession = (Carrito) Session["carrito"];
+            List<Carrito> listaCarritos = carritoNegocio.ListaCarritos();
+            Usuario usuario = (Usuario)Session["Cuenta"];
+            Carrito carrito = listaCarritos.Find(x => x.IdUsuario == usuario.ID);
+            List<Componente> listado = (List<Componente>)Session["ListarComponentes"];
+            
+
+
+            foreach (Item item in CarritoSession.Items)
+            { 
+                    item.IdCarrito = carrito.Id;
+                    itemNegocio.Agregar(item);
+                    decimal Total =+ item.SubTotal * item.Cantidad;
+                
+                    Componente producto = listado.Find(x => x.ID == item.componente.ID);
+                    int cantidad = producto.Cantidad - item.Cantidad;
+                    
+                    componenteNegocio.ActualizarStock(item.componente.ID, cantidad);
+                    
+                carritoNegocio.Total(carrito.Id,Total);    
+            }
+
+
             PedidoNegocio negocio = new PedidoNegocio();
-            List<TiposPedidos> listaTipos = (List<TiposPedidos>) Session["listaTipos"];
-            Usuario usuariologuiado = (Usuario)Session["cuenta"];
-            int id =  + 1;
+            List<TiposPedidos> listaTipos = (List<TiposPedidos>)Session["listaTipos"];
+
             //aca agrego la direccion y un telefono es es opcional por que son campos null en la DB y genero  un pedido ahi si con todos los datos necesarios
             //desorrolar la funcion en negocio que inserte en la  DB un pedido
-            Pedidos pedido= new Pedidos();
-            pedido.usuario = usuariologuiado;
+            Pedidos pedido = new Pedidos();
+            pedido.usuario = usuario;
             pedido.direccion = TxtDireccion.Text;
             pedido.Telefono = Convert.ToInt32(TxtTelefono.Text);
-            //sacarlo de la db 
-            pedido.Estado = true;
             //cargar en la DB los tipos de pedidos
             pedido.Tipos = listaTipos.Find(x => x.Id == 1);
-            //dentro de carrito tengo el id del usuario ,el producto y el item, 
-            // List<carrito> listaCarrito . find (x.idCliente == session sacar id del usuario)
-           
+
             pedido.carrito = carrito;
-          
+
             negocio.agregar(pedido);
             //mandar mensaje de alta exitosa 
-            
-         
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Pedido Realizado');window.location ='Inicio.aspx';", true);
+
         }
     }
 }
