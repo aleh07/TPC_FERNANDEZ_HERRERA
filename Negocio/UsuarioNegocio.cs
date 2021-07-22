@@ -119,5 +119,58 @@ namespace Negocio
 
 
         }
+
+        public void Eliminar(Usuario nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+
+                datos.setearConsulta("update Usuarios set  Estado = @Estado where id = @id");
+
+                datos.setearParametro("@Id", nuevo.ID);
+                datos.setearParametro("@Estado", nuevo.Estado);
+
+                datos.ejectutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void modificar(Usuario nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+
+                datos.setearConsulta("update Usuarios set  Nombre = @nombre, Apellido = @Apellido, Email = @Email,Pass = @Pass, Tipo = @Tipo, Estado = @Estado where id = @id");
+                datos.setearParametro("@Id", nuevo.ID);
+                datos.setearParametro("@nombre", nuevo.Nombre);
+                datos.setearParametro("@Apellido", nuevo.Apellido);
+                datos.setearParametro("@Email", nuevo.Email);
+                datos.setearParametro("@Pass", nuevo.Pass);
+                datos.setearParametro("@Tipo", nuevo.Tipo);
+               
+                datos.setearParametro("@Estado", nuevo.Estado);
+
+                datos.ejectutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }
