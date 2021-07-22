@@ -11,7 +11,7 @@
       <asp:TextBox ID="TxtPass" class="controls" MaxLength="8" type="password" placeholder="Ingrese su Contraseña 8 caracteres max" aria-label="Ingrese Nombre" runat="server"></asp:TextBox>
       
     <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
-    <asp:Button ID="BtnAgregar" Text="Registrar" onclick="BtnAgregar_Click" runat="server" CssClass="botons" />
+    <asp:Button ID="BtnAgregar" Text="Registrar" onclick="BtnAgregar_Click" runat="server" CssClass="botons" type="submit"/>
 
     <p><a href="Login.aspx">¿Ya tengo Cuenta?</a></p>
   </section>

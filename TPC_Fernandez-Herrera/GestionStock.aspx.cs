@@ -15,6 +15,7 @@ namespace TPC_Fernandez_Herrera
         public List<Componente> listaComponentesActivos;
         protected void Page_Load(object sender, EventArgs e)
         {
+
             ComponenteNegocio listar = new ComponenteNegocio();
             try
             {
