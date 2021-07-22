@@ -4,7 +4,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
       <div class="main-container">  
     <table class="table">
-       
         <thead>
             <tr>
                 <th> 

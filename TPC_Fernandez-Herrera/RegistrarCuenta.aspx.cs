@@ -30,6 +30,8 @@ namespace TPC_Fernandez_Herrera
                     TxtEmail.Text = modificar.Email;
                     TxtPass.Text = modificar.Pass;
                    
+                    BtnAgregar.Text = "Modificar";
+                    
                 }
             }
 
@@ -79,7 +81,7 @@ namespace TPC_Fernandez_Herrera
             aux.Tipo = "U";
             aux.Estado = true;
 
-            if (ValidarVacios()==false) 
+            if (ValidarVacios() == false) 
             {
                 if (id == null)
                 { 
@@ -88,17 +90,18 @@ namespace TPC_Fernandez_Herrera
             negocio.agregar(aux);
             //falta mandar el email
             ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Cuenta Registrada correctamente');window.location ='Login.aspx';", true);
-           }
+                 }
                 else
                 {
+                    
                     //esto esta demas creo que se puede utlizar la variable aux pero n lo probe por tiempo
                  Usuario modificar = listaUsuario.Find(x => x.ID.ToString() == id);
-
+                    
                     modificar.Nombre = TxtNombre.Text;
                     modificar.Apellido = TxtApellido.Text;
                     modificar.Email = TxtEmail.Text;
                     modificar.Pass = TxtPass.Text;
-                    modificar.Tipo = "U";
+                  
                     modificar.Estado = true;
                     
 

@@ -152,7 +152,7 @@ namespace TPC_Fernandez_Herrera
             Usuario usuario = (Usuario)Session["Cuenta"];
             Carrito carrito = listaCarritos.Find(x => x.IdUsuario == usuario.ID);
             List<Componente> listado = (List<Componente>)Session["ListarComponentes"];
-            
+            EmailServices emailServices = new EmailServices();
 
 
             foreach (Item item in CarritoSession.Items)
@@ -185,6 +185,7 @@ namespace TPC_Fernandez_Herrera
             pedido.carrito = carrito;
 
             negocio.agregar(pedido);
+            emailServices.armarCorreo(pedido.usuario.Email, "Confirmacion Pedido", "El pedido sera enviado a "+pedido.direccion+"  Gracias por Elegirnos");
             //mandar mensaje de alta exitosa 
             ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Pedido Realizado');window.location ='Inicio.aspx';", true);
 

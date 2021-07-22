@@ -44,7 +44,7 @@ namespace TPC_Fernandez_Herrera
               
                 if (cuenta.Tipo == "C") { Session.Add("admin", 1); }
                 else if(cuenta.Tipo == "U") { Session.Add("admin", null); }
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Hola "+user+"');window.location ='Inicio.aspx';", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Hola "+cuenta.Nombre+"');window.location ='Inicio.aspx';", true);
               
                    
                 }

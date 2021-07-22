@@ -129,7 +129,7 @@ body {
 .table-stock {
     background: #24303c;
     padding: 30px;
-    margin: auto;
+    margin: 0;
    
     border-radius: 4px;
     font-family: 'calibri';
@@ -165,7 +165,7 @@ table {
 }
 
 th, td {
-    padding: 20px;
+    padding: 10px;
 }
 
 thead {

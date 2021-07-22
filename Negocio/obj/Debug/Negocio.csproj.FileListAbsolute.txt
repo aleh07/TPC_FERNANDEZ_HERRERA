@@ -79,3 +79,12 @@ C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\REGULARAZACION\TPC_FERN
 C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\REGULARAZACION\TPC_FERNANDEZ_HERRERA\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\REGULARAZACION\TPC_FERNANDEZ_HERRERA\Negocio\obj\Debug\Negocio.dll
 C:\Users\aleh0\OneDrive\Imágenes\Documentos\PROG 3 2021\REGULARAZACION\TPC_FERNANDEZ_HERRERA\Negocio\obj\Debug\Negocio.pdb
+C:\Users\reitm\Desktop\TPC Final\Negocio\bin\Debug\Negocio.dll
+C:\Users\reitm\Desktop\TPC Final\Negocio\bin\Debug\Negocio.pdb
+C:\Users\reitm\Desktop\TPC Final\Negocio\bin\Debug\Dominio.dll
+C:\Users\reitm\Desktop\TPC Final\Negocio\bin\Debug\Dominio.pdb
+C:\Users\reitm\Desktop\TPC Final\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\reitm\Desktop\TPC Final\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\reitm\Desktop\TPC Final\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\reitm\Desktop\TPC Final\Negocio\obj\Debug\Negocio.dll
+C:\Users\reitm\Desktop\TPC Final\Negocio\obj\Debug\Negocio.pdb
